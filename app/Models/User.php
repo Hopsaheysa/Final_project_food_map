@@ -6,6 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Recipe;
+use App\Models\Rating;
+use App\Models\Ingredient;
+use App\Models\Comment;
+use App\Models\Reply;
 
 class User extends Authenticatable
 {
@@ -40,4 +45,27 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function recipes()
+    {
+        return $this->hasMany(Recipe::class);
+    }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }
+
+    public function ingredients()
+    {
+        return $this->hasMany(Ingredient::class);
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
