@@ -16,12 +16,12 @@ class Recipe extends Model
 
     public function countries()
     {
-        return $this->hasMany(Country::class);
+        return $this->belongsToMany(Country::class);
     }
 
     public function ingredients()
     {
-        return $this->hasMany(Ingredient::class);
+        return $this->belongsToMany(Ingredient::class);
     }
 
     public function comments()
@@ -31,7 +31,7 @@ class Recipe extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function ratings()

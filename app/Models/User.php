@@ -48,7 +48,7 @@ class User extends Authenticatable
 
     public function recipes()
     {
-        return $this->hasMany(Recipe::class);
+        return $this->belongsToMany(Recipe::class);
     }
 
     public function ratings()
@@ -58,7 +58,7 @@ class User extends Authenticatable
 
     public function ingredients()
     {
-        return $this->hasMany(Ingredient::class);
+        return $this->belongsToMany(Ingredient::class);
     }
     public function comments()
     {

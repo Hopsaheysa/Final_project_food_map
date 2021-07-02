@@ -25,20 +25,33 @@ class FoodMapSeeder extends Seeder
         DB::table('ingredients')->truncate();
         DB::table('facts')->truncate();
         DB::table('recipes')->truncate();
+        DB::table('ingredient_recipe')->truncate();
+        DB::table('country_recipe')->truncate();
 
 
-        $data = [
+        $data = [[
             'name' => "Grilled Chicken",
-            'instruction' => "unclear, will be burned anyway",
+            'instructions' => "unclear, will be burned anyway",
             'image' => "beatufil_chicken.jpg",
             'isVegan' => false,
             'isVegeterian' => false,
             'isLactoseFree' => true,
             'isGlutenFree' => true,
             'isNutFree' => false,
-            'country' => ["Czech republic", "cz.png"],
+            'countries' => ["Czech Republic"],
             'ingredients' => [[1, "whole", "chicken"], [100, "gram", "potatoes"]]
-        ];
+        ], [
+            'name' => "Hot Dog",
+            'instructions' => "cook sausage, put it in the bun",
+            'image' => "beautiful_sausage.jpg",
+            'isVegan' => false,
+            'isVegeterian' => false,
+            'isLactoseFree' => true,
+            'isGlutenFree' => false,
+            'isNutFree' => true,
+            'countries' => ["Uganda", "Czech Republic"],
+            'ingredients' => [[1, "piece", "bun"], [5, "bla", "sausage"], [8, "blo", "sausage"]]
+        ]];
 
         $countries = [
             ["name" => "Afghanistan", "flag" => "AF.png"],
@@ -287,11 +300,53 @@ class FoodMapSeeder extends Seeder
             ["name" => "Zimbabwe", "flag" => "ZW.png"]
         ];
 
+
+
+        //this fills DB with Countries
         foreach ($countries as $iteration) {
             $country = new Country;
             $country->name = $iteration["name"];
             $country->flag = strtolower($iteration["flag"]);
             $country->save();
         }
+
+
+        //this is yet not working but this should fill DB with recipes from array $data
+        foreach ($data as $food) {
+            $recipe = new Recipe;
+            
+            $recipe->name = $food["name"];
+            $recipe->instructions = $food["instructions"];
+            $recipe->image = $food["image"];
+            $recipe->isVegan = $food["isVegan"];
+            $recipe->isVegeterian = $food["isVegeterian"];
+            $recipe->isLactoseFree = $food["isLactoseFree"];
+            $recipe->isGlutenFree = $food["isGlutenFree"];
+            $recipe->isNutFree = $food["isNutFree"];
+            $recipe->save();
+
+            // $recipe->country = $food["country"][0];
+
+            foreach ($food["countries"] as $coun) {
+                //we need to get country ID to save it to recipe_coutry table
+                $country_generated = Country::where("name", $coun)->first();
+                $recipe->countries()->attach($country_generated->id);
+            }
+
+            foreach ($food["ingredients"] as $ingr) {
+                $ingredient_generated = Ingredient::where("name", $ingr[2])->first();
+                if (!$ingredient_generated) {
+                    $ingredient = new Ingredient;
+                    $ingredient->name = $ingr[2];
+                    $ingredient->save();
+                }
+                              
+
+                //if ingredient is already in DB it won't be saved
+                $recipe->ingredients()->attach($ingredient->id, ["quantity" => $ingr[0], "measurement" => $ingr[1]]);
+
+            }
+        }
+        $recipe->save();
     }
 }
