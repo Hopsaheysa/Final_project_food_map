@@ -39,7 +39,7 @@ class FoodMapSeeder extends Seeder
             'isGlutenFree' => true,
             'isNutFree' => false,
             'countries' => ["Czech Republic"],
-            'ingredients' => [[1, "whole", "chicken"], [100, "gram", "potatoes"]]
+            'ingredients' => [[1, "whole", "chicken"], [100, "gram", "bun"]]
         ], [
             'name' => "Hot Dog",
             'instructions' => "cook sausage, put it in the bun",
