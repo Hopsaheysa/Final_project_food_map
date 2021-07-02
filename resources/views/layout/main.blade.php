@@ -10,17 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&family=Raleway:wght@100;200;500&display=swap" rel="stylesheet">
 
-    {{-- <link rel="stylesheet" href= {{mix('css/style.css')}}> --}}
+    <link rel="stylesheet" href= {{mix('css/style.css')}}>
 
 </head>
 <body>
 
-    @include('partials.header')
+    
    
-    <main>
+  
+    @include('partials.header')
     @yield('content')
-    </main>
+   
 </body>
 </html>

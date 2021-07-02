@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: #404040;
+}
+
+.main {
+  background-image: url("../img/kitchen.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home__container__header {
+  font-size: 600%;
+  margin-bottom: 0;
+}
+.home__container__header span {
+  color: #a3ceff;
+}
+.home__container__slogan {
+  font-size: 160%;
+  color: #a3ceff;
+}
+.home__container__slogan span {
+  color: #404040;
+}
+
+.main_nav {
+  position: fixed;
+  top: 1.5rem;
+  right: 0;
+  z-index: 2;
+}
+.main_nav a {
+  font-size: 120%;
+  text-decoration: none;
+  padding: 2rem;
+  color: #fffef9;
+}
+.main_nav a:hover {
+  color: #a3ceff;
+}
+
+.filter {
+  margin-top: 3em;
+  padding: 0.9em;
+  display: flex;
+  justify-content: center;
+  background-color: #a3ceff;
+  border-radius: 1.2rem;
+}
+
+.filter__input {
+  margin-left: 1em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map*/
