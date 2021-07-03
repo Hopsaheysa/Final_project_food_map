@@ -28,8 +28,29 @@ html {
   font-size: 600%;
   margin-bottom: 0;
 }
+@media (max-width: 800px) {
+  .home__container__header {
+    color: #a3ceff;
+  }
+}
 .home__container__header span {
   color: #a3ceff;
+}
+@media (max-width: 800px) {
+  .home__container__header {
+    font-size: 450%;
+    padding: 4rem;
+  }
+}
+@media (max-width: 425px) {
+  .home__container__header {
+    margin-right: 6rem;
+  }
+}
+@media (max-width: 360px) {
+  .home__container__header {
+    font-size: 350%;
+  }
 }
 .home__container__slogan {
   font-size: 160%;
@@ -38,6 +59,22 @@ html {
 .home__container__slogan span {
   color: #404040;
 }
+@media (max-width: 800px) {
+  .home__container__slogan span {
+    color: #a3ceff;
+  }
+}
+@media (max-width: 800px) {
+  .home__container__slogan {
+    font-size: 140%;
+  }
+}
+@media (max-width: 500px) {
+  .home__container__slogan {
+    font-size: 130%;
+    width: 85%;
+  }
+}
 
 .main_nav {
   position: fixed;
@@ -45,11 +82,21 @@ html {
   right: 0;
   z-index: 2;
 }
+@media (max-width: 700px) {
+  .main_nav {
+    left: 0;
+  }
+}
 .main_nav a {
   font-size: 120%;
   text-decoration: none;
   padding: 2rem;
   color: #fffef9;
+}
+@media (max-width: 800px) {
+  .main_nav a {
+    font-size: 90%;
+  }
 }
 .main_nav a:hover {
   color: #a3ceff;
@@ -62,6 +109,11 @@ html {
   justify-content: center;
   background-color: #a3ceff;
   border-radius: 1.2rem;
+}
+@media (max-width: 360px) {
+  .filter {
+    padding: 0.5em;
+  }
 }
 
 .filter__input {

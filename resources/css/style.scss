@@ -32,8 +32,25 @@ html {
         font-size: 600%;
         margin-bottom: 0;
 
+        @media (max-width: 800px) {
+            color: #a3ceff;
+        }
+
         span {
             color: #a3ceff;
+        }
+
+        @media (max-width: 800px) {
+            font-size: 450%;
+            padding: 4rem;
+        }
+
+        @media (max-width: 425px) {
+            margin-right: 6rem;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 350%;
         }
     }
 
@@ -43,6 +60,18 @@ html {
 
         span {
             color: #404040;
+
+            @media (max-width: 800px) {
+                color: #a3ceff;
+            }
+        }
+        @media (max-width: 800px) {
+            font-size: 140%;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 130%;
+            width: 85%;
         }
     }
 }
@@ -55,11 +84,19 @@ html {
     right: 0;
     z-index: 2;
 
+    @media (max-width: 700px) {
+        left: 0;
+    }
+
     a {
         font-size: 120%;
         text-decoration: none;
         padding: 2rem;
         color: #fffef9;
+
+        @media (max-width: 800px) {
+            font-size: 90%;
+        }
     }
 
     a:hover {
@@ -76,6 +113,10 @@ html {
     justify-content: center;
     background-color: #a3ceff;
     border-radius: 1.2rem;
+
+    @media (max-width: 360px) {
+        padding: 0.5em;
+    }
 }
 
 .filter__input {
