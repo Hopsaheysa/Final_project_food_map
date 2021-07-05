@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('home.home');
 });
 
-Route::get('/country', "CountryController@index");
+Route::get('/api/country/{country_id}', "CountryController@show");
+
+Route::get('/api/search/{term}', 'CountryController@search');
