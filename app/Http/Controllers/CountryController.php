@@ -17,8 +17,6 @@ class CountryController extends Controller
     public function search($term)
     {
         $countries = Country::where('name', 'like', '%' . $term . '%')->get();
-
-
         return $countries;
     }
 
@@ -27,9 +25,10 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function allCountries()
     {
-        //
+        $countriesAll = Country::all();
+        return $countriesAll;
     }
 
     /**
