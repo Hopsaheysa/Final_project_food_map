@@ -1,14 +1,31 @@
 import JSONDATA from './MOCK_DATA.json'
 import {useState} from 'react'; 
+import CountryResults from './CountryResults'
+
 function Home() {
 
   const[searchTerm, setSearchTerm] = useState(''); 
 
+  const loadCountries = async () => {
+        const response = await fetch(`/api/country/${searchTerm}`, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        const data = await response.json();
+
+        setSearchTerm(data);
+
+    }
+
+    useEffect(() => {
+       loadCountries();
+    }, [])
+
   return (
     <>
       <div className="main">
-          <div className="home__container">
-            
+          <div className="home__container">      
             <h1 className="home__container__header">World <span>Kitchen</span></h1>
             <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
                   <div className="filter">
@@ -29,7 +46,7 @@ function Home() {
                       }
                     }).map((val, key) => {
                        return <div key={key} className="list">
-                                <div className="country">{val.name}</div>
+                                <div className="country-select">{val.name}</div>
                               </div>
                     })
 
@@ -40,6 +57,8 @@ function Home() {
           </div>
         
         </div>
+
+        <CountryResults />
 
       
     </>
