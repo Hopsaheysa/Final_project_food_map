@@ -16,6 +16,7 @@ function Home() {
       }
     });
     const data = await response.json();
+
     setCountryResult(data);
 
   }
@@ -30,7 +31,7 @@ function Home() {
         }
       });
       const data = await response.json();
-      console.log(recipesResult)
+      console.log(data);
       setRecipesResult(data);
 
 
@@ -83,7 +84,7 @@ function Home() {
         </div>
 
       </div>
-      {recipesResult && recipesResult > 0 ?
+      {recipesResult && recipesResult.length > 0 ?
         <CountryResults recipes={recipesResult} />
         : null
 
