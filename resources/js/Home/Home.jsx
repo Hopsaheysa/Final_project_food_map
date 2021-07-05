@@ -18,6 +18,7 @@ function Home() {
       }
     });
     const data = await response.json();
+
     setCountryResult(data);
   }
 
@@ -32,7 +33,7 @@ function Home() {
         }
       });
       const data = await response.json();
-      console.log(recipesResult)
+      console.log(data);
       setRecipesResult(data);
 
 

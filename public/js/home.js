@@ -331,7 +331,7 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              console.log(recipesResult);
+              console.log(data);
               setRecipesResult(data);
 
             case 9:
@@ -467,7 +467,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function RecipeResults(props) {
+function RecipeResults() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
       className: "recipe",
