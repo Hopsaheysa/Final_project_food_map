@@ -1,10 +1,10 @@
 import RecipeResults from './RecipeResults'
 
-function CountryResults() {
+function CountryResults(props) {
 
 
   return (
-    <>
+    <div className="results__container">
       <div className="country">
          <div className="country__container">
               <h1 className="country__heading">Meals from ""</h1>
@@ -27,9 +27,9 @@ function CountryResults() {
          
 
     </div>
-    <RecipeResults />
+    {/* <RecipeResults /> */}
       
-    </>
+    </div>
 
       
   );
