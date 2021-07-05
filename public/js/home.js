@@ -261,10 +261,10 @@ function Home() {
       countryResult = _useState4[0],
       setCountryResult = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
       _useState6 = _slicedToArray(_useState5, 2),
-      countryId = _useState6[0],
-      setCountryId = _useState6[1];
+      recipesResult = _useState6[0],
+      setRecipesResult = _useState6[1];
 
   var loadCountries = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(searchTerm) {
@@ -315,7 +315,7 @@ function Home() {
               }
 
               _context2.next = 3;
-              return fetch("/api/country/".concat(countryResult), {
+              return fetch("/api/country/".concat(countryResult[0].id), {
                 headers: {
                   'Accept': 'application/json'
                 }
@@ -328,8 +328,8 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              setCountryId(data);
-              console.log(countryId);
+              console.log(recipesResult);
+              setRecipesResult(data);
 
             case 9:
             case "end":
@@ -346,11 +346,10 @@ function Home() {
 
   var handleClick = function handleClick() {
     loadCountries(searchTerm);
-    console.log('clicked');
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    loadRecipes();
+    countryResult && loadRecipes(countryResult);
   }, [countryResult]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -394,7 +393,9 @@ function Home() {
           }, key);
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CountryResults__WEBPACK_IMPORTED_MODULE_3__.default, {})]
+    }), recipesResult && recipesResult > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CountryResults__WEBPACK_IMPORTED_MODULE_3__.default, {
+      recipes: recipesResult
+    }) : null]
   });
 }
 
@@ -418,7 +419,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function RecipeResults() {
+function RecipeResults(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
       className: "recipe",

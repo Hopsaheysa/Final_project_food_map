@@ -1,4 +1,4 @@
-function RecipeResults() {
+function RecipeResults(props) {
 
  
 
