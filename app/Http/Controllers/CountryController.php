@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Country;
+use App\Models\Recipe;
+
 class CountryController extends Controller
 {
     /**
@@ -11,9 +14,12 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function search($term)
     {
-        //
+        $countries = Country::where('name', 'like', '%' . $term . '%')->get();
+
+
+        return $countries;
     }
 
     /**
@@ -43,9 +49,13 @@ class CountryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($country_id)
     {
-        //
+        $country = Country::findOrFail($country_id);
+        //$country = Country::where("country", $country_string)->get();
+        $recipes = $country->recipes;
+
+        return $recipes;
     }
 
     /**
