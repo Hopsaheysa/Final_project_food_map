@@ -1,26 +1,52 @@
-import JSONDATA from './MOCK_DATA.json'
-import {useState} from 'react'; 
+
+import JSONDATA from './COUNTRY.json'
+import { useState, useEffect } from 'react'; 
 import CountryResults from './CountryResults'
 
 function Home() {
 
   const[searchTerm, setSearchTerm] = useState(''); 
+  const[countryResult, setCountryResult] = useState('')
+  const[countryId, setCountryId] = useState(0)
 
-  const loadCountries = async () => {
-        const response = await fetch(`/api/country/${searchTerm}`, {
+  const loadCountries = async (searchTerm) => {
+        const response = await fetch(`/api/search/${searchTerm}`, {
             headers: {
                 'Accept': 'application/json'
             }
         });
         const data = await response.json();
-
-        setSearchTerm(data);
+        setCountryResult(data);
 
     }
 
+  
+
+  const loadRecipes = async (countryResult) => {
+    if(countryResult) {
+      const response = await fetch(`/api/country/${countryResult}`, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        const data = await response.json();
+        setCountryId(data);
+        console.log(countryId)
+
+    }
+    }
+        
+
+    const handleClick = () => {
+      loadCountries(searchTerm)
+      console.log('clicked')
+
+    }
+ 
+
     useEffect(() => {
-       loadCountries();
-    }, [])
+      loadRecipes()
+    }, [countryResult])
 
   return (
     <>
@@ -35,6 +61,7 @@ function Home() {
                     className="filter__input" 
                     placeholder="e.g Czech Republic" 
                     onChange={(event) => {setSearchTerm(event.target.value)}}
+                    
                     />
                   </div> 
 
@@ -46,12 +73,12 @@ function Home() {
                       }
                     }).map((val, key) => {
                        return <div key={key} className="list">
-                                <div className="country-select">{val.name}</div>
+                                <div className="country-select" onClick={handleClick}>{val.name}</div>
                               </div>
-                    })
+                    }) }
 
-                    }
-                   
+             
+            
 
                     
           </div>
