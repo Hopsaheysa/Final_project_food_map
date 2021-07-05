@@ -2,6 +2,8 @@
 import JSONDATA from './COUNTRY.json'
 import { useState, useEffect } from 'react';
 import CountryResults from './CountryResults'
+import NoResults from './NoResults'
+import { Redirect } from 'react-router-dom';
 
 function Home() {
 
@@ -17,9 +19,9 @@ function Home() {
     });
     const data = await response.json();
     setCountryResult(data);
-
   }
 
+  
 
 
   const loadRecipes = async (countryResult) => {
@@ -37,9 +39,19 @@ function Home() {
     }
   }
 
+  useEffect(() =>  {
+    let rect = document.querySelector('.results__container').getBoundingClientRect();
+    console.log(rect);
+
+    window.scrollTo(0, rect.top + rect.height);
+
+  }, [recipesResult])
+
+
 
   const handleClick = () => {
     loadCountries(searchTerm)
+    
   }
 
 
@@ -83,9 +95,9 @@ function Home() {
         </div>
 
       </div>
-      {recipesResult && recipesResult > 0 ?
+      {recipesResult && recipesResult.length > 0 ?
         <CountryResults recipes={recipesResult} />
-        : null
+        : <NoResults countries={countryResult} />
 
       }
 

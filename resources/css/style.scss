@@ -19,7 +19,7 @@ html {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150vh;
+    min-height: 100vh;
 }
 
 .home__container {
@@ -84,18 +84,17 @@ html {
     right: 0;
     z-index: 2;
 
-    @media (max-width: 700px) {
-        left: 0;
-    }
-
     a {
         font-size: 120%;
         text-decoration: none;
         padding: 2rem;
         color: #fffef9;
 
-        @media (max-width: 800px) {
+        @media (max-width: 560px) {
             font-size: 90%;
+            background-color: #a3ceff;
+            padding: 0.75rem;
+            border-radius: 1.2rem;
         }
     }
 
@@ -192,6 +191,39 @@ html {
             width: 100px;
             border-radius: 30%;
         }
+    }
+}
+
+// NO RESULTS
+
+.no_results {
+    background-color: #fff6e9;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        @media (max-width: 800px) {
+            font-size: 100%;
+        }
+        @media (max-width: 570px) {
+            font-size: 80%;
+        }
+        @media (max-width: 460px) {
+            text-align: center;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    img {
+        text-align: center;
+        border-radius: 3rem;
+        width: 300px;
     }
 }
 

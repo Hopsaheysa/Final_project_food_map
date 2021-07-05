@@ -15,7 +15,7 @@ html {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150vh;
+  min-height: 100vh;
 }
 
 .home__container {
@@ -82,20 +82,18 @@ html {
   right: 0;
   z-index: 2;
 }
-@media (max-width: 700px) {
-  .main_nav {
-    left: 0;
-  }
-}
 .main_nav a {
   font-size: 120%;
   text-decoration: none;
   padding: 2rem;
   color: #fffef9;
 }
-@media (max-width: 800px) {
+@media (max-width: 560px) {
   .main_nav a {
     font-size: 90%;
+    background-color: #a3ceff;
+    padding: 0.75rem;
+    border-radius: 1.2rem;
   }
 }
 .main_nav a:hover {
@@ -187,6 +185,38 @@ html {
 .country__option img {
   width: 100px;
   border-radius: 30%;
+}
+
+.no_results {
+  background-color: #fff6e9;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .no_results h2 {
+    font-size: 100%;
+  }
+}
+@media (max-width: 570px) {
+  .no_results h2 {
+    font-size: 80%;
+  }
+}
+@media (max-width: 460px) {
+  .no_results h2 {
+    text-align: center;
+  }
+}
+.no_results p {
+  text-align: center;
+}
+.no_results img {
+  text-align: center;
+  border-radius: 3rem;
+  width: 300px;
 }
 
 .recipe {
