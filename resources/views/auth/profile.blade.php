@@ -12,6 +12,5 @@
     Your email is {{ $user->email }}!!!
 </h5>
 
-<script src="{{mix('js/profile.js')}}"></script>
 
 @endsection
