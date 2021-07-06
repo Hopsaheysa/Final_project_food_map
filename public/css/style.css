@@ -8,6 +8,7 @@ html {
   margin: 0;
   font-family: "Raleway", sans-serif;
   color: #404040;
+  scroll-behavior: smooth;
 }
 
 .main {
@@ -190,6 +191,7 @@ html {
   align-items: center;
 }
 .country__heading {
+  color: #91972a;
   font-size: 300%;
   margin-top: 5rem;
 }
@@ -199,25 +201,32 @@ html {
     align-items: center;
   }
 }
+.country__tag {
+  font-size: 120%;
+}
 @media (max-width: 530px) {
   .country__tag {
     font-size: 100%;
   }
 }
 .country__options {
+  text-align: center;
   margin-top: 4rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-@media (max-width: 530px) {
+@media (max-width: 1030px) {
   .country__options {
     flex-direction: column;
     align-items: center;
   }
 }
 .country__option {
+  color: #91972a;
   margin-bottom: 4rem;
+  font-size: 120%;
 }
 @media (max-width: 530px) {
   .country__option {
@@ -225,8 +234,16 @@ html {
   }
 }
 .country__option img {
-  width: 100px;
-  border-radius: 30%;
+  width: 300px;
+  height: 250px;
+  padding: 0.5rem;
+  opacity: 0.5;
+  border-radius: 1.5rem;
+}
+.country__option img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .no_results {
@@ -256,14 +273,9 @@ html {
 .no_results p {
   text-align: center;
 }
-.no_results img {
-  text-align: center;
-  border-radius: 3rem;
-  width: 300px;
-}
 
 .recipe {
-  background-color: #e3f0ff;
+  background-color: #d8d174;
 }
 .recipe__container {
   display: flex;
@@ -288,6 +300,14 @@ html {
 }
 .recipe__ingredient {
   padding: 1.5rem;
+}
+.recipe__ingredient img {
+  border-radius: 3rem;
+  width: 300px;
+}
+.recipe__ingredient img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .recipe__instructions {
   margin: 2rem 0;

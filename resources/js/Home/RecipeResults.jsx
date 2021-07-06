@@ -1,16 +1,16 @@
-function RecipeResults() {
+function RecipeResults(props) {
 
- 
+
 
   return (
     <>
       <div className="recipe">
          <div className="recipe__container">
              <h1 className="recipe__heading">Great choice!</h1>
-             <h3>Roll up your sleeves and get started...</h3>
+             <h4>Roll up your sleeves and start making your {props.recipe.name}!</h4>
              <div className="recipe__ingredients">
                  <div className="recipe__ingredient">
-                 <img src="../img/placeholder.png" alt="meal name"/>   
+                 <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />   
                  </div>
                  <div className="recipe__ingredient">
                     <ul>
@@ -28,14 +28,16 @@ function RecipeResults() {
                 <div className="recipe__instructions">
                     <h3>Instructions</h3>
                     <div>
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ipsa illo perspiciatis magnam beatae est dolores recusandae voluptate quos sequi modi hic numquam ex, deserunt sint ut nobis commodi ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ipsa illo perspiciatis magnam beatae est dolores recusandae voluptate quos sequi modi hic numquam ex, deserunt sint ut nobis commodi ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ipsa illo perspiciatis magnam beatae est dolores recusandae voluptate quos sequi modi hic numquam ex, deserunt sint ut nobis commodi ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ipsa illo perspiciatis magnam beatae est dolores recusandae voluptate quos sequi modi hic numquam ex, deserunt sint ut nobis commodi ullam.
+                    {props.recipe.instructions}
                     </div>
 
                 </div>
-                <p>Bon Apetite!</p>
+                <h2>Bon Apetite!</h2>
+
+                
             </div>
          
-
+        
     </div>
 
       

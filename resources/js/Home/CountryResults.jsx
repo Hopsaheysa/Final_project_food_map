@@ -1,6 +1,19 @@
 import RecipeResults from './RecipeResults'
+import { useState, useEffect } from 'react';
 
 function CountryResults(props) {
+const [getRecipeResult, setGetRecipeResult] = useState(null)
+const [recipe, setRecipe] = useState('')
+
+  const handleClick = (event, recipe) => {
+    event.preventDefault()
+    setRecipe(recipe)
+    
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 2000);
+  }, [recipe])
 
 
   return (
@@ -11,24 +24,27 @@ function CountryResults(props) {
               <h2 className="country__tag">A tasty dish is only a click away!</h2>
             </div>
             <div className="country__options">
-                <div className= "country__option">
-                    <h3>{props.recipes[0].name}</h3>
-                    <img src={props.recipes[0].image} alt={props.recipes[0].name}/>
-                </div>
-                <div className= "country__option">
-                    <h3>{props.recipes[1].name}</h3>
-                    <img src={props.recipes[1].image} alt={props.recipes[1].name}/>
-                </div>
-                <div className= "country__option">
-          
-                    <h3>{props.recipes[2].name}</h3>
-                    <img src={props.recipes[2].image} alt={props.recipes[2].name}/>
-                </div>
+              {
+                props.recipes.map((recipe, i) => (
+                    <div key={i} className= "country__option" onClick={(event) => handleClick(event, recipe)}>
+                      <h3>{recipe.name}</h3>
+                    <img src={`/images-food/${recipe.image}`} alt={recipe.name}/>
+                  </div>
+                ))
+              }
+                
+                
             </div>
          
 
     </div>
-    {/* <RecipeResults /> */}
+     {
+       recipe ? 
+       <RecipeResults recipe={recipe} />
+     :
+     null 
+    }
+  
       
     </div>
 

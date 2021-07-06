@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import CountryResults from './CountryResults'
 import NoResults from './NoResults'
 import Hero from './Hero'
-import { Redirect } from 'react-router-dom';
+
 
 function Home() {
 
@@ -37,15 +37,16 @@ function Home() {
       console.log(data);
       setRecipesResult(data);
 
+      console.log(setRecipesResult)
+
 
     }
   }
 
   useEffect(() =>  {
-    let rect = document.querySelector('.results__container').getBoundingClientRect();
-    console.log(rect);
-
-    window.scrollTo(0, rect.top + rect.height);
+    // let rect = document.querySelector('.results__container').getBoundingClientRect();
+    // window.scrollTo(0, rect.top + rect.height);
+    window.scrollTo(0, 1500);
 
   }, [recipesResult])
 
