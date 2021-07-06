@@ -1,3 +1,6 @@
+@extends('layout.main')
+
+@section('content')
 
 @foreach ($errors->all() as $error)
     <div class="error">{{ $error }}</div>
@@ -12,3 +15,5 @@
 
     <button>Login</button>
 </form>
+
+@endsection

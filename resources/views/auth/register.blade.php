@@ -5,6 +5,9 @@
 @endforeach
 
  
+@extends('layout.main')
+
+@section('content')
 
 <form action="{{ route('register') }}" method="post">
     @csrf
@@ -40,3 +43,5 @@
     
     <button>Register</button>
 </form>
+
+@endsection
