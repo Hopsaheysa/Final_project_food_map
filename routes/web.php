@@ -24,6 +24,8 @@ Route::get('/api/search/', 'CountryController@allCountries');
 Route::get('/api/search/{term}', 'CountryController@search');
 Route::get('/country', "CountryController@index");
 
+Route::get('/profile', "UserController@indexProfile")->middleware("auth");
+
 
 // Route::get('/register', 'RegistrationController@create');
 // Route::post('register', 'RegistrationController@store');
