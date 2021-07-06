@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('admin');
-            $table->boolean('isVegan');
-            $table->boolean('isVegeterian');
-            $table->boolean('isLactoseFree');
-            $table->boolean('isGlutenFree');
-            $table->boolean('isNutFree');
+            $table->boolean('admin')->nullable();
+            $table->boolean('isVegan')->nullable();
+            $table->boolean('isVegetarian')->nullable();
+            $table->boolean('isLactoseFree')->nullable();
+            $table->boolean('isGlutenFree')->nullable();
+            $table->boolean('isNutFree')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
