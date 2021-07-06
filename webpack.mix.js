@@ -37,6 +37,7 @@ mix.js('resources/js/Home/index.jsx', 'public/js/home.js').react()
     mix.browserSync({
         host: 'localhost',
         port: 3000,
+        notify: false,
         proxy: {
             target: process.env.APP_URL // Yay! Using APP_URL from the .env file!
         }

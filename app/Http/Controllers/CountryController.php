@@ -51,10 +51,11 @@ class CountryController extends Controller
     public function show($country_id)
     {
         $country = Country::findOrFail($country_id);
-        //$country = Country::where("country", $country_string)->get();
-        $recipes = $country->recipes;
 
-        return $recipes;
+        $recipes = $country->recipes()->with("ingredients")->get();
+
+
+        return ($recipes);
     }
 
     /**
