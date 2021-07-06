@@ -115,19 +115,6 @@ class DataProvider
                 'instructions' => "Heat a paella pan over medium-high heat, and coat with olive oil. Add the chicken, rabbit and garlic; cook and stir until nicely browned. Move the browned meat to the sides of the pan, and add the tomato, butter beans, peas, and green beans. Season with paprika, and mix well.
             Fill the paella pan almost to the top with water, measuring the water as you put it in. This is to help you to determine how much rice to add, as paella pans come in different sizes. Bring to a boil. Simmer for about 1 hour to make a nice broth.
             Season with a generous amount of salt, and just enough saffron to make a nice yellow color. Season with thyme and rosemary if desired. The goal is to make a rich tasting broth that will soak into the rice to make it delicious. Stir in half as much rice as the amount of water in the pan. Cover, reduce heat to low, and simmer until all of the liquid has been absorbed, about 20 minutes.",
-<<<<<<< HEAD
-            'image' => "paella-valenciana.jpg",
-            'isVegan' => false,
-            'isVegeterian' => false,
-            'isLactoseFree' => true,
-            'isGlutenFree' => true,
-            'isNutFree' => true,
-            'countries' => ["Spain"],
-            'ingredients' => [[1, "tablespoon", "olive oil"], [0.5, null, "chicken"], [0.5, null, "rabbit"], [10, "cloves", "garlic"], [1, null, "tomato"], [1, null, "tomato"], [1, "can", "butter beans"], [300, "g", "frozen green peas"], [300, "g", "frozen green beans"], [null, null, "salt"], [null, null, "mild paprika"], [1, "pinch", "saffron threads"], [1, "pinch", "dried thyme"], [1, "pinch", "dried rosemary"], [4, "cups", "white rice"]]
-        ], [
-            'name' => "Gazpacho",
-            'instructions' => "Place the cucumber, peppers, tomatoes, garlic and spring onions in a large bowl. Add the bread and season well with salt and pepper. Add the sherry vinegar and a couple of tablespoons of olive oil and mix together with your hands, pressing down to squeeze out the juices. Cover and chill. Leave to marinade for at least 30 mins or overnight.
-=======
                 'image' => "tortilla-de-patatas.jpg",
                 'isVegan' => false,
                 'isVegeterian' => false,
@@ -139,7 +126,6 @@ class DataProvider
             ], [
                 'name' => "Gazpacho",
                 'instructions' => "Place the cucumber, peppers, tomatoes, garlic and spring onions in a large bowl. Add the bread and season well with salt and pepper. Add the sherry vinegar and a couple of tablespoons of olive oil and mix together with your hands, pressing down to squeeze out the juices. Cover and chill. Leave to marinade for at least 30 mins or overnight.
->>>>>>> cae3ecc22a3c34cc0949729149d9fb629da7700f
             Put the vegetable mixture into a blender and whiz until smooth. Check the consistency. If it is still rather thick and not very rich, add another glug or two of olive oil until you reach a consistency you like. Taste and adjust the seasoning as necessary. You might need a little more vinegar. Cover and chill again, until really cold and you’re ready to serve.
             To serve, stir the gazpacho and taste again as the seasoning may have changed as the soup is now very cold. Adjust as necessary, then serve ice cold with gazpacho ice cubes, sprinkled with chopped basil, an extra drizzle of olive oil and the toasts alongside, if using.",
                 'image' => "gazpacho.jpg",
