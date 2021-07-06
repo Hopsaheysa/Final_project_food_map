@@ -1,3 +1,5 @@
+import Footer from './Footer'
+
 function RecipeResults(props) {
 
 const instructionsSteps = props.recipe.instructions.split('\n')
@@ -65,6 +67,8 @@ console.log(instructionsSteps)
          
         
     </div>
+
+    <Footer />
 
       
     </>
