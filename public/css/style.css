@@ -166,7 +166,7 @@ html {
 .hero__container cite {
   color: #e6d3a3;
   background-color: #91972a;
-  padding: 1rem;
+  padding: 0.65rem;
   border-radius: 0.55rem;
   font-size: 100%;
   font-weight: bold;
@@ -230,7 +230,7 @@ html {
   min-width: 33%;
   color: #91972a;
   margin-bottom: 4rem;
-  font-size: 120%;
+  font-size: 90%;
 }
 @media (max-width: 530px) {
   .country__option {
