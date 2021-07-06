@@ -33,6 +33,7 @@ if (!mix.inProduction()) {
 mix.sass('resources/css/style.scss', 'public/css');
 mix.js('resources/js/Home/index.jsx', 'public/js/home.js').react()
 
+
  
     mix.browserSync({
         host: 'localhost',

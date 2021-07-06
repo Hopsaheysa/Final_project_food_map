@@ -68,7 +68,12 @@ class FoodMapSeeder extends Seeder
                     $ingredient = new Ingredient;
                     $ingredient->name = $ingr[2];
                     $ingredient->save();
+                } else {
+                    $ingredient = $ingredient_generated;
+                    $ingredient->save();
                 }
+
+
                 //actually filling the intermediate table ingredient_recipe (notice syntax in attach() method)
                 $recipe->ingredients()->attach($ingredient->id, ["quantity" => $ingr[0], "measurement" => $ingr[1]]);
             }
