@@ -36,6 +36,11 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'isVegan' => isset($input['isVegan']),
+            'isVegetarian' => isset($input['isVegetarian']),
+            'isLactoseFree' => isset($input['isLactoseFree']),
+            'isGlutenFree' => isset($input['isGlutenFree']),
+            'isNutFree' => isset($input['isNutFree'])
         ]);
     }
 }

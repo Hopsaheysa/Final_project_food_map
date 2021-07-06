@@ -25,6 +25,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'isVegan',
+        'isVegetarian',
+        'isLactoseFree',
+        'isGlutenFree',
+        'isNutFree'
     ];
 
     /**
