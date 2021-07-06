@@ -97,7 +97,7 @@ class DataProvider
             'isLactoseFree' => false,
             'isGlutenFree' => true,
             'isNutFree' => true,
-            'countries' => ["Czech Republic", "Slovakia"],
+            'countries' => ["Czech Republic"],
             'ingredients' => [[750, "g", "beef sirloin"], [50, "g", "bacon"], [140, "gram", "butter"], [2, "bigger", "carrots"], [150, "g", "celery root"], [null, null, "salt"], [null, null, "pepper"], [1, null, "parsley"], [1, null, "onion"], [5, null, "peppercorns"], [3, null, "allspice balls"], [3, null, "bayleaves"], [1, "pinch", "thyme"], [150, "g", "melted butter"], [1, null, "lemon"], [100, "g", "mustard"], [2, "tablespoons", "flour"], [250, "ml", "whipping cream"], [null, null, "sugar"]]
         ], [
             'name' => "Kyselo (sour and mushroom soup)",
@@ -108,8 +108,113 @@ class DataProvider
             'isLactoseFree' => false,
             'isGlutenFree' => true,
             'isNutFree' => true,
-            'countries' => ["Czech Republic", "Slovakia"],
+            'countries' => ["Czech Republic",],
             'ingredients' => [[120, "g", "sourdough"], [40, "g", "butter"], [70, "g", "dried mushroom"], [300, "g", "potatoes"], [1, null, "onion"], [900, "ml", "water"], [200, "ml", "milk"], [2, null, "eggs"], [null, null, "salt"], [null, null, "caraway"]]
+        ], [
+            'name' => "Tortilla de patatas",
+            'instructions' => "For this recipe, I used a 9 inch pan. It's a good size for a nice and thick omelette. And I used a bigger pan to cook the potatoes.
+            Peel and slice the potatoes very thin
+            Chop the onion, season with salt (and pepper if you want), and cook in a small pan on a low-medium heat until it gets brown, then set it aside.
+            While the onion is cooking, preheat a pan with 2 cups of vegetable or canola oil on high heat. Place the potato slices into the pan.
+            Season the potatoes with salt and pepper and cook for about 5 to 7 minutes. Do not wait until they look brown, we don’t want french fries! To be sure the potatoes are done, poke them with a wooden spoon and if they fall apart, they are done.
+            Once the potatoes are cooked, drain the oil. Mix the potatoes with the onion in the pan and combine them well ( you can skip this step but I love the flavor it gets). Then place the mixture into a bowl.
+            Beat 4 eggs, season them with some more salt and pepper, and pour them into the bowl with the onion and potatoes. Mix with a spatula or a wooden spoon.
+            Be sure it is juicy! If it looks dry just beat another egg and pour it into the mixture.
+            Using one of the pans you used for the potato or onion, pour about 1 tablespoon of olive oil and place on medium-low heat. Once the oil is warm, pour the mixture in. After about a minute, peel back the edges of the omelette from the pan so it doesn’t stick. Shaking the pan also helps to ensure the omelette doesn’t stick.
+            In about 4-5 minutes, the bottom of the omelette should be cooked. Position a plate on top of the omelette in the pan, and flip it. The omelette now will be on the plate. Next, slide it back into the pan, with the cooked face of the omelette facing up.
+            Cook it for about 3-5 minutes and flip again. Now the omelette should have a consistent texture. Slide it back into the pan for another 30 seconds and flip it again. I always flip the omelette 5-6 times. My grandmother told me that the more you flip it, the better!",
+            'image' => "tortilla-de-patatas.jpg",
+            'isVegan' => false,
+            'isVegeterian' => true,
+            'isLactoseFree' => true,
+            'isGlutenFree' => true,
+            'isNutFree' => true,
+            'countries' => ["Spain"],
+            'ingredients' => [[3, null, "potatoes"], [1, null, "onion"], [4, null, "eggs"], [500, "ml", "oil"], [null, null, "salt"], [null, null, "black pepper"]]
+        ], [
+            'name' => "Authentic Paella Valenciana",
+            'instructions' => "Heat a paella pan over medium-high heat, and coat with olive oil. Add the chicken, rabbit and garlic; cook and stir until nicely browned. Move the browned meat to the sides of the pan, and add the tomato, butter beans, peas, and green beans. Season with paprika, and mix well.
+            Fill the paella pan almost to the top with water, measuring the water as you put it in. This is to help you to determine how much rice to add, as paella pans come in different sizes. Bring to a boil. Simmer for about 1 hour to make a nice broth.
+            Season with a generous amount of salt, and just enough saffron to make a nice yellow color. Season with thyme and rosemary if desired. The goal is to make a rich tasting broth that will soak into the rice to make it delicious. Stir in half as much rice as the amount of water in the pan. Cover, reduce heat to low, and simmer until all of the liquid has been absorbed, about 20 minutes.",
+            'image' => "tortilla-de-patatas.jpg",
+            'isVegan' => false,
+            'isVegeterian' => false,
+            'isLactoseFree' => true,
+            'isGlutenFree' => true,
+            'isNutFree' => true,
+            'countries' => ["Spain"],
+            'ingredients' => [[1, "tablespoon", "olive oil"], [0.5, null, "chicken"], [0.5, null, "rabbit"], [10, "cloves", "garlic"], [1, null, "tomato"], [1, null, "tomato"], [1, "can", "butter beans"], [300, "g", "frozen green peas"], [300, "g", "frozen green beans"], [null, null, "salt"], [null, null, "mild paprika"], [1, "pinch", "saffron threads"], [1, "pinch", "dried thyme"], [1, "pinch", "dried rosemary"], [4, "cups", "white rice"]]
+        ], [
+            'name' => "Gazpacho",
+            'instructions' => "Place the cucumber, peppers, tomatoes, garlic and spring onions in a large bowl. Add the bread and season well with salt and pepper. Add the sherry vinegar and a couple of tablespoons of olive oil and mix together with your hands, pressing down to squeeze out the juices. Cover and chill. Leave to marinade for at least 30 mins or overnight.
+            Put the vegetable mixture into a blender and whiz until smooth. Check the consistency. If it is still rather thick and not very rich, add another glug or two of olive oil until you reach a consistency you like. Taste and adjust the seasoning as necessary. You might need a little more vinegar. Cover and chill again, until really cold and you’re ready to serve.
+            To serve, stir the gazpacho and taste again as the seasoning may have changed as the soup is now very cold. Adjust as necessary, then serve ice cold with gazpacho ice cubes, sprinkled with chopped basil, an extra drizzle of olive oil and the toasts alongside, if using.",
+            'image' => "gazpacho.jpg",
+            'isVegan' => true,
+            'isVegeterian' => true,
+            'isLactoseFree' => true,
+            'isGlutenFree' => true,
+            'isNutFree' => true,
+            'countries' => ["Spain"],
+            'ingredients' => [[1, null, "cucumber"], [1, null, "red pepper"], [1, null, "green pepper"], [1, "kg", "plum tomatoes"], [2, "cloves", "garlic"], [2, null, "spring onions"], [2, "tablespoons", "sherry vinegar"]]
+        ], [
+            'name' => "Boeuf Bourguignon",
+            'instructions' => "Pre-heat oven to 180°C (350°F)
+            Start with the vegetables: chop the carrots in 1 cm pieces and the onion finely
+            Dry the beef cubes with paper towel and sprinkle with salt and pepper
+            In a pan, heat some oil and add the beef pieces. Braise meat for 5 minutes and add the chopped vegetables
+            Stir for a few minutes, while you prepare the “bouquet garni” by arranging the herbs in a neat stack, one on top of the other, and then tie the ingredients into a tight bundle with string.
+            Add the flour and continue to stir
+            Transfer to a Dutch oven (casserole dish)
+            Add the wine, the beef stock.the finely chopped garlic and the “bouquet garni”
+            Cook in the oven for around 2 hours
+            In the meantime, cook the pearl onions (until golden but still firm) and mushrooms separately
+            Add the pearl onions and mushrooms to the beef stew once it is cooked. Remove the 'bouquet garni'
+            Best served with egg pasta (tagliatelle), mashed or boiled potatoes",
+            'image' => "gazpacho.jpg",
+            'isVegan' => false,
+            'isVegeterian' => false,
+            'isLactoseFree' => true,
+            'isGlutenFree' => false,
+            'isNutFree' => true,
+            'countries' => ["France"],
+            'ingredients' => [[1, "kg", " beef"], [1, null, "carrots"], [1, null, "onion"], [30, "g", "flour"], [2, "cloves", "garlic"], [40, "cl", "red wine"], [40, "cl", "beef stock"], [null, null, "vegetable oil"], [null, null, "black pepper"], [150, "g", "mushrooms"], [150, "g", "pearl onions"], [250, "g", "bacon"], [null, null, "'Bouquet garni'"], [2, "sprigs", "fresh thyme"], [2, "leaves", "'dried bay"], [2, "stalks", "leafy greens from the celery stalks"], [6, "sprigs", "fresh parsley"]]
+        ], [
+            'name' => "Lobster Bisque",
+            'instructions' => "
+            Gather the ingredients.
+            Melt the butter in a large pan, once melted add the flour, a pinch of salt and pepper and the paprika. Stir well. 
+            Slowly whisk in the milk, followed by the chicken stock, the white wine, and continue stirring until a smooth and slightly thickened to a cream-like consistency. (This stirring can take several minutes but spending the time at this stage of the bisque is critical to the success of the dish. Be careful not to let the mixture boil as this may cause the bisque to curdle.) 
+            Add the onion, the carrots and simmer (again, do not boil) for 10 minutes. Add the cooked lobster meat and stir. Taste the bisque and adjust the seasoning to your liking. 
+            Stir in the Cognac and finally, the cream. Heat through until piping hot. 
+            Serve in hot bowls with a crusty baguette on the side. 
+            Enjoy! ",
+            'image' => "Lobster-Bisque.jpg",
+            'isVegan' => false,
+            'isVegeterian' => false,
+            'isLactoseFree' => false,
+            'isGlutenFree' => false,
+            'isNutFree' => true,
+            'countries' => ["France"],
+            'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
+        ], [
+            'name' => "Lobster Bisque",
+            'instructions' => "
+            Gather the ingredients.
+            Melt the butter in a large pan, once melted add the flour, a pinch of salt and pepper and the paprika. Stir well. 
+            Slowly whisk in the milk, followed by the chicken stock, the white wine, and continue stirring until a smooth and slightly thickened to a cream-like consistency. (This stirring can take several minutes but spending the time at this stage of the bisque is critical to the success of the dish. Be careful not to let the mixture boil as this may cause the bisque to curdle.) 
+            Add the onion, the carrots and simmer (again, do not boil) for 10 minutes. Add the cooked lobster meat and stir. Taste the bisque and adjust the seasoning to your liking. 
+            Stir in the Cognac and finally, the cream. Heat through until piping hot. 
+            Serve in hot bowls with a crusty baguette on the side. 
+            Enjoy! ",
+            'image' => "Lobster-Bisque.jpg",
+            'isVegan' => false,
+            'isVegeterian' => false,
+            'isLactoseFree' => false,
+            'isGlutenFree' => false,
+            'isNutFree' => true,
+            'countries' => ["France"],
+            'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
         ]];
     }
 

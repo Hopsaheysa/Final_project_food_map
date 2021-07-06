@@ -165,9 +165,9 @@ function CountryResults(props) {
       className: "country",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "country__container",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h1", {
           className: "country__heading",
-          children: "Meals from \"\""
+          children: ["Meals from ", props.countries[0].name]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
           className: "country__tag",
           children: "A tasty dish is only a click away!"
@@ -177,26 +177,26 @@ function CountryResults(props) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "country__option",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            children: "Meal Name"
+            children: props.recipes[0].name
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "../img/placeholder.png",
-            alt: "meal name"
+            src: props.recipes[0].image,
+            alt: props.recipes[0].name
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "country__option",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            children: "Meal Name"
+            children: props.recipes[1].name
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "../img/placeholder.png",
-            alt: "meal name"
+            src: props.recipes[1].image,
+            alt: props.recipes[1].name
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "country__option",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            children: "Meal Name"
+            children: props.recipes[2].name
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "../img/placeholder.png",
-            alt: "meal name"
+            src: props.recipes[2].image,
+            alt: props.recipes[2].name
           })]
         })]
       })]
@@ -205,6 +205,65 @@ function CountryResults(props) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CountryResults);
+
+/***/ }),
+
+/***/ "./resources/js/Home/Hero.jsx":
+/*!************************************!*\
+  !*** ./resources/js/Home/Hero.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _QUOTES_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./QUOTES.js */ "./resources/js/Home/QUOTES.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+function Hero() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      quoteIndex = _useState2[0],
+      setQuoteIndex = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    setInterval(function () {
+      return setQuoteIndex(Math.floor(Math.random() * _QUOTES_js__WEBPACK_IMPORTED_MODULE_0__.default.length));
+    }, 7000);
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "hero__container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "hero__quote",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h3", {
+        children: ["\"", _QUOTES_js__WEBPACK_IMPORTED_MODULE_0__.default[quoteIndex].quote, "\""]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("cite", {
+        children: ["- ", _QUOTES_js__WEBPACK_IMPORTED_MODULE_0__.default[quoteIndex].cite]
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);
 
 /***/ }),
 
@@ -225,7 +284,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _CountryResults__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CountryResults */ "./resources/js/Home/CountryResults.jsx");
 /* harmony import */ var _NoResults__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NoResults */ "./resources/js/Home/NoResults.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Hero */ "./resources/js/Home/Hero.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -243,6 +303,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -331,7 +392,7 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              console.log(recipesResult);
+              console.log(data);
               setRecipesResult(data);
 
             case 9:
@@ -360,31 +421,31 @@ function Home() {
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     countryResult && loadRecipes(countryResult);
   }, [countryResult]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       className: "main",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "home__container",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h1", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h1", {
           className: "home__container__header",
-          children: ["World ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          children: ["World ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
             children: "Kitchen"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h2", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h2", {
           className: "home__container__slogan",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
             children: "Finding you recipes "
           }), "from around the world"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "filter",
-          children: ["Search Country", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
             type: "text",
             className: "filter__input",
             placeholder: "e.g Czech Republic",
             onChange: function onChange(event) {
               setSearchTerm(event.target.value);
             }
-          })]
+          })
         }), _COUNTRY_json__WEBPACK_IMPORTED_MODULE_1__.filter(function (val) {
           if (searchTerm == "") {
             return null;
@@ -392,9 +453,9 @@ function Home() {
             return val;
           }
         }).map(function (val, key) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "list",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
               className: "country-select",
               onClick: handleClick,
               children: val.name
@@ -402,9 +463,10 @@ function Home() {
           }, key);
         })]
       })
-    }), recipesResult && recipesResult.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_CountryResults__WEBPACK_IMPORTED_MODULE_3__.default, {
-      recipes: recipesResult
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_NoResults__WEBPACK_IMPORTED_MODULE_4__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Hero__WEBPACK_IMPORTED_MODULE_5__.default, {}), recipesResult && recipesResult.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_CountryResults__WEBPACK_IMPORTED_MODULE_3__.default, {
+      recipes: recipesResult,
+      countries: countryResult
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_NoResults__WEBPACK_IMPORTED_MODULE_4__.default, {
       countries: countryResult
     })]
   });
@@ -431,14 +493,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function NoResults(props) {
   var countries = props.countries;
-  console.log(countries);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
     className: "results__container",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
       className: "no_results",
       children: countries ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", {
-          children: "I'm afraid we don't have any recipes from this country at such time."
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h2", {
+          children: ["I'm afraid we don't have any recipes from ", countries[0].name, " at such time."]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
           children: "Please try again"
         })]
@@ -448,6 +509,70 @@ function NoResults(props) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NoResults);
+
+/***/ }),
+
+/***/ "./resources/js/Home/QUOTES.js":
+/*!*************************************!*\
+  !*** ./resources/js/Home/QUOTES.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var quotesData = [{
+  id: 1,
+  quote: "All happiness depends on a leisurely breakfast.",
+  cite: "John Gunther"
+}, {
+  id: 2,
+  quote: "You don't need a silver fork to eat good food.",
+  cite: "Paul Prudhomme"
+}, {
+  id: 3,
+  quote: "I only drink Champagne on two occasions, when I am in love and when I am not.",
+  cite: "Coco Chanel"
+}, {
+  id: 4,
+  quote: "A balanced diet is a cookie in each hand.",
+  cite: "Barbara Johnson"
+}, {
+  id: 5,
+  quote: "Cooking is like love. It should be entered into with abandon or not at all.",
+  cite: "Harriet Van Horne"
+}, {
+  id: 6,
+  quote: "People who love to eat are always the best people.",
+  cite: "Julia Child"
+}, {
+  id: 7,
+  quote: "To eat is a necessity, but to eat intelligently is an art.",
+  cite: "François de la Rochefoucauld"
+}, {
+  id: 8,
+  quote: "We all eat, an it would be a sad waste of opportunity to eat badly.",
+  cite: "Anna Thomas"
+}, {
+  id: 9,
+  quote: "It's difficult to think anything but pleasant thoughts while eating a homegrown tomato.",
+  cite: "Lewis Grizzard"
+}, {
+  id: 10,
+  quote: "Always serve too much hot fudge sauce on hot fudge sundaes. It makes people overjoyed and puts them in your debt.",
+  cite: "Judith Olney"
+}, {
+  id: 11,
+  quote: "Ice cream is exquisite. What a pity it isn't illegal.",
+  cite: "Voltaire"
+}, {
+  id: 12,
+  quote: "Life is a combination of magic and pasta",
+  cite: "Federico Fellini"
+}];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (quotesData);
 
 /***/ }),
 
@@ -467,7 +592,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function RecipeResults(props) {
+function RecipeResults() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
       className: "recipe",

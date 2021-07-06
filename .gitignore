@@ -2,6 +2,7 @@
 /public/hot
 /public/js
 /public/storage
+/public/js/home.js.map
 /storage/*.key
 /vendor
 .env

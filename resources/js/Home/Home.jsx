@@ -3,6 +3,7 @@ import JSONDATA from './COUNTRY.json'
 import { useState, useEffect } from 'react';
 import CountryResults from './CountryResults'
 import NoResults from './NoResults'
+import Hero from './Hero'
 import { Redirect } from 'react-router-dom';
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       }
     });
     const data = await response.json();
+
     setCountryResult(data);
   }
 
@@ -32,7 +34,7 @@ function Home() {
         }
       });
       const data = await response.json();
-      console.log(recipesResult)
+      console.log(data);
       setRecipesResult(data);
 
 
@@ -65,8 +67,7 @@ function Home() {
         <div className="home__container">
           <h1 className="home__container__header">World <span>Kitchen</span></h1>
           <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
-          <div className="filter">
-            Search Country
+          <div className="filter"> 
             <input
               type="text"
               className="filter__input"
@@ -95,11 +96,13 @@ function Home() {
         </div>
 
       </div>
+       <Hero />
       {recipesResult && recipesResult.length > 0 ?
-        <CountryResults recipes={recipesResult} />
+        <CountryResults recipes={recipesResult} countries={countryResult} />
         : <NoResults countries={countryResult} />
 
       }
+     
 
     </>
 

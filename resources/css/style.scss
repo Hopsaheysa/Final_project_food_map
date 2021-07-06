@@ -15,10 +15,7 @@ html {
 // HOME
 
 .main {
-    background-image: url("../img/kitchen.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #e6d3a3;
     min-height: 100vh;
 }
 
@@ -32,12 +29,8 @@ html {
         font-size: 600%;
         margin-bottom: 0;
 
-        @media (max-width: 800px) {
-            color: #a3ceff;
-        }
-
         span {
-            color: #a3ceff;
+            color: #91972a;
         }
 
         @media (max-width: 800px) {
@@ -51,19 +44,20 @@ html {
 
         @media (max-width: 360px) {
             font-size: 350%;
+            padding-left: 3rem;
         }
     }
 
     &__slogan {
         font-size: 160%;
-        color: #a3ceff;
+        color: #404040;
 
         span {
-            color: #404040;
+            color: #91972a;
 
-            @media (max-width: 800px) {
-                color: #a3ceff;
-            }
+            // @media (max-width: 800px) {
+            //     color: #a3ceff;
+            // }
         }
         @media (max-width: 800px) {
             font-size: 140%;
@@ -88,18 +82,18 @@ html {
         font-size: 120%;
         text-decoration: none;
         padding: 2rem;
-        color: #fffef9;
+        color: #91972a;
 
         @media (max-width: 560px) {
             font-size: 90%;
-            background-color: #a3ceff;
+            // background-color: #a3ceff;
             padding: 0.75rem;
             border-radius: 1.2rem;
         }
     }
 
     a:hover {
-        color: #a3ceff;
+        color: #fffef9;
     }
 }
 
@@ -110,42 +104,94 @@ html {
     padding: 1em;
     display: flex;
     justify-content: center;
-    background-color: #a3ceff;
+    background-color: #91972a;
     border-radius: 1.2rem;
 
     @media (max-width: 360px) {
-        padding: 0.5em;
+        margin-left: 2rem;
+    }
+
+    @media (max-width: 410px) {
+        margin-right: 5rem;
     }
 }
 
 .filter__input {
-    margin-left: 1em;
+    padding: 1em;
+    outline: none;
+    border-style: none;
+    border-radius: 0.75rem;
+    font-size: 120%;
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    background-color: #fffef9;
     color: #404040;
     padding: 1em;
-    border-top: 1px solid #a3ceff;
-    border-radius: 1.2rem;
+    border-top: 1px solid #91972a;
 }
 
 .country-select {
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
 .country-select:hover {
     cursor: pointer;
-    color: #a3ceff;
+    color: #91972a;
+}
+
+// HERO
+
+.hero__container {
+    height: 100vh;
+    background-image: url("../img/kitchen.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        color: #91972a;
+        font-size: 130%;
+        font-style: italic;
+        background-color: #e6d3a3;
+        padding: 1rem;
+        border-radius: 0.75rem;
+
+        @media (max-width: 880px) {
+            font-size: 120%;
+        }
+        @media (max-width: 500px) {
+            font-size: 80%;
+        }
+        @media (max-width: 360px) {
+            padding: 0.5rem;
+        }
+    }
+
+    cite {
+        color: #e6d3a3;
+        background-color: #91972a;
+        padding: 1rem;
+        border-radius: 0.55rem;
+        font-size: 100%;
+        font-weight: bold;
+
+        @media (max-width: 360px) {
+            font-size: 80%;
+            padding: 0.5rem;
+        }
+    }
 }
 
 // COUNTRY RESULTS
 
 .country {
-    background-color: #fff6e9;
+    background-color: #f2f4f3;
 
     &__container {
         display: flex;
@@ -197,7 +243,8 @@ html {
 // NO RESULTS
 
 .no_results {
-    background-color: #fff6e9;
+    background-color: #919720;
+    color: #e3f0ff;
     padding: 2rem;
     display: flex;
     flex-direction: column;
