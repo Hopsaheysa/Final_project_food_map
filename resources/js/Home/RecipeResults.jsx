@@ -13,18 +13,24 @@ function RecipeResults(props) {
                  <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />   
                  </div>
                  <div className="recipe__ingredient">
-                    <ul>
-                        <h3>Ingredients</h3>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                        <li>Ingredient</li>
-                    </ul>
+                      <h3>Ingredients</h3>
+
+                  {
+                          props.recipe.ingredients.map((n, i) => (
+                          <ul key={i}>
+                              {n.pivot.quantity  ?
+                              
+                                <li>{n.pivot.quantity}</li>
+                               : <li>{n.name}</li>
+                               }
+                          </ul>
+
+                      ))
+                     }
+ 
+                  
                     </div>
-             </div>
+                </div>
                 <div className="recipe__instructions">
                     <h3>Instructions</h3>
                     <div>
@@ -32,7 +38,7 @@ function RecipeResults(props) {
                     </div>
 
                 </div>
-                <h2>Bon Apetite!</h2>
+                <h2 className="recipe__bon">Bon Apetite!</h2>
 
                 
             </div>

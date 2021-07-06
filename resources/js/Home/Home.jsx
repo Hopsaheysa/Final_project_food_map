@@ -64,7 +64,7 @@ function Home() {
 
   return (
     <>
-      <div className="main">
+      {/* <div className="main"> */}
         <div className="home__container">
           <h1 className="home__container__header">World <span>Kitchen</span></h1>
           <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
@@ -96,7 +96,7 @@ function Home() {
 
         </div>
 
-      </div>
+      {/* </div> */}
        <Hero />
       {recipesResult && recipesResult.length > 0 ?
         <CountryResults recipes={recipesResult} countries={countryResult} />

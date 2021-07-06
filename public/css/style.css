@@ -11,16 +11,13 @@ html {
   scroll-behavior: smooth;
 }
 
-.main {
-  background-color: #e6d3a3;
-  min-height: 100vh;
-}
-
 .home__container {
+  background-color: #e6d3a3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 .home__container__header {
   font-size: 600%;
@@ -120,7 +117,7 @@ html {
   flex-direction: column;
   color: #404040;
   padding: 1em;
-  border-top: 1px solid #91972a;
+  border-bottom: 1px solid #91972a;
 }
 
 .country-select {
@@ -223,7 +220,14 @@ html {
     align-items: center;
   }
 }
+@media (max-width: 350px) {
+  .country__options {
+    font-size: 80%;
+  }
+}
 .country__option {
+  flex-grow: 1;
+  min-width: 33%;
   color: #91972a;
   margin-bottom: 4rem;
   font-size: 120%;
@@ -239,6 +243,12 @@ html {
   padding: 0.5rem;
   opacity: 0.5;
   border-radius: 1.5rem;
+}
+@media (max-width: 350px) {
+  .country__option img {
+    width: 200px;
+    height: 150px;
+  }
 }
 .country__option img:hover {
   opacity: 1;
@@ -315,6 +325,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.recipe__bon {
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map*/
