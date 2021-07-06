@@ -6,7 +6,7 @@
                         <a href="{{ url('/profile') }}" class="text-sm text-gray-700 underline">Profile</a>
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
-                            <button>Logout</button>
+                            <button>>Logout</button>
                         </form>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
