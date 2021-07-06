@@ -5,6 +5,9 @@
 @endforeach
 
  
+@extends('layout.main')
+
+@section('content')
 
 <form action="{{ route('register') }}" method="post">
     @csrf
@@ -18,3 +21,5 @@
     <input type="password" name="password_confirmation" value=""><br />
     <button>Register</button>
 </form>
+
+@endsection
