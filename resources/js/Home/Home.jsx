@@ -86,7 +86,7 @@ function Home() {
             }
           }).map((val, key) => {
             return <div key={key} className="list">
-              <div className="country-select" onClick={handleClick}>{val.name}</div>
+              <div className="country-select" onClick={zhandleClick}>{val.name}</div>
             </div>
           })}
 
