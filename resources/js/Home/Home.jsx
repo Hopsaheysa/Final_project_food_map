@@ -12,14 +12,14 @@ function Home() {
   const [countryResult, setCountryResult] = useState('')
   const [recipesResult, setRecipesResult] = useState(null);
 
-  const loadCountries = async (searchTerm) => {
-    const response = await fetch(`/api/search/${searchTerm}`, {
+  const loadCountries = async () => {
+    const response = await fetch(`/api/search`, {
       headers: {
         'Accept': 'application/json'
       }
     });
     const data = await response.json();
-
+    console.log(data);
     setCountryResult(data);
   }
 
