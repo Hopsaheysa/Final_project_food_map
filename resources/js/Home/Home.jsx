@@ -9,7 +9,8 @@ import Hero from './Hero'
 function Home() {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [countryResult, setCountryResult] = useState('')
+  const [countriesAll, setCountriesAll] = useState([]);
+  const [countryResult, setCountryResult] = useState('');
   const [recipesResult, setRecipesResult] = useState(null);
 
   const loadCountries = async () => {
@@ -19,26 +20,25 @@ function Home() {
       }
     });
     const data = await response.json();
-    console.log(data);
-    setCountryResult(data);
+    setCountriesAll(data);
   }
 
+  useEffect(() => {
+    loadCountries();
+  }, [])
   
 
 
   const loadRecipes = async (countryResult) => {
     if (countryResult) {
-      const response = await fetch(`/api/country/${countryResult[0].id}`, {
+      const response = await fetch(`/api/country/${countryResult}`, {
         headers: {
           'Accept': 'application/json'
         }
       });
       const data = await response.json();
-      console.log(data);
+
       setRecipesResult(data);
-
-      console.log(setRecipesResult)
-
 
     }
   }
@@ -52,8 +52,9 @@ function Home() {
 
 
 
-  const handleClick = () => {
-    loadCountries(searchTerm)
+  const handleClick = (country) => {
+    setCountryResult(country);
+    loadRecipes(country.id)
     
   }
 
@@ -78,7 +79,7 @@ function Home() {
             />
           </div>
 
-          {JSONDATA.filter((val) => {
+          {countriesAll.filter((val) => {
             if (searchTerm == "") {
               return null
             } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -86,7 +87,7 @@ function Home() {
             }
           }).map((val, key) => {
             return <div key={key} className="list">
-              <div className="country-select" onClick={handleClick}>{val.name}</div>
+              <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}</div>
             </div>
           })}
 

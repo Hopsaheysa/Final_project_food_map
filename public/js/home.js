@@ -190,7 +190,8 @@ function CountryResults(props) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     window.scrollTo(0, 2000);
-  }, [recipe]);
+  }, [recipe]); // console.log("props", props)
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "results__container",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -199,7 +200,7 @@ function CountryResults(props) {
         className: "country__container",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
           className: "country__heading",
-          children: ["Meals from ", props.countries[0].name]
+          children: ["Meals from ", props.countries.name]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
           className: "country__tag",
           children: "A tasty dish is only a click away!"
@@ -439,15 +440,20 @@ function Home() {
       searchTerm = _useState2[0],
       setSearchTerm = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
       _useState4 = _slicedToArray(_useState3, 2),
-      countryResult = _useState4[0],
-      setCountryResult = _useState4[1];
+      countriesAll = _useState4[0],
+      setCountriesAll = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
       _useState6 = _slicedToArray(_useState5, 2),
-      recipesResult = _useState6[0],
-      setRecipesResult = _useState6[1];
+      countryResult = _useState6[0],
+      setCountryResult = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState8 = _slicedToArray(_useState7, 2),
+      recipesResult = _useState8[0],
+      setRecipesResult = _useState8[1];
 
   var loadCountries = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -470,10 +476,9 @@ function Home() {
 
             case 5:
               data = _context.sent;
-              console.log(data);
-              setCountryResult(data);
+              setCountriesAll(data);
 
-            case 8:
+            case 7:
             case "end":
               return _context.stop();
           }
@@ -486,6 +491,10 @@ function Home() {
     };
   }();
 
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    loadCountries();
+  }, []);
+
   var loadRecipes = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(countryResult) {
       var response, data;
@@ -494,12 +503,12 @@ function Home() {
           switch (_context2.prev = _context2.next) {
             case 0:
               if (!countryResult) {
-                _context2.next = 10;
+                _context2.next = 8;
                 break;
               }
 
               _context2.next = 3;
-              return fetch("/api/country/".concat(countryResult[0].id), {
+              return fetch("/api/country/".concat(countryResult), {
                 headers: {
                   'Accept': 'application/json'
                 }
@@ -512,11 +521,9 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              console.log(data);
               setRecipesResult(data);
-              console.log(setRecipesResult);
 
-            case 10:
+            case 8:
             case "end":
               return _context2.stop();
           }
@@ -535,8 +542,9 @@ function Home() {
     window.scrollTo(0, 1500);
   }, [recipesResult]);
 
-  var handleClick = function handleClick() {
-    loadCountries(searchTerm);
+  var handleClick = function handleClick(country) {
+    setCountryResult(country);
+    loadRecipes(country.id);
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
@@ -565,7 +573,7 @@ function Home() {
             setSearchTerm(event.target.value);
           }
         })
-      }), _COUNTRY_json__WEBPACK_IMPORTED_MODULE_1__.filter(function (val) {
+      }), countriesAll.filter(function (val) {
         if (searchTerm == "") {
           return null;
         } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -576,7 +584,9 @@ function Home() {
           className: "list",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "country-select",
-            onClick: handleClick,
+            onClick: function onClick(event) {
+              return handleClick(val);
+            },
             children: val.name
           })
         }, key);
@@ -617,7 +627,7 @@ function NoResults(props) {
       className: "no_results",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h2", {
-          children: ["I'm afraid we don't have any recipes from ", countries[0].name, " at such time."]
+          children: ["I'm afraid we don't have any recipes from ", countries.name, " at such time."]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
           children: "Please try again"
         })]
@@ -714,7 +724,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function RecipeResults(props) {
   var instructionsSteps = props.recipe.instructions.split('\n');
-  console.log(instructionsSteps);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "recipe",
@@ -745,8 +754,8 @@ function RecipeResults(props) {
                   }) : "", n.pivot.measurement ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
                     children: [n.pivot.measurement, " "]
                   }) : "", n.name]
-                })
-              }, i);
+                }, i)
+              });
             })]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
