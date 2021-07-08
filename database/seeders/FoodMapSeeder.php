@@ -41,7 +41,7 @@ class FoodMapSeeder extends Seeder
         }
 
 
-        //this is yet not working but this should fill DB with recipes from array $data_recipes
+        //fill DB with recipes from array $data_recipes
         foreach ($data_recipes as $food) {
             $recipe = new Recipe;
 

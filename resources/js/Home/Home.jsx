@@ -1,5 +1,5 @@
 
-import JSONDATA from './COUNTRY.json'
+// import JSONDATA from './COUNTRY.json'
 import { useState, useEffect } from 'react';
 import CountryResults from './CountryResults'
 import NoResults from './NoResults'
@@ -9,36 +9,36 @@ import Hero from './Hero'
 function Home() {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [countryResult, setCountryResult] = useState('')
+  const [countriesAll, setCountriesAll] = useState([]);
+  const [countryResult, setCountryResult] = useState('');
   const [recipesResult, setRecipesResult] = useState(null);
 
-  const loadCountries = async (searchTerm) => {
-    const response = await fetch(`/api/search/${searchTerm}`, {
+  const loadCountries = async () => {
+    const response = await fetch(`/api/search`, {
       headers: {
         'Accept': 'application/json'
       }
     });
     const data = await response.json();
-
-    setCountryResult(data);
+    setCountriesAll(data);
   }
 
+  useEffect(() => {
+    loadCountries();
+  }, [])
   
 
 
   const loadRecipes = async (countryResult) => {
     if (countryResult) {
-      const response = await fetch(`/api/country/${countryResult[0].id}`, {
+      const response = await fetch(`/api/country/${countryResult}`, {
         headers: {
           'Accept': 'application/json'
         }
       });
       const data = await response.json();
-      console.log(data);
+
       setRecipesResult(data);
-
-      console.log(setRecipesResult)
-
 
     }
   }
@@ -52,8 +52,9 @@ function Home() {
 
 
 
-  const handleClick = () => {
-    loadCountries(searchTerm)
+  const handleClick = (country) => {
+    setCountryResult(country);
+    loadRecipes(country.id)
     
   }
 
@@ -78,7 +79,7 @@ function Home() {
             />
           </div>
 
-          {JSONDATA.filter((val) => {
+          {countriesAll.filter((val) => {
             if (searchTerm == "") {
               return null
             } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -86,7 +87,7 @@ function Home() {
             }
           }).map((val, key) => {
             return <div key={key} className="list">
-              <div className="country-select" onClick={zhandleClick}>{val.name}</div>
+              <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}</div>
             </div>
           })}
 
