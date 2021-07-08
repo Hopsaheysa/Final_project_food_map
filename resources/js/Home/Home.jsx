@@ -1,5 +1,3 @@
-
-// import JSONDATA from './COUNTRY.json'
 import { useState, useEffect } from 'react';
 import CountryResults from './CountryResults'
 import NoResults from './NoResults'

@@ -8,40 +8,38 @@
 @extends('layout.main')
 
 @section('content')
+<div class="register">
+    <div class="register__container">
+        <form class="register__form" action="{{ route('register') }}" method="post">
+            @csrf
+            <p class="register__title">Register</p>
+            <input class="register__input" type="text" name="name" placeholder="Name" value="{{ old('name') }}"><br />
+            <input class="register__input" type="email" name="email" placeholder="Email"  value="{{ old('email') }}"><br />
+            <input class="register__input" type="password" name="password" placeholder="Password" value=""><br />
+            <input class="register__input" type="password" name="password_confirmation" placeholder="Confrim Password"  value=""><br />
+            
+            <div class="register__preferences">
+            <p> Please share with us your preferences. You can skip this part for now and return to it later.</p>
+            
+            <label for="isVegan">Vegan?</label>
+            <input type="checkbox" name="isVegan" value="1"><br />
 
-<form action="{{ route('register') }}" method="post">
-    @csrf
-    <label for="name">Name</label>
-    <input type="text" name="name" value="{{ old('name') }}"><br />
-    <label for="email">E-mail</label>
-    <input type="email" name="email" value="{{ old('email') }}"><br />
-    <label for="password">Password</label>
-    <input type="password" name="password" value=""><br />
-    
+            <label for="isVegetarian">Vegetarian?</label>
+            <input type="checkbox" name="isVegetarian" value="1"><br />
 
-    
-    <label for="password_confirmation">Confirm password</label>
-    <input type="password" name="password_confirmation" value=""><br />
-    
-    
-    <p>Please share with us your preferences. If you skip it and leave it blank you can fill it later.</p>
-    
-    <label for="isVegan">Are you vegan?</label>
-    <input type="checkbox" name="isVegan" value="1"><br />
+            <label for="isLactoseFree">Lactose intolerant?</label>
+            <input type="checkbox" name="isLactoseFree" value="1"><br />
+            
+            <label for="isGlutenFree">Gluten intolerant?</label>
+            <input type="checkbox" name="isGlutenFree" value="1"><br />
 
-    <label for="isVegetarian">Are you vegetarian?</label>
-    <input type="checkbox" name="isVegetarian" value="1"><br />
+            <label for="isNutFree">Nut intolerant?</label>
+            <input type="checkbox" name="isNutFree" value="1"><br />
 
-    <label for="isLactoseFree">Are you lactose intolerant?</label>
-    <input type="checkbox" name="isLactoseFree" value="1"><br />
-    
-    <label for="isGlutenFree">Are you gluten intolerant?</label>
-    <input type="checkbox" name="isGlutenFree" value="1"><br />
-
-    <label for="isNutFree">Are you nut intolerant?</label>
-    <input type="checkbox" name="isNutFree" value="1"><br />
-    
-    <button>Register</button>
-</form>
-
+            </div>
+            
+            <button class="register__btn">Register</button>
+        </form>
+    </div>
+</div>
 @endsection

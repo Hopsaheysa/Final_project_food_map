@@ -15,10 +15,10 @@ function Footer() {
                 </div>
                 <div className="footer__social">
                     <ul className="footer__links">
-                        <li><a href="#"><ion-icon name="logo-facebook" className="facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-twitter" className="twitter"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-google" className="google"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram" className="instagram"></ion-icon></a></li>
+                        <li><a href="#" className="facebook"><ion-icon name="logo-facebook" ></ion-icon></a></li>
+                        <li><a href="#" className="twitter"><ion-icon name="logo-twitter" ></ion-icon></a></li>
+                        <li><a href="#" className="google"><ion-icon name="logo-google" ></ion-icon></a></li>
+                        <li><a href="#" className="instagram"><ion-icon name="logo-instagram" ></ion-icon></a></li>
                     </ul>
                     
                 </div>

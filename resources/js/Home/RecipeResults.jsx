@@ -13,6 +13,7 @@ function RecipeResults(props) {
           <div className="recipe__ingredients">
             <div className="recipe__ingredient">
               <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />
+               <h2 className="recipe__easy">It's easy! Give it a try...</h2>
             </div>
             <div className="recipe__ingredient">
               <h3>Ingredients</h3>
@@ -40,11 +41,14 @@ function RecipeResults(props) {
                 ))
               }
 
-
+                  </div>
+                
             </div>
           </div>
+          <div className="recipe__container__bottom">
           <div className="recipe__instructions">
-            <h3>Instructions</h3>
+           
+            <h3>Step by step</h3>
             <ol>
               {
                 instructionsSteps.map((step, i) => (
@@ -57,15 +61,19 @@ function RecipeResults(props) {
               }
 
             </ol>
-
+            <div className="recipe__container__bon">
+              <h2>Bon Apetite!</h2>
+            </div>
           </div>
-          <h2 className="recipe__bon">Bon Apetite!</h2>
+          
 
 
-        </div>
+              </div>
+            
 
 
       </div>
+   
 
       <Footer />
 

@@ -160,8 +160,7 @@ class DataProvider
                 'ingredients' => [[1, "kg", " beef"], [1, null, "carrots"], [1, null, "onion"], [30, "g", "flour"], [2, "cloves", "garlic"], [40, "cl", "red wine"], [40, "cl", "beef stock"], [null, null, "vegetable oil"], [null, null, "black pepper"], [150, "g", "mushrooms"], [150, "g", "pearl onions"], [250, "g", "bacon"], [null, null, "'Bouquet garni'"], [2, "sprigs", "fresh thyme"], [2, "leaves", "'dried bay"], [2, "stalks", "leafy greens from the celery stalks"], [6, "sprigs", "fresh parsley"]]
             ], [
                 'name' => "Lobster Bisque",
-                'instructions' => "
-            Gather the ingredients.
+                'instructions' => "Gather the ingredients.
             Melt the butter in a large pan, once melted add the flour, a pinch of salt and pepper and the paprika. Stir well. 
             Slowly whisk in the milk, followed by the chicken stock, the white wine, and continue stirring until a smooth and slightly thickened to a cream-like consistency. (This stirring can take several minutes but spending the time at this stage of the bisque is critical to the success of the dish. Be careful not to let the mixture boil as this may cause the bisque to curdle.) 
             Add the onion, the carrots and simmer (again, do not boil) for 10 minutes. Add the cooked lobster meat and stir. Taste the bisque and adjust the seasoning to your liking. 
@@ -178,8 +177,7 @@ class DataProvider
                 'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
             ], [
                 'name' => "Lobster Bisque",
-                'instructions' => "
-            Gather the ingredients.
+                'instructions' => "Gather the ingredients.
             Melt the butter in a large pan, once melted add the flour, a pinch of salt and pepper and the paprika. Stir well. 
             Slowly whisk in the milk, followed by the chicken stock, the white wine, and continue stirring until a smooth and slightly thickened to a cream-like consistency. (This stirring can take several minutes but spending the time at this stage of the bisque is critical to the success of the dish. Be careful not to let the mixture boil as this may cause the bisque to curdle.) 
             Add the onion, the carrots and simmer (again, do not boil) for 10 minutes. Add the cooked lobster meat and stir. Taste the bisque and adjust the seasoning to your liking. 
