@@ -15,7 +15,7 @@
         </h1>
 
 
-        <form class="profile__form" action="{{ route('register') }}" method="post">
+        <form class="profile__form" action="{{ action('UserController@store') }}" method="post">
             @csrf
             
             <h2>Want to update your preferences?</h2>

@@ -25,11 +25,4 @@ Route::get('/api/search/{term}', 'CountryController@search');
 Route::get('/country', "CountryController@index");
 
 Route::get('/profile', "UserController@indexProfile")->middleware("auth");
-
-
-// Route::get('/register', 'RegistrationController@create');
-// Route::post('register', 'RegistrationController@store');
-
-// Route::get('/login', 'SessionsController@create');
-// Route::post('/login', 'SessionsController@store');
-// Route::get('/logout', 'SessionsController@destroy');
+Route::post('/userSave', "UserController@store")->middleware("auth");
