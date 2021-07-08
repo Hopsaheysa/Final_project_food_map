@@ -287,6 +287,11 @@ html {
     p {
         text-align: center;
     }
+
+    a {
+        text-decoration: none;
+        color: #404040;
+    }
 }
 
 // RECIPE RESULTS
@@ -320,14 +325,11 @@ html {
         padding: 1.5rem;
 
         img {
-            border-radius: 3rem;
-            width: 50em;
+            width: 700px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
         }
-    }
-
-    &__easy {
-        margin-top: 2em;
-        padding: 1em;
     }
 
     &__container__bottom {
@@ -346,6 +348,7 @@ html {
     &__container__bon {
         display: flex;
         justify-content: center;
+        text-align: center;
     }
 }
 
@@ -353,34 +356,29 @@ html {
 
 .footer {
     background-color: #404040;
-    padding: 50px;
+    padding: 1em;
     font-size: 80%;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
     &__nav {
         list-style: none;
-        float: left;
-    }
-
-    &__links {
-        list-style: none;
-        float: right;
+        display: flex;
+        flex-direction: column;
     }
 
     &__nav li,
-    &__links li {
+    &__nav__social li {
         display: inline-block;
-        margin-right: 20px;
-    }
-
-    &__nav li:last-child,
-    &__links li:last-child {
-        margin-right: 0;
+        padding: 0.5em;
     }
 
     &__nav li a:link,
-    &__nav li a:visited,
-    &__links li a:link,
-    &__links li a:visited {
+    &__nav li a:visited {
         text-decoration: none;
         border: 0;
         color: #d8d174;
@@ -392,9 +390,10 @@ html {
         color: #919720;
     }
 
-    &__links li a:hover,
-    &__links li a:active {
-        font-size: 160%;
+    &__copyright {
+        color: #d8d174;
+        text-align: center;
+        margin-top: 2em;
     }
 }
 
@@ -403,6 +402,10 @@ html {
 .google,
 .instagram {
     transition: color 0.2s;
+    text-decoration: none;
+    font-size: 18px;
+    border: 0;
+    color: #d8d174;
 }
 
 .facebook:hover {
@@ -419,11 +422,6 @@ html {
 
 .instagram:hover {
     color: #517fa4;
-}
-
-footer p {
-    color: #d8d174;
-    text-align: center;
 }
 
 // LOGIN
@@ -526,6 +524,7 @@ footer p {
         justify-content: center;
         width: 100%;
         min-height: 100vh;
+
         padding: 20px;
     }
 
@@ -541,6 +540,7 @@ footer p {
     &__form {
         border-radius: 2px 2px 5px 5px;
         padding: 10px 20px 20px 20px;
+        margin: 4em 0;
         width: 90%;
         max-width: 320px;
         background: #f2f4f3;
@@ -615,7 +615,6 @@ footer p {
     }
 
     &__form {
-        // margin-right: 13rem;
         line-height: 2.5;
     }
 

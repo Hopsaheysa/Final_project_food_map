@@ -26,7 +26,7 @@ function Liked() {
     return (
         <>
             <div className="profile__inputs">
-                <p>I love these ingredients...</p>
+                <p>♡ I love these ingredients...</p>
                 {inputArray}
             </div>
 

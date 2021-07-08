@@ -26,7 +26,7 @@ function Disliked() {
     return (
         <>
             <div className="profile__inputs">
-                <p>I don't care for these ingredients...</p>
+                <p>✕ I don't care for these ingredients...</p>
                 {inputArray}
             </div>
 
