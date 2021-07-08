@@ -14,7 +14,7 @@ function Disliked() {
     const inputList = () => {
         const list = [];
         for (let i = 0; i < inputsNumber; i++) {
-            list.push(<Input key={i} position={i} />)
+            list.push(<Input key={i} position={i} liked="disliked"/>)
         }
         setInputArray(list);
     }

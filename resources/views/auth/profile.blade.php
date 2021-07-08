@@ -13,7 +13,7 @@
 </h5>
 
 
-<form action="{{ route('register') }}" method="post">
+<form action="{{ action('UserController@store') }}" method="post">
     @csrf
    
     
