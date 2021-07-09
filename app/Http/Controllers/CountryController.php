@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Country;
 use App\Models\Recipe;
+use App\Models\Ingredient;
+use Illuminate\Support\Facades\DB;
 
 class CountryController extends Controller
 {
@@ -54,17 +56,22 @@ class CountryController extends Controller
     {
         $country = Country::findOrFail($country_id);
 
-        // $user = auth()->user();
-        // if ($user) {
-        //     $recipes = $country->recipes()->with
-        // }
-
-
-
-        $recipes = $country->recipes()->with("ingredients")->get();
-
-
-        return ([$recipes]);
+        $user = auth()->user();
+        if ($user) {
+            $dislikedIngredient = $user->dislikesIngredients;
+            // all recipes from country => this will be changed 
+            // according to preference if user is logged in 
+            $recipes = $country->recipes()->with("ingredients")
+                ->leftJoin('ingredient_recipe', function ($join) use ($dislikedIngredient) {
+                    $join->on('recipes.id', '=', 'ingredient_recipe.recipe_id')
+                        ->whereIn('ingredient_recipe.ingredient_id', $dislikedIngredient->pluck("id"));
+                })->whereNull('ingredient_recipe.id')->get();
+        } else {
+            // if user is not logged in we will get all recipes
+            $recipes = $country->recipes()->with("ingredients")->get();
+        }
+        // dd($recipes);
+        return $recipes;
     }
 
     /**

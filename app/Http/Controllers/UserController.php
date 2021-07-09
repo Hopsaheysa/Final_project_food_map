@@ -27,46 +27,50 @@ class UserController extends Controller
             'isGlutenFree' => isset($input['isGlutenFree']),
             'isNutFree' => isset($input['isNutFree'])
         ]);
-        dd($request->all());
+
 
         foreach ($request->all() as $key => $value) {
-            if (str_starts_with($key, "ingredient_liked_")) {
-                $ingredient = Ingredient::where('name', $value)->first();
-                if (!$ingredient) {
-                    $ingredient = new Ingredient();
-                    $ingredient->name = $value;
-                    $ingredient->save();
-                }
+            if (isset($value)) {
+                if (str_starts_with($key, "ingredient_liked_")) {
+                    $ingredient = Ingredient::where('name', $value)->first();
+                    if (!$ingredient) {
+                        $ingredient = new Ingredient();
+                        $ingredient->name = $value;
+                        $ingredient->save();
+                    }
 
-                if (!DB::table('ingredient_user')->where('user_id', auth()->id())
-                    ->where('ingredient_id', $ingredient->id)->first())
-                    DB::table('ingredient_user')->insert([
-                        'user_id' => auth()->id(),
-                        'ingredient_id' => $ingredient->id,
-                        'likes' => 1,
-                        'dislikes' => 0
-                    ]);
+                    if (!DB::table('ingredient_user')->where('user_id', auth()->id())
+                        ->where('ingredient_id', $ingredient->id)->first())
+                        DB::table('ingredient_user')->insert([
+                            'user_id' => auth()->id(),
+                            'ingredient_id' => $ingredient->id,
+                            'likes' => 1,
+                            'dislikes' => 0
+                        ]);
+                }
             }
         }
 
         foreach ($request->all() as $key => $value) {
-            if (str_starts_with($key, "ingredient_disliked_")) {
-                $ingredient = Ingredient::where('name', $value)->first();
-                if (!$ingredient) {
-                    $ingredient = new Ingredient();
-                    $ingredient->name = $value;
-                    $ingredient->save();
-                }
+            if (isset($value)) {
+                if (str_starts_with($key, "ingredient_disliked_")) {
+                    $ingredient = Ingredient::where('name', $value)->first();
+                    if (!$ingredient && isset($value)) {
+                        $ingredient = new Ingredient();
+                        $ingredient->name = $value;
+                        $ingredient->save();
+                    }
 
-                if (!DB::table('ingredient_user')->where('user_id', auth()->id())
-                ->where('ingredient_id', $ingredient->id)->first())
-                DB::table('ingredient_user')->insert([
-                    'user_id' => auth()->id(),
-                    'ingredient_id' => $ingredient->id,
-                    'likes' => 0,
-                    'dislikes' => 1
-                ]);
+                    if (!DB::table('ingredient_user')->where('user_id', auth()->id())
+                        ->where('ingredient_id', $ingredient->id)->first())
+                        DB::table('ingredient_user')->insert([
+                            'user_id' => auth()->id(),
+                            'ingredient_id' => $ingredient->id,
+                            'likes' => 0,
+                            'dislikes' => 1
+                        ]);
+                }
             }
-        }        
+        }
     }
 }

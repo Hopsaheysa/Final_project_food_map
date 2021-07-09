@@ -36,7 +36,7 @@ function Home() {
         }
       });
       const data = await response.json();
-      console.log(data[0][0]);
+      console.log(data);
       setRecipesResult(data);
 
     }
@@ -53,8 +53,7 @@ function Home() {
 
   const handleClick = (country) => {
     setCountryResult(country);
-    loadRecipes(country.id)
-
+    loadRecipes(country.id);
   }
 
 

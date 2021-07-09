@@ -17,8 +17,8 @@ class CreateIngredientUserTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('ingredient_id');
-            $table->boolean('likes');
-            $table->boolean('dislikes');
+            $table->boolean('likes')->nullable();
+            $table->boolean('dislikes')->nullable();
             $table->timestamps();
         });
     }
