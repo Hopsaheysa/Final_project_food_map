@@ -502,7 +502,7 @@ function Home() {
           switch (_context2.prev = _context2.next) {
             case 0:
               if (!countryResult) {
-                _context2.next = 8;
+                _context2.next = 9;
                 break;
               }
 
@@ -520,9 +520,10 @@ function Home() {
 
             case 6:
               data = _context2.sent;
+              console.log(data[0][0]);
               setRecipesResult(data);
 
-            case 8:
+            case 9:
             case "end":
               return _context2.stop();
           }

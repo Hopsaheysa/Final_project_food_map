@@ -16,6 +16,8 @@ class CountryController extends Controller
      */
     public function search($term)
     {
+
+
         $countries = Country::where('name', 'like', '%' . $term . '%')->get();
         return $countries;
     }
@@ -52,10 +54,17 @@ class CountryController extends Controller
     {
         $country = Country::findOrFail($country_id);
 
+        // $user = auth()->user();
+        // if ($user) {
+        //     $recipes = $country->recipes()->with
+        // }
+
+
+
         $recipes = $country->recipes()->with("ingredients")->get();
 
 
-        return ($recipes);
+        return ([$recipes]);
     }
 
     /**
