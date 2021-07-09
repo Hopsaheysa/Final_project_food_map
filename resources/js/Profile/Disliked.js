@@ -14,7 +14,7 @@ function Disliked() {
     const inputList = () => {
         const list = [];
         for (let i = 0; i < inputsNumber; i++) {
-            list.push(<Input key={i} position={i} />)
+            list.push(<Input key={i} position={i} liked="disliked"/>)
         }
         setInputArray(list);
     }
@@ -25,12 +25,12 @@ function Disliked() {
 
     return (
         <>
-            <div className="input">
-                <p>Disliked ingredients</p>
+            <div className="profile__inputs">
+                <p>✕ I don't care for these ingredients...</p>
                 {inputArray}
             </div>
 
-            <button onClick={(e) => addIngredient(e)}>+</button>
+            <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button>
         </>
     )
 }

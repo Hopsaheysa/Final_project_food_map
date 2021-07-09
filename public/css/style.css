@@ -280,11 +280,13 @@ html {
 .no_results p {
   text-align: center;
 }
-
-.recipe {
-  background-color: #d8d174;
+.no_results a {
+  text-decoration: none;
+  color: #404040;
 }
+
 .recipe__container {
+  background-color: #e6d3a3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,45 +311,46 @@ html {
   padding: 1.5rem;
 }
 .recipe__ingredient img {
-  border-radius: 3rem;
-  width: 300px;
+  width: 700px;
+  border-radius: 20px;
 }
-.recipe__ingredient img:hover {
-  transform: scale(1.2);
-  cursor: pointer;
+.recipe__container__bottom {
+  background-color: #f2f4f3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .recipe__instructions {
   margin: 2rem 0;
+  line-height: 2.5;
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.recipe__bon {
-  margin-bottom: 3rem;
+.recipe__container__bon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer {
   background-color: #404040;
-  padding: 50px;
+  padding: 1em;
   font-size: 80%;
+}
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .footer__nav {
   list-style: none;
-  float: left;
+  display: flex;
+  flex-direction: column;
 }
-.footer__links {
-  list-style: none;
-  float: right;
-}
-.footer__nav li, .footer__links li {
+.footer__nav li, .footer__nav__social li {
   display: inline-block;
-  margin-right: 20px;
+  padding: 0.5em;
 }
-.footer__nav li:last-child, .footer__links li:last-child {
-  margin-right: 0;
-}
-.footer__nav li a:link, .footer__nav li a:visited, .footer__links li a:link, .footer__links li a:visited {
+.footer__nav li a:link, .footer__nav li a:visited {
   text-decoration: none;
   border: 0;
   color: #d8d174;
@@ -356,8 +359,10 @@ html {
 .footer__nav li a:hover, .footer__nav li a:active {
   color: #919720;
 }
-.footer__links li a:hover, .footer__links li a:active {
-  font-size: 160%;
+.footer__copyright {
+  color: #d8d174;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .facebook,
@@ -365,6 +370,10 @@ html {
 .google,
 .instagram {
   transition: color 0.2s;
+  text-decoration: none;
+  font-size: 18px;
+  border: 0;
+  color: #d8d174;
 }
 
 .facebook:hover {
@@ -383,9 +392,208 @@ html {
   color: #517fa4;
 }
 
-footer p {
-  color: #d8d174;
+.login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/hero.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+.login__form {
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  width: 90%;
+  max-width: 320px;
+  background: #f2f4f3;
+  position: relative;
+  padding-bottom: 80px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.login__title {
+  color: #404040;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 30px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.login__input {
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  color: #404040;
+}
+.login__register {
+  font-size: 0.8em;
+  color: #404040;
+}
+.login__register a {
+  color: #919720;
+  text-decoration: none;
+}
+.login__btn {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  background: #919720;
+  color: #f2f4f3;
+  font-size: 120%;
+  display: block;
+  border: none;
+  margin-top: 1em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 60px;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 2px 2px;
+  border-bottom-width: 7px;
+}
+.login__btn:hover {
+  cursor: pointer;
+}
+
+.register {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/platter.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.register__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+.register__title {
+  color: #404040;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0 10px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.register__form {
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  margin: 4em 0;
+  width: 90%;
+  max-width: 320px;
+  background: #f2f4f3;
+  position: relative;
+  padding-bottom: 80px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.register__input {
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  color: #404040;
+}
+.register__preferences {
+  font-size: 80%;
+  line-height: 2;
+}
+.register__btn {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  background: #919720;
+  color: #f2f4f3;
+  font-size: 120%;
+  display: block;
+  border: none;
+  margin-top: 1em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 60px;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 2px 2px;
+  border-bottom-width: 7px;
+}
+.register__btn:hover {
+  cursor: pointer;
+}
+
+.profile {
+  background-color: #f2f4f3;
+}
+.profile__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+.profile h1 {
+  margin-top: 2em;
+  font-size: 300%;
+}
+.profile h2,
+.profile span {
+  color: #919720;
+}
+.profile__form {
+  line-height: 2.5;
+}
+.profile__preferences {
+  margin-top: 4em;
+}
+.profile__input {
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  color: #404040;
+}
+.profile__add {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 2em;
+  background: #919720;
   text-align: center;
+  border: none;
+  font-size: 20px;
+  color: #f2f4f3;
+}
+.profile__btn {
+  background: #919720;
+  color: #f2f4f3;
+  margin-top: 2em;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 100%;
+  margin-left: 20em;
+}
+.profile button {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map*/

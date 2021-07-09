@@ -14,7 +14,7 @@ function Liked() {
     const inputList = () => {
         const list = [];
         for (let i = 0; i < inputsNumber; i++) {
-            list.push(<Input key={i} position={i} />)
+            list.push(<Input key={i} position={i} liked="liked"/>)
         }
         setInputArray(list);
     }
@@ -25,12 +25,12 @@ function Liked() {
 
     return (
         <>
-            <div className="input">
-                <p>Liked ingredients</p>
+            <div className="profile__inputs">
+                <p>♡ I love these ingredients...</p>
                 {inputArray}
             </div>
 
-            <button onClick={(e) => addIngredient(e)}>+</button>
+            <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button>
         </>
     )
 }

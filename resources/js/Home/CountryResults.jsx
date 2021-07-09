@@ -40,7 +40,7 @@ const [recipe, setRecipe] = useState('')
     </div>
      {
        recipe ? 
-       <RecipeResults recipe={recipe} />
+       <RecipeResults recipe={recipe}  />
      :
      null 
     }
