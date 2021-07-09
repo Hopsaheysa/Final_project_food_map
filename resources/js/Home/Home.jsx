@@ -23,6 +23,7 @@ function Home() {
 
   useEffect(() => {
     loadCountries();
+    window.startObserver();
   }, [])
   
 

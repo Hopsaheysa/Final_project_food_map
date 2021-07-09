@@ -372,6 +372,7 @@ function Hero() {
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "hero__container",
+    id: "hero",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "hero__quote",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("blockquote", {
@@ -490,6 +491,7 @@ function Home() {
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     loadCountries();
+    window.startObserver();
   }, []);
 
   var loadRecipes = /*#__PURE__*/function () {

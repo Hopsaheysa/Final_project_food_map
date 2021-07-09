@@ -14,7 +14,7 @@ const [quoteIndex, setQuoteIndex] = useState(0)
 
   return (
 
-    <div className="hero__container">
+    <div className="hero__container" id="hero">
       <div className="hero__quote">
         <blockquote>"{quotesData[quoteIndex].quote}"</blockquote>
         <cite>- {quotesData[quoteIndex].cite}</cite>    

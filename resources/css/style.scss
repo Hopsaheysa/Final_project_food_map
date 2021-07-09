@@ -90,9 +90,40 @@ html {
     }
 
     a:hover {
-        color: #fffef9;
+        color: #404040;
         transition: color 0.2s;
     }
+}
+
+header {
+    --text: #f4f4f4;
+    --text-inverse: #333;
+    --background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+
+    &:hover {
+        background: var(--text);
+        color: var(--text-inverse);
+        border-color: var(--text);
+    }
+}
+
+.nav-scrolled {
+    --text: #333;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 // SEARCH BAR
