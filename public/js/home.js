@@ -518,7 +518,7 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              console.log(data[0][0]);
+              console.log(data);
               setRecipesResult(data);
 
             case 9:

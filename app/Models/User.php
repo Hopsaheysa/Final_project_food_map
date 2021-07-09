@@ -65,6 +65,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Ingredient::class);
     }
+    public function dislikesIngredients()
+    {
+        return $this->belongsToMany(Ingredient::class)->wherePivot('dislikes', 1);
+    }
     public function comments()
     {
         return $this->hasMany(Comment::class);

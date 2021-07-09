@@ -22,7 +22,7 @@ class DataProvider
                 'isGlutenFree' => false,
                 'isNutFree' => true,
                 'countries' => ["Czech Republic"],
-                'ingredients' => [[3, "piece", "dried mushroom"], [300, "g", "hulled grain (barley)"], [4, "tablespoon", "lard"], [2, "whole", "onions"], [2, "cloves", "garlic"], [0.5, "teaspoon", "ground caraway"], [1, "teaspoon", "dried marjoram"], [null, null, "salt"], [null, null, "pepper"]]
+                'ingredients' => [[3, "piece", "mushrooms"], [300, "g", "hulled grain (barley)"], [4, "tablespoon", "lard"], [2, "whole", "onions"], [2, "cloves", "garlic"], [0.5, "teaspoon", "ground caraway"], [1, "teaspoon", "dried marjoram"], [null, null, "salt"], [null, null, "pepper"]]
             ], [
                 'name' => "Fried carp with potato salad",
                 'instructions' => "Preferably the day before, boil potatoes in skin for about 15‑20 minutes, depending on their size, check with a knife whether they are soft. Let them cool down, peel and cut into cubes about 1 × 1 cm.
@@ -88,7 +88,7 @@ class DataProvider
                 'isGlutenFree' => true,
                 'isNutFree' => true,
                 'countries' => ["Czech Republic",],
-                'ingredients' => [[120, "g", "sourdough"], [40, "g", "butter"], [70, "g", "dried mushroom"], [300, "g", "potatoes"], [1, null, "onion"], [900, "ml", "water"], [200, "ml", "milk"], [2, null, "eggs"], [null, null, "salt"], [null, null, "caraway"]]
+                'ingredients' => [[120, "g", "sourdough"], [40, "g", "butter"], [70, "g", "mushrooms"], [300, "g", "potatoes"], [1, null, "onion"], [900, "ml", "water"], [200, "ml", "milk"], [2, null, "eggs"], [null, null, "salt"], [null, null, "caraway"]]
             ], [
                 'name' => "Tortilla de patatas",
                 'instructions' => "For this recipe, I used a 9 inch pan. It's a good size for a nice and thick omelette. And I used a bigger pan to cook the potatoes.
