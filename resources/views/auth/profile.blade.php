@@ -37,7 +37,6 @@
     {{-- this id is used as a link to index.js if you want to change it change also index.js --}}
     <div id="profile-form"> 
 
-    
     </div>
 
     

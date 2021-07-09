@@ -11,8 +11,8 @@ function Input(props) {
     return (
         <>
             <div className={`liked-input ${props.position}`} >
-                <label key={props.position} htmlFor="ingredient ">Ingredient</label>
-                <input type="text" name="ingredient" /><br />
+                <label key={props.position} htmlFor="ingredient ">Ingredient {props.position + 1}</label>
+                <input type="text" name={`ingredient ${props.position}`} /><br />
             </div>
 
         </>
