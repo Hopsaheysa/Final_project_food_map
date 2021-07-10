@@ -69,7 +69,7 @@ function Home() {
         <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
         <div className="filter">
           <input
-            type="text"
+            type="search"
             className="filter__input"
             placeholder="e.g Czech Republic"
             onChange={(event) => { setSearchTerm(event.target.value) }}

@@ -8,17 +8,11 @@ function RecipeResults(props) {
     <>
       <div className="recipe">
         <div className="recipe__container">
+          <div className="recipe__card">
           <h1 className="recipe__heading">{props.recipe.name}</h1>
-          <h3>Easy peasy lemon squeezy</h3>
+          <h3 className="recipe__easy">It's easy peasy lemon squeezy!</h3>
               <div className="recipe__requirements">
-                <p className="recipe__is"> Vegan? 
-                    {
-                      props.recipe.isVegan ?
-                        <p className="recipe__dietary">✓</p>
-                      :
-                        <p className="recipe__dietary">✕</p>
-                    }
-                  </p>
+
                   <p className="recipe__is">Vegetarian?
                     {
                       props.recipe.isVegeterian ?
@@ -51,19 +45,24 @@ function RecipeResults(props) {
                         <p className="recipe__dietary">✕</p>
                     }
                      </p>
+
+                    <p className="recipe__is"> Vegan? 
+                    {
+                      props.recipe.isVegan ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                  </p>
             
             </div>
          
           <div className="recipe__ingredients">
-            <div className="recipe__ingredient">
 
-              <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />
-              
-            </div>
 
             <div className="recipe__ingredient">
              
-              <h3>What you'll need...</h3>
+              <h3>Ingredients</h3>
 
               {
                 props.recipe.ingredients.map((n, i) => (
@@ -89,13 +88,19 @@ function RecipeResults(props) {
               }
 
                   </div>
+
+                              <div className="recipe__ingredient">
+
+              <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />
+              
+            </div>
                 
             </div>
           </div>
           <div className="recipe__container__bottom">
           <div className="recipe__instructions">
              <h2>Roll up your sleeves and start cooking your {props.recipe.name}!</h2>
-            <h3>✓ Step by step</h3>
+            <h3>Step by step</h3>
             <ol>
               {
                 instructionsSteps.map((step, i) => (
@@ -109,11 +114,11 @@ function RecipeResults(props) {
 
             </ol>
             <div className="recipe__container__bon">
-              <h3>...Bon appétit! ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
+              <h3>...Enjoy your meal! ...Bon appétit!  ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
             </div>
           </div>
           
-
+              </div>
 
               </div>
             
