@@ -334,12 +334,32 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        h3 {
+            color: #919720;
+        }
     }
 
     &__heading {
         font-size: 300%;
         margin-top: 5rem;
         text-align: center;
+        justify-content: space-between;
+    }
+
+    &__requirements {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__is {
+        display: flex;
+        flex-direction: column;
+        margin: 2.5rem 2rem;
+    }
+
+    &__dietary {
+        color: #919720;
     }
 
     &__ingredients {
@@ -353,6 +373,10 @@ header {
     }
 
     &__ingredient {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
         padding: 1.5rem;
 
         img {

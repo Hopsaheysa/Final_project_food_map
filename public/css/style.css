@@ -322,10 +322,26 @@ header:hover {
   justify-content: center;
   align-items: center;
 }
+.recipe__container h3 {
+  color: #919720;
+}
 .recipe__heading {
   font-size: 300%;
   margin-top: 5rem;
   text-align: center;
+  justify-content: space-between;
+}
+.recipe__requirements {
+  display: flex;
+  flex-direction: row;
+}
+.recipe__is {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 2rem;
+}
+.recipe__dietary {
+  color: #919720;
 }
 .recipe__ingredients {
   display: flex;
@@ -338,6 +354,9 @@ header:hover {
   }
 }
 .recipe__ingredient {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1.5rem;
 }
 .recipe__ingredient img {

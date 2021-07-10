@@ -10,12 +10,57 @@ function RecipeResults(props) {
         <div className="recipe__container">
           <h1 className="recipe__heading">{props.recipe.name}</h1>
           <h3>Easy peasy lemon squeezy</h3>
+              <div className="recipe__requirements">
+                <p className="recipe__is"> Vegan? 
+                    {
+                      props.recipe.isVegan ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                  </p>
+                  <p className="recipe__is">Vegetarian?
+                    {
+                      props.recipe.isVegeterian ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                     </p>
+                  <p className="recipe__is">Lactose Free? 
+                    {
+                      props.recipe.isLactoseFree ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                    </p>
+                  <p className="recipe__is">Gluten Free? 
+                    {
+                      props.recipe.isGlutenFree ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                    </p>
+                    <p className="recipe__is">Nut Free?
+                    {
+                      props.recipe.isNutFree ?
+                        <p className="recipe__dietary">✓</p>
+                      :
+                        <p className="recipe__dietary">✕</p>
+                    }
+                     </p>
+            
+            </div>
          
           <div className="recipe__ingredients">
             <div className="recipe__ingredient">
+
               <img src={`/images-food/${props.recipe.image}`} alt={props.recipe.name} />
               
             </div>
+
             <div className="recipe__ingredient">
              
               <h3>What you'll need...</h3>
