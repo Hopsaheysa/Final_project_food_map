@@ -27,7 +27,7 @@ class UserController extends Controller
             'isGlutenFree' => isset($input['isGlutenFree']),
             'isNutFree' => isset($input['isNutFree'])
         ]);
-        dd($request->all());
+        // dd($request->all());
 
         foreach ($request->all() as $key => $value) {
             if (str_starts_with($key, "ingredient_liked_")) {
@@ -67,6 +67,7 @@ class UserController extends Controller
                     'dislikes' => 1
                 ]);
             }
-        }        
+        } 
+        return redirect()->action("UserController@indexProfile");
     }
 }
