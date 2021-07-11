@@ -66,11 +66,19 @@ class CountryController extends Controller
                     $join->on('recipes.id', '=', 'ingredient_recipe.recipe_id')
                         ->whereIn('ingredient_recipe.ingredient_id', $dislikedIngredient->pluck("id"));
                 })->whereNull('ingredient_recipe.id')->get();
+
+            //THIS WILL BE LOOPING THROUGH RECIPES TO KNOW ABOUT USERS VEGANISM AND SUCH  
+            // foreach ($recipes as $recipe) {
+            //     if ($user->isVegan && !$recipe->isVegan)
+            // }
+            // if ($user->isVegan && $user->isVegan == $recipes->)
+
+
         } else {
             // if user is not logged in we will get all recipes
             $recipes = $country->recipes()->with("ingredients")->get();
         }
-        // dd($recipes);
+        // dd($user);
         return $recipes;
     }
 
