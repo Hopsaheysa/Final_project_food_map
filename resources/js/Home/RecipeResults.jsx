@@ -13,7 +13,7 @@ function RecipeResults(props) {
           <h3 className="recipe__easy">It's easy peasy lemon squeezy!</h3>
               <div className="recipe__requirements">
 
-                  <p className="recipe__is">Vegetarian?
+                  <p className="recipe__is">Vegetarian
                     {
                       props.recipe.isVegeterian ?
                         <p className="recipe__dietary">✓</p>
@@ -21,7 +21,7 @@ function RecipeResults(props) {
                         <p className="recipe__dietary">✕</p>
                     }
                      </p>
-                  <p className="recipe__is">Lactose Free? 
+                  <p className="recipe__is">Lactose Free 
                     {
                       props.recipe.isLactoseFree ?
                         <p className="recipe__dietary">✓</p>
@@ -29,7 +29,7 @@ function RecipeResults(props) {
                         <p className="recipe__dietary">✕</p>
                     }
                     </p>
-                  <p className="recipe__is">Gluten Free? 
+                  <p className="recipe__is">Gluten Free 
                     {
                       props.recipe.isGlutenFree ?
                         <p className="recipe__dietary">✓</p>
@@ -37,7 +37,7 @@ function RecipeResults(props) {
                         <p className="recipe__dietary">✕</p>
                     }
                     </p>
-                    <p className="recipe__is">Nut Free?
+                    <p className="recipe__is">Nut Free
                     {
                       props.recipe.isNutFree ?
                         <p className="recipe__dietary">✓</p>
@@ -46,7 +46,7 @@ function RecipeResults(props) {
                     }
                      </p>
 
-                    <p className="recipe__is"> Vegan? 
+                    <p className="recipe__is"> Vegan 
                     {
                       props.recipe.isVegan ?
                         <p className="recipe__dietary">✓</p>
@@ -111,9 +111,14 @@ function RecipeResults(props) {
 
                 ))
               }
+             
 
             </ol>
+       
+            
+           
             <div className="recipe__container__bon">
+               <img src="../img/chef.png" />
               <h3>...Enjoy your meal! ...Bon appétit!  ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
             </div>
           </div>
