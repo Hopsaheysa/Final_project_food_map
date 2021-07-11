@@ -27,11 +27,6 @@ class UserController extends Controller
             'isGlutenFree' => isset($input['isGlutenFree']),
             'isNutFree' => isset($input['isNutFree'])
         ]);
-<<<<<<< HEAD
-        // dd($request->all());
-=======
-
->>>>>>> 3bb54c1824fb60a4fcbca915fb985a77a71221f5
 
         foreach ($request->all() as $key => $value) {
             if (isset($value)) {
