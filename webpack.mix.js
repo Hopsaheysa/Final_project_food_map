@@ -33,6 +33,7 @@ if (!mix.inProduction()) {
 mix.sass('resources/css/style.scss', 'public/css');
 mix.js('resources/js/Home/index.jsx', 'public/js/home.js').react();
 mix.js('resources/js/Profile/index.js', 'public/js/profile.js').react()
+mix.js('resources/js/Nav/nav.js', 'public/js/nav.js')
 
 
 

@@ -25,12 +25,12 @@ function Disliked() {
 
     return (
         <>
-            <div className="input">
-                <p>Disliked ingredients</p>
+            <div className="profile__inputs">
+                <p><span className="profile__emoji">✕</span> I don't care for these ingredients...</p>
                 {inputArray}
             </div>
 
-            <button onClick={(e) => addIngredient(e)}>+</button>
+            <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button>
         </>
     )
 }

@@ -23,8 +23,9 @@ function Home() {
 
   useEffect(() => {
     loadCountries();
+    window.startObserver();
   }, [])
-  
+
 
 
   const loadRecipes = async (countryResult) => {
@@ -35,13 +36,13 @@ function Home() {
         }
       });
       const data = await response.json();
-
+      console.log(data);
       setRecipesResult(data);
 
     }
   }
 
-  useEffect(() =>  {
+  useEffect(() => {
     // let rect = document.querySelector('.results__container').getBoundingClientRect();
     // window.scrollTo(0, rect.top + rect.height);
     window.scrollTo(0, 1500);
@@ -52,8 +53,7 @@ function Home() {
 
   const handleClick = (country) => {
     setCountryResult(country);
-    loadRecipes(country.id)
-    
+    loadRecipes(country.id);
   }
 
 
@@ -63,46 +63,46 @@ function Home() {
 
   return (
     <>
-      {/* <div className="main"> */}
-        <div className="home__container">
-          <h1 className="home__container__header">World <span>Kitchen</span></h1>
-          <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
-          <div className="filter"> 
-            <input
-              type="text"
-              className="filter__input"
-              placeholder="e.g Czech Republic"
-              onChange={(event) => { setSearchTerm(event.target.value) }}
+    
+      <div className="home__container">
+        <h1 className="home__container__header">World <span>Kitchen</span></h1>
+        <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
+        <div className="filter">
+          <input
+            type="search"
+            className="filter__input"
+            placeholder="e.g Czech Republic"
+            onChange={(event) => { setSearchTerm(event.target.value) }}
 
-            />
-          </div>
-
-          {countriesAll.filter((val) => {
-            if (searchTerm == "") {
-              return null
-            } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-              return val
-            }
-          }).map((val, key) => {
-            return <div key={key} className="list">
-              <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}</div>
-            </div>
-          })}
-
-
-
-
-
+          />
         </div>
 
-      {/* </div> */}
-       <Hero />
+        {countriesAll.filter((val) => {
+          if (searchTerm == "") {
+            return null
+          } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return val
+          }
+        }).map((val, key) => {
+          return <div key={key} className="list">
+            <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}</div>
+          </div>
+        })}
+
+
+
+
+
+      </div>
+
+
+      <Hero />
       {recipesResult && recipesResult.length > 0 ?
         <CountryResults recipes={recipesResult} countries={countryResult} />
         : <NoResults countries={countryResult} />
 
       }
-     
+
 
     </>
 

@@ -25,12 +25,12 @@ function Liked() {
 
     return (
         <>
-            <div className="input">
-                <p>Liked ingredients</p>
+            <div className="profile__inputs">
+                <p><span className="profile__emoji">♡</span> I love these ingredients...</p>
                 {inputArray}
             </div>
 
-            <button onClick={(e) => addIngredient(e)}>+</button>
+            <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button>
         </>
     )
 }
