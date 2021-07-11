@@ -23,6 +23,7 @@ function Home() {
 
   useEffect(() => {
     loadCountries();
+    window.startObserver();
   }, [])
 
 
@@ -62,13 +63,13 @@ function Home() {
 
   return (
     <>
-      {/* <div className="main"> */}
+    
       <div className="home__container">
         <h1 className="home__container__header">World <span>Kitchen</span></h1>
         <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
         <div className="filter">
           <input
-            type="text"
+            type="search"
             className="filter__input"
             placeholder="e.g Czech Republic"
             onChange={(event) => { setSearchTerm(event.target.value) }}
@@ -94,7 +95,7 @@ function Home() {
 
       </div>
 
-      {/* </div> */}
+
       <Hero />
       {recipesResult && recipesResult.length > 0 ?
         <CountryResults recipes={recipesResult} countries={countryResult} />

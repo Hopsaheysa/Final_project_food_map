@@ -14,7 +14,7 @@ const [recipe, setRecipe] = useState('')
   useEffect(() => {
     window.scrollTo(0, 2000);
   }, [recipe])
-// console.log("props", props)
+
 
   return (
     <div className="results__container">
@@ -27,8 +27,11 @@ const [recipe, setRecipe] = useState('')
               {
                 props.recipes.map((recipe, i) => (
                     <div key={i} className= "country__option" onClick={(event) => handleClick(event, recipe)}>
+                    
+                     <div className="country__card">
+                         <img src={`/images-food/${recipe.image}`} alt={recipe.name}/>
                       <h3>{recipe.name}</h3>
-                    <img src={`/images-food/${recipe.image}`} alt={recipe.name}/>
+                    </div>
                   </div>
                 ))
               }

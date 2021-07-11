@@ -1,6 +1,7 @@
-  
-        <nav class="main_nav">
-            @if (Route::has('login'))
+
+    <header>
+        <nav class="main_nav" id="main_nav">
+
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/profile') }}" class="text-sm text-gray-700 underline">My Account</a>
@@ -11,14 +12,30 @@
                             @csrf
                         </form>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @if (!str_contains(url()->current(), 'login'))
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                           
                         @endif
+
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                         {{-- <a href="{{ route('register') }}" class="text-sm text-gray-700 underline">Home</a> --}}
+
                     @endauth
                 </div>
-            @endif
 
         </nav>
+
+           
+
+    </header>
+
+      <script src="{{mix('js/nav.js')}}"></script>
+
+ 
+
+  
+
+
+
     

@@ -28,7 +28,6 @@ class UserController extends Controller
             'isNutFree' => isset($input['isNutFree'])
         ]);
 
-
         foreach ($request->all() as $key => $value) {
             if (isset($value)) {
                 if (str_starts_with($key, "ingredient_liked_")) {
@@ -71,6 +70,7 @@ class UserController extends Controller
                         ]);
                 }
             }
-        }
+        } 
+        return redirect()->action("UserController@indexProfile");
     }
 }
