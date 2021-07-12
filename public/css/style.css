@@ -305,6 +305,8 @@ header:hover {
   width: 300px;
   height: 250px;
   padding: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: scale(1.15);
   transition: transform 0.5s, opacity 0.5s;
 }
@@ -465,11 +467,20 @@ header:hover {
 .recipe__easy {
   text-align: center;
 }
+@media (max-width: 700px) {
+  .recipe__easy {
+    font-size: 90%;
+  }
+}
 .recipe__heading {
   font-size: 270%;
   margin-top: 3rem;
   text-align: center;
-  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .recipe__heading {
+    font-size: 150%;
+  }
 }
 .recipe__requirements {
   display: flex;
@@ -558,10 +569,7 @@ header:hover {
   }
 }
 .recipe__container__bottom {
-  width: 62%;
-  background-color: #f2f4f3;
-  margin: 5em 0;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: #e6d3a3;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -576,10 +584,19 @@ header:hover {
     margin: 2em auto;
   }
 }
+@media (max-width: 700px) {
+  .recipe__container__bottom {
+    font-size: 90%;
+  }
+}
 .recipe__instructions {
   margin: 2rem 0;
   line-height: 2;
   width: 75%;
+  background-color: #f2f4f3;
+  padding: 3.5em 6.5em;
+  margin: 5em 0;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 .recipe__container__bon {
   display: flex;
@@ -616,6 +633,12 @@ header:hover {
 .footer__nav li, .footer__nav__social li {
   display: inline-block;
   padding: 0.5em;
+}
+.footer__nav li {
+  color: #d8d174;
+}
+.footer__nav li:hover {
+  color: #919720;
 }
 .footer__nav li a:link, .footer__nav li a:visited {
   text-decoration: none;
@@ -866,17 +889,41 @@ header:hover {
   cursor: pointer;
 }
 
-.card {
+.about {
+  background-color: #d8d174;
+}
+.about__container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 40%;
+  width: 20%;
+  background-color: #f2f4f3;
 }
-
-.card:hover {
+.about__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
-.container {
+.about__card img {
+  width: 286px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about__card h4 {
+  text-align: center;
+  font-size: 130%;
+}
+.about__card p {
+  font-size: 90%;
+}
+.about__card b {
+  color: #919720;
+}
+.about__person {
   padding: 2px 16px;
 }
 

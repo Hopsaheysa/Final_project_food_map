@@ -305,6 +305,7 @@ header {
             width: 300px;
             height: 250px;
             padding: 1.5rem;
+            object-fit: cover;
             transform: scale(1.15);
             transition: transform 0.5s, opacity 0.5s;
 
@@ -458,21 +459,24 @@ header {
             margin: 2em 20em;
             max-width: inherit;
         }
-
-        // @media (max-width: 716px) {
-        //     margin: 2em auto;
-        // }
     }
 
     &__easy {
         text-align: center;
+
+        @media (max-width: 700px) {
+            font-size: 90%;
+        }
     }
 
     &__heading {
         font-size: 270%;
         margin-top: 3rem;
         text-align: center;
-        justify-content: space-between;
+
+        @media (max-width: 700px) {
+            font-size: 150%;
+        }
     }
 
     &__requirements {
@@ -559,10 +563,8 @@ header {
     }
 
     &__container__bottom {
-        width: 62%;
-        background-color: #f2f4f3;
-        margin: 5em 0;
-        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+        background-color: #e6d3a3;
+
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -574,12 +576,21 @@ header {
         @media (max-width: 716px) {
             margin: 2em auto;
         }
+
+        @media (max-width: 700px) {
+            font-size: 90%;
+        }
     }
 
     &__instructions {
         margin: 2rem 0;
         line-height: 2;
         width: 75%;
+
+        background-color: #f2f4f3;
+        padding: 3.5em 6.5em;
+        margin: 5em 0;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     }
 
     &__container__bon {
@@ -623,6 +634,14 @@ header {
     &__nav__social li {
         display: inline-block;
         padding: 0.5em;
+    }
+
+    &__nav li {
+        color: #d8d174;
+
+        &:hover {
+            color: #919720;
+        }
     }
 
     &__nav li a:link,
@@ -915,16 +934,47 @@ header {
 
 // ABOUT
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 40%;
-}
+.about {
+    background-color: #d8d174;
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
+    &__container {
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.container {
-    padding: 2px 16px;
+    &__card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 20%;
+        background-color: #f2f4f3;
+
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 286px;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 130%;
+        }
+
+        p {
+            font-size: 90%;
+        }
+
+        b {
+            color: #919720;
+        }
+    }
+
+    &__person {
+        padding: 2px 16px;
+    }
 }
