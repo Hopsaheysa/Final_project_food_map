@@ -61,39 +61,31 @@ class CountryController extends Controller
             $dislikedIngredient = $user->dislikesIngredients;
             // all recipes from country => this will be changed 
             // according to preference if user is logged in 
-            $recipes = $country->recipes()->with("ingredients")
+            $recipeQuery = $country->recipes()->with("ingredients")
                 ->leftJoin('ingredient_recipe', function ($join) use ($dislikedIngredient) {
                     $join->on('recipes.id', '=', 'ingredient_recipe.recipe_id')
                         ->whereIn('ingredient_recipe.ingredient_id', $dislikedIngredient->pluck("id"));
-                })->whereNull('ingredient_recipe.id')->get();
+                })
+                ->whereNull('ingredient_recipe.id');
 
-
-            foreach ($recipes as $recipe) {
-                if ($user->isVegan && !$recipe->isVegan) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
-                if ($user->isVegetarian && !$recipe->isVegan) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
-                if ($user->isVegetarian && !$recipe->isVegan) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
-                if ($user->isLactoseFree && !$recipe->isLactoseFree) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
-                if ($user->isGlutenFree && !$recipe->isGlutenFree) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
-                if ($user->isNutFree && !$recipe->isNutFree) {
-                    unset($recipes[$recipe]);
-                    continue;
-                }
+            if ($user->isVegan) {
+                $recipeQuery->where('isVegan', true);
             }
+
+            if ($user->isVegetarian) {
+                $recipeQuery->where('isVegetarian', true);
+            }
+
+            if ($user->isLactoseFree) {
+                $recipeQuery->where('isLactoseFree', true);
+            }
+            if ($user->isGlutenFree) {
+                $recipeQuery->where('isGlutenFree', true);
+            }
+            if ($user->isNutFree) {
+                $recipeQuery->where('isNutFree', true);
+            }
+            $recipes = $recipeQuery->get();
         } else {
             // if user is not logged in we will get all recipes
             $recipes = $country->recipes()->with("ingredients")->get();
