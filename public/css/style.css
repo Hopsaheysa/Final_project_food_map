@@ -164,6 +164,11 @@ header:hover {
   font-size: 1.75rem;
   font-weight: bold;
 }
+@media (max-width: 700px) {
+  .country-select {
+    font-size: 1rem;
+  }
+}
 
 .country-select:hover {
   cursor: pointer;
@@ -440,10 +445,14 @@ header:hover {
   padding: 1em 1.5em;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 716px) {
+@media (max-width: 480px) {
   .recipe__card {
-    margin: 2em 20em;
-    max-width: inherit;
+    padding: 2px 16px;
+  }
+}
+@media (max-width: 320px) {
+  .recipe__card {
+    padding: 2px 16px;
   }
 }
 .recipe__easy {
@@ -491,9 +500,21 @@ header:hover {
   justify-content: space-between;
   margin-bottom: 2.5rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
+  .recipe__ingredients {
+    font-size: 80%;
+  }
+}
+@media (max-width: 940px) {
+  .recipe__ingredients {
+    font-size: 60%;
+  }
+}
+@media (max-width: 900px) {
   .recipe__ingredients {
     flex-direction: column;
+    align-items: center;
+    font-size: 100%;
   }
 }
 .recipe__ingredient {
@@ -515,16 +536,14 @@ header:hover {
     width: 350px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .recipe__ingredient img {
-    width: 200px;
-    align-items: center;
+    width: 370px;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 450px) {
   .recipe__ingredient img {
-    width: 150px;
-    padding: 0rem;
+    width: 340px;
   }
 }
 .recipe__ingredient ul {
@@ -571,6 +590,11 @@ header:hover {
     font-size: 90%;
   }
 }
+@media (max-width: 530px) {
+  .recipe__container__bottom {
+    font-size: 60%;
+  }
+}
 .recipe__instructions {
   margin: 2rem 0;
   line-height: 2;
@@ -579,6 +603,19 @@ header:hover {
   padding: 3.5em 6.5em;
   margin: 5em 0;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.recipe__review {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #404040;
+}
+.recipe__review span {
+  font-style: italic;
+  text-decoration: underline;
+}
+.recipe__review span:hover {
+  color: #919720;
 }
 .recipe__container__bon {
   display: flex;

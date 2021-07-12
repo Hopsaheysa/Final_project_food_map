@@ -15,7 +15,7 @@ function RecipeResults(props) {
 
                   <p className="recipe__is">Vegetarian
                     {
-                      props.recipe.isVegeterian ?
+                      props.recipe.isVegaterian ?
                         <p className="recipe__dietary">✓</p>
                       :
                         <p className="recipe__dietary">✕</p>
@@ -116,10 +116,10 @@ function RecipeResults(props) {
             </ol>
        
             
-           
+           <a className="recipe__review" href="">Like this meal? <span>  Leave a review</span></a>
             <div className="recipe__container__bon">
                <img src="../img/chef.png" />
-               <a href="">Leave a review</a>
+               
               <h3>...Enjoy your meal! ...Bon appétit!  ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
             </div>
           </div>
