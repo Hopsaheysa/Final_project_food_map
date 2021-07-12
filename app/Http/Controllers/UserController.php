@@ -70,7 +70,14 @@ class UserController extends Controller
                         ]);
                 }
             }
-        } 
+        }
         return redirect()->action("UserController@indexProfile");
+    }
+
+    public function dislikedIngredients()
+    {
+        return DB::table('ingredient_user')->leftJoin('ingredients', 'ingredient_user.ingredient_id', "=", "ingredients.id")
+            ->where('user_id', auth()->id())
+            ->where('dislikes', 1)->get();
     }
 }

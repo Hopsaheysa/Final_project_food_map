@@ -5,7 +5,6 @@ import Disliked from './Disliked';
 function Profile() {
     return (
         <>
-            <Liked />
             <Disliked />
         </>
     )

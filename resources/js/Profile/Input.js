@@ -15,7 +15,7 @@ function Input(props) {
                 <label key={props.position} htmlFor="ingredient ">
                     Ingredient
                 </label>
-                <input type="text" name={`ingredient ${props.liked} ${props.position}`} className="profile__input" />
+                <input type="text" name={`ingredient ${props.liked} ${props.position}`} className="profile__input" value={props.what}/>
                 <br />
             </div>
          
