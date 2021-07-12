@@ -831,6 +831,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function RecipeResults(props) {
   var instructionsSteps = props.recipe.instructions.split('\n');
+  console.log(props.recipe);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "recipe",
@@ -848,7 +849,7 @@ function RecipeResults(props) {
             className: "recipe__requirements",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
               className: "recipe__is",
-              children: ["Vegetarian", props.recipe.isVegeterian ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: ["Vegetarian", props.recipe.isVegetarian ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                 className: "recipe__dietary",
                 children: "\u2713"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {

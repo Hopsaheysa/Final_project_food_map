@@ -49,7 +49,7 @@ class FoodMapSeeder extends Seeder
             $recipe->instructions = $food["instructions"];
             $recipe->image = $food["image"];
             $recipe->isVegan = $food["isVegan"];
-            $recipe->isVegeterian = $food["isVegeterian"];
+            $recipe->isVegetarian = $food["isVegetarian"];
             $recipe->isLactoseFree = $food["isLactoseFree"];
             $recipe->isGlutenFree = $food["isGlutenFree"];
             $recipe->isNutFree = $food["isNutFree"];
