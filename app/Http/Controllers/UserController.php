@@ -80,4 +80,14 @@ class UserController extends Controller
             ->where('user_id', auth()->id())
             ->where('dislikes', 1)->get();
     }
+
+    public function removeIngredient($id)
+    {
+        $user = auth()->user();
+        $ingredient = Ingredient::where("id", $id);
+
+        dd($ingredient);
+
+        return view()
+    }
 }

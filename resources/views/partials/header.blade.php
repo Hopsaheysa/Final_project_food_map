@@ -6,7 +6,7 @@
                     @auth
                         @if (str_contains(url()->current(), '/profile'))
                             <a href="{{ url('/') }}" class="text-sm text-gray-700 underline">Home</a>
-                        @else
+                        @elseif (str_contains(url()->current(), '/about'))
                             <a href="{{ url('/profile') }}" class="text-sm text-gray-700 underline">My Account</a>
                         @endif
 
