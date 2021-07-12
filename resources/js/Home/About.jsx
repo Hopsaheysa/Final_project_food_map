@@ -5,7 +5,7 @@ function About() {
             <h1>About us</h1>
    
         <div className="about__card">
-            <img src="" alt="Matthew" style="width:100%" />
+            <img src="" alt="Matthew" />
             <div className="container">
                 <h4><b>Matthew Lyne-Watt</b></h4>
                 <p><b>Favourite food:</b> Spaghetti</p>
@@ -14,7 +14,7 @@ function About() {
         </div>
 
         <div className="about__card">
-            <img src="" alt="Marek" style="width:100%" />
+            <img src="" alt="Marek" />
             <div className="container">
                 <h4><b>Marek Stránský</b></h4>
                 <p><b>Favourite food:</b> Ipsem</p>
@@ -23,7 +23,7 @@ function About() {
         </div>
 
         <div className="about__card">
-            <img src="" alt="Richard" style="width:100%" />
+            <img src="" alt="Richard" />
             <div className="container">
                 <h4><b>Richard Paprok</b></h4>
                 <p><b>Favourite food:</b> Ipsem</p>
