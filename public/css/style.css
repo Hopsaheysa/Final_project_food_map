@@ -277,6 +277,7 @@ header:hover {
   }
 }
 .country__options {
+  color: #91972a;
   text-align: center;
   margin-top: 4rem;
   display: flex;
@@ -290,85 +291,21 @@ header:hover {
     align-items: center;
   }
 }
-@media (max-width: 350px) {
-  .country__options {
-    font-size: 80%;
-  }
-}
 .country__option {
   transition: 0.3s;
-  color: #91972a;
+  overflow: hidden;
   margin-bottom: 4rem;
-  font-size: 120%;
-}
-@media (max-width: 1450px) {
-  .country__option {
-    width: 40%;
-  }
-}
-@media (max-width: 1000px) {
-  .country__option {
-    font-size: 90%;
-  }
-}
-@media (max-width: 800px) {
-  .country__option {
-    min-width: 60%;
-    font-size: 80%;
-  }
+  font-size: 150%;
+  position: relative;
 }
 .country__option img {
-  width: 800px;
-  height: 750px;
+  width: 230px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.9;
   transform: scale(1.15);
   transition: transform 0.5s, opacity 0.5s;
-}
-@media (max-width: 1100px) {
-  .country__option img {
-    width: 180px;
-    height: 120px;
-    padding: 1.5rem;
-  }
-}
-@media (max-width: 850px) {
-  .country__option img {
-    width: 230px;
-    height: 190px;
-    padding: 1.5rem;
-  }
-}
-@media (min-width: 800px) {
-  .country__option img {
-    width: 230px;
-    height: 190px;
-  }
-}
-@media (min-width: 750px) {
-  .country__option img {
-    width: 230px;
-    height: 170px;
-  }
-}
-@media (max-width: 570px) {
-  .country__option img {
-    width: 200px;
-    height: 150px;
-    padding: 1.5rem;
-  }
-}
-@media (max-width: 360px) {
-  .country__option img {
-    width: 180px;
-    height: 130px;
-    padding: 2rem;
-  }
-}
-@media (max-width: 330px) {
-  .country__option img {
-    width: 160px;
-    height: 110px;
-    padding: 2rem;
-  }
 }
 .country__option img:hover {
   opacity: 1;
@@ -376,25 +313,18 @@ header:hover {
   cursor: pointer;
 }
 .country__name {
-  margin-top: 1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.322);
+  color: #f2f4f3;
+  visibility: hidden;
+  opacity: 0;
 }
-.country__card {
-  padding: 2px 16px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  margin-left: 9em;
-}
-@media (max-width: 480px) {
-  .country__card {
-    margin-left: 0;
-    padding: 2px 16px;
-  }
-}
-@media (max-width: 320px) {
-  .country__card {
-    margin-left: 0;
-    padding: 2px 16px;
-  }
+.country .country__option:hover .country__name {
+  visibility: visible;
+  opacity: 1;
 }
 
 .no_results {
@@ -433,7 +363,7 @@ header:hover {
   color: #919720;
 }
 .recipe__container {
-  background-color: #91972a;
+  background-color: rgba(190, 190, 190, 0.322);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -571,6 +501,8 @@ header:hover {
 }
 .recipe__container__bottom {
   background-color: #e6d3a3;
+  padding: 3.5em 6.5em;
+  margin: 5em 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -596,13 +528,11 @@ header:hover {
   }
 }
 .recipe__instructions {
-  margin: 2rem 0;
   line-height: 2;
-  width: 75%;
-  background-color: #f2f4f3;
-  padding: 3.5em 6.5em;
-  margin: 5em 0;
+  width: 68%;
+  padding: 3.5em 4.5em;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f2f4f3;
 }
 .recipe__review {
   display: flex;
@@ -672,6 +602,17 @@ header:hover {
   color: #d8d174;
   text-align: center;
   margin-top: 2em;
+}
+@media (max-width: 700px) {
+  .footer__copyright {
+    font-size: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .footer__copyright {
+    font-size: 60%;
+    margin-left: 10em;
+  }
 }
 
 .facebook,
@@ -915,7 +856,7 @@ header:hover {
 }
 
 .about {
-  background-color: #d8d174;
+  background-color: #f2f4f3;
 }
 .about__container {
   height: 100vh;
@@ -927,13 +868,15 @@ header:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 20%;
-  background-color: #f2f4f3;
+  background-color: #919720;
+  opacity: 0.9;
 }
 .about__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 .about__card img {
-  width: 286px;
+  width: 288px;
   height: 260px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -941,12 +884,14 @@ header:hover {
 .about__card h4 {
   text-align: center;
   font-size: 130%;
+  color: #f2f4f3;
 }
 .about__card p {
   font-size: 90%;
+  color: #f2f4f3;
 }
 .about__card b {
-  color: #919720;
+  color: #404040;
 }
 .about__person {
   padding: 2px 16px;
