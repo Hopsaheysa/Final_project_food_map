@@ -19,7 +19,7 @@ class CreateRecipesTable extends Migration
             $table->text('instructions');
             $table->string('image');
             $table->boolean('isVegan');
-            $table->boolean('isVegeterian');
+            $table->boolean('isVegetarian');
             $table->boolean('isLactoseFree');
             $table->boolean('isGlutenFree');
             $table->boolean('isNutFree');
