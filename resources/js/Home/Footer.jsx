@@ -9,7 +9,7 @@ function Footer() {
                 <div className="footer__container">
 
                     <ul className="footer__nav">
-                        <Link to='/about'><li><a href="#">About us</a></li></Link>
+                        <Link to='/about'><li>About us</li></Link>
                         <li><a href="#">Register</a></li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Contact</a></li>

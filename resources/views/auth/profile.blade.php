@@ -44,12 +44,12 @@
            </div>
             <button class="profile__btn">Update</button>
          </form>
- </div>
 
 </div>
 
 
     <script src="{{mix('js/profile.js')}}"></script>
+    
 
 
 @endsection
