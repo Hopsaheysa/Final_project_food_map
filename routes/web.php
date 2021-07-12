@@ -26,3 +26,5 @@ Route::get('/country', "CountryController@index");
 
 Route::get('/profile', "UserController@indexProfile")->middleware("auth");
 Route::post('/userSave', "UserController@store")->middleware("auth");
+
+Route::get('/disliked', "UserController@dislikedIngredients")->middleware("auth");
