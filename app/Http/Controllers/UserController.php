@@ -80,4 +80,16 @@ class UserController extends Controller
             ->where('user_id', auth()->id())
             ->where('dislikes', 1)->get();
     }
+
+    public function removeIngredient($id)
+    {
+        $user = auth()->user();
+        $ingredient = Ingredient::where("id", $id)->get();
+        //this fucking shit is working but is not in fault... 
+        $user->ingredients()->detach($ingredient);
+
+        return [
+            'status' => 'success'
+        ];;
+    }
 }
