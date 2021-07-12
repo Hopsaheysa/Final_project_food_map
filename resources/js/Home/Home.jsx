@@ -45,7 +45,7 @@ function Home() {
   useEffect(() => {
     // let rect = document.querySelector('.results__container').getBoundingClientRect();
     // window.scrollTo(0, rect.top + rect.height);
-    window.scrollTo(0, 1500);
+    window.scrollTo(0, 1400);
 
   }, [recipesResult])
 

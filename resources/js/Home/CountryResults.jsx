@@ -12,7 +12,7 @@ const [recipe, setRecipe] = useState('')
   }
 
   useEffect(() => {
-    window.scrollTo(0, 2000);
+    window.scrollTo(0, 2900);
   }, [recipe])
 
 
