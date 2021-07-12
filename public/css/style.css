@@ -281,8 +281,6 @@ header:hover {
   }
 }
 .country__option {
-  flex-grow: 1;
-  min-width: 33%;
   color: #91972a;
   margin-bottom: 4rem;
   font-size: 110%;
@@ -464,11 +462,6 @@ header:hover {
     max-width: inherit;
   }
 }
-@media (max-width: 716px) {
-  .recipe__card {
-    margin: 2em auto;
-  }
-}
 .recipe__easy {
   text-align: center;
 }
@@ -565,15 +558,28 @@ header:hover {
   }
 }
 .recipe__container__bottom {
+  width: 62%;
   background-color: #f2f4f3;
+  margin: 5em 0;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+@media (max-width: 716px) {
+  .recipe__container__bottom {
+    max-width: inherit;
+  }
+}
+@media (max-width: 716px) {
+  .recipe__container__bottom {
+    margin: 2em auto;
+  }
+}
 .recipe__instructions {
   margin: 2rem 0;
   line-height: 2;
-  width: 60%;
+  width: 75%;
 }
 .recipe__container__bon {
   display: flex;
