@@ -84,10 +84,12 @@ class UserController extends Controller
     public function removeIngredient($id)
     {
         $user = auth()->user();
-        $ingredient = Ingredient::where("id", $id);
+        $ingredient = Ingredient::where("id", $id)->get();
+        //this fucking shit is working but is not in fault... 
+        $user->ingredients()->detach($ingredient);
 
-        dd($ingredient);
-
-        return view()
+        return [
+            'status' => 'success'
+        ];;
     }
 }

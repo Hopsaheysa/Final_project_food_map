@@ -41,23 +41,22 @@ function Disliked() {
         inputList();
     }, [inputsNumber]);
 
-    const removeItem = (e, ingredient) => {
+    const removeItem = async (e, ingredient) => {
         e.preventDefault();
-        console.log(ingredient)
+        console.log(ingredient.id)
 
-
-        const response = await fetch(`/removeIngredient/${ingredient.id}`, {
+        const response = await fetch(`/api/removeIngredient/${ingredient.id}`, {
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify(ingredient.id),
             headers: {
                 'Accept': 'application/json',
                 'Content-type': 'application/json',
-                'X-CSRF-TOKEN': 'd1g2ff3s4a5fa6g7h8a9fds0'
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
         })
 
-        // this deletes it from list on page -> we need to run it through backend
-        // setData(data.filter((ing) => ing.id !== ingredient.id));
+        // this deletes it from list on page -> we need to run it through backend -> done above
+        setData(data.filter((ing) => ing.id !== ingredient.id));
 
     };
 

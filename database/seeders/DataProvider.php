@@ -475,9 +475,7 @@ class DataProvider
                     [2, "cups", "beef stock"], [1, "whole", "garlic bulb"], [1, "tablespoon", "minced fresh oregano"], [1, "teaspoon", "coarse sea salt"],
                     [1, "teaspoon", "coarsely ground pepper"], [3, "cups", "cherry tomatoes"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Greek Shrimp Canapes",
                 'instructions' => " In a large bowl, whisk the first 5 ingredients until blended. Pour 1-1/2 cups
                 marinade into a large bowl. Add shrimp and stir to coat. Cover and refrigerate 45 minutes.
@@ -498,9 +496,7 @@ class DataProvider
                     [0.25, "cup", "Greek seasoning"], [4, "pcs", "garlic cloves"], [1, "pound", "uncooked shrimp"], [2, "pcs", "large cucumbers"],
                     [1, "package", "cream cheese, softened"], [null, null, "Minced fresh parsley"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Greek-Style Lentil Soup",
                 'instructions' => " Place the water, broth, lentils, carrots, onion, celery and 1/2 teaspoon oregano
                 in a 5- or 6-qt. slow cooker. Cook, covered, on low 4-5 hours or until lentils are tender.
@@ -519,9 +515,7 @@ class DataProvider
                     [1, "cup", "chopped fresh spinach"], [0.5, "cup", "tomato sauce"], [1, "can", "sliced ripe olives"], [3, "tablespoons", "red wine vinegar"],
                     [2, "pcs", "garlic cloves"], [0.5, "teaspoon", "salt"], [0.25, "teaspoon", "pepper"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Melomakarona",
                 'instructions' => " Preheat oven to 350°. In a saucepan, combine sugar, water and honey; bring to a boil. Reduce heat; simmer, uncovered, 10 minutes. Cool completely.
                 Meanwhile, for cookies, in a large bowl, beat confectioners' sugar and oil until blended. Beat in Cognac, orange juice and honey. In another bowl, whisk flour, orange zest, baking powder and cinnamon; gradually beat into sugar mixture.
@@ -540,9 +534,7 @@ class DataProvider
                     [1, "tablespoon", "honey"], [7.5, "cups", "all-purpose flour"], [4, "teaspoons", "grated orange zest"], [3, "teaspoons", "baking powder"],
                     [1, "teaspoon", "ground cinnamon"], [0.5, "cup", "ground toasted walnuts"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Greek Chicken & Rice",
                 'instructions' => " Sprinkle chicken with garlic powder and pepper. In a large skillet, heat oil over medium heat. Add chicken; cook and stir until no longer pink, 8-10 minutes. Stir in artichokes, roasted peppers, tomatoes and olives. Cook and stir until heated through, 3-5 minutes.
                 Meanwhile, prepare rice according to package directions. Serve with chicken. Sprinkle with parsley.",
@@ -559,9 +551,7 @@ class DataProvider
                     [0.33, "cup", "oil-packed sun-dried tomatoes"],
                     [0.33, "cup", "Greek olives"], [1, "package", "ready-to-serve brown rice"], [1, "tablespoon", "minced fresh parsley"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Georgia Caviar",
                 'instructions' => "Place black-eyed peas in a large saucepan with enough water to cover. Bring to a boil.
                 Reduce heat and simmer 90 minutes, or until black-eyed peas are tender.
@@ -581,9 +571,7 @@ class DataProvider
                     [2, "cups", "diced green bell pepper"],
                     [1, "pinch", "ground black pepper"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Crawfish Etouffee Georgia Style",
                 'instructions' => "Melt butter in a large cast iron skillet over medium heat. Stir in onion, celery root,
                 and bell peppers; cook and stir until the onion has softened and turned translucent, 8 to 10 minutes.
@@ -605,9 +593,7 @@ class DataProvider
                     [1.5, "tablespoon", "all-purpose flour"], [0.5, "cup", "low-sodium chicken broth"],
                     [0.5, "cup", "water"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Gozinaki",
                 'instructions' => "Place apricot pieces in a small bowl. Add rum and almond extract, and mix well to coat each piece. Set aside.
                 Toast walnuts lightly at 350° F for 10 minutes; then chop them coarsely. In a deep saucepan,
@@ -627,9 +613,7 @@ class DataProvider
                     [3.5, "cups", "shelled walnuts"], [12, "pcs", "dried apricots"], [1, "tablespoon", "dark rum"],
                     [1, "teaspoon", "pure almond extract"], [0.66, "cup", "honey"], [0.33, "cup", "pomegranate molasses"]
                 ]
-            ],
-
-            [
+            ], [
                 'name' => "Khachapuri",
                 'instructions' => " Make the dough: In the bowl of an electric mixer fitted with the dough hook attachment, mix the flour, yeast, sugar, and salt to combine. Add the butter and mix on low speed until the mixture looks crumbly, about 1 minute.
                 Add the milk and water and mix the dough on low speed for 4 minutes. Raise the speed to medium and mix until the dough is very smooth, 2-3 minutes more.
@@ -654,10 +638,7 @@ class DataProvider
                     [522, "g", "bread flour"], [1, "tablespoon", "instant active dry yeast"], [2, "tablespoons", "granulated sugar"],
                     [1, "teaspoon", "fine sea salt"], [142, "g", "unsalted butter"], [1, "cup", "whole milk, warmed"], [0.33, "cup", "water"]
                 ]
-            ],
-
-
-            [
+            ], [
                 'name' => "Chakapuli",
                 'instructions' => "Place the meat in a medium, wide pot in one layer. Add a third of the herbs, tomatillos, and
                 red pepper flakes. Add another layer of meat and then herbs. Season with salt and black pepper, drizzle the
@@ -674,6 +655,79 @@ class DataProvider
                     [2, "pounds", " lamb (with bones)"], [5, "pcs", "tomatillos"], [2, null, "lime juice"],
                     [2, "bunches", "tarragon"], [2, "bunches", "scallions"], [2, "cups", "dry white wine"], [null, null, "salt"]
                 ]
+            ], [
+                'name' => "Bangers & Mash",
+                'instructions' => "Preheat the oven to 400 degrees F. 
+                To Make the Mash: Place the potatoes in a pot of water and add the salt. Bring to a boil, lower the heat to a steady simmer and cook for about 15-20 minutes or until they potatoes are just tender when pierced with a knife. Be careful not to over-boil them. Thoroughly drain the potatoes and place them back in the empty pot set over very low heat just to maintain warmth. Mash the potatoes until fluffy and you've reached the desired degree of smoothness. Be careful not to over-mash or the potatoes will become gluey. 
+                Use a spoon to stir in the butter. Once melted stir in the hot milk gradually, allowing time for the potatoes to absorb the liquid after each addition. 
+                Add more hot milk as needed to achieve desired consistency. Season with salt and pepper to taste. 
+                To Prepare the Sausages: While the potatoes are boiling place the sausages in a baking dish with a little oil and roast the sausages for about 10 minutes on each side or until nicely browned. 
+                To serve, place a mound of mashed potatoes on each plate, lay the sausages on the mashed potatoes and top with onion gravy. Peas are a traditional side.",
+                'image' => "bangers-mash.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["United Kingdom"],
+                'ingredients' => [[8, "single", "sausages"], [2, "pounds", "Yukon Gold potatoes"], [1 / 2, "teaspoon", "salt"], [4, "tablespoons", "unsalted butter"], [3 / 14, "cups", "milk"], [1, "batch", "onion gravy"]]
+            ], [
+                'name' => "Beef Wellington",
+                'instructions' => "Using kitchen twine, tie tenderloin in 4 places. Season generously with salt and pepper. 
+                Over high heat, coat bottom of a heavy skillet with olive oil. Once pan is nearly smoking, sear tenderloin until well-browned on all sides, including the ends, about 2 minutes per side (12 minutes total). 
+                Transfer to a plate. When cool enough to handle, snip off twine and coat all sides with mustard. Let cool in fridge. Meanwhile, make duxelles: In a food processor, pulse mushrooms, shallots, and thyme until finely chopped. To skillet, add butter and melt over medium heat. Add mushroom mixture and cook until liquid has evaporated, about 25 minutes. Season with salt and pepper, then let cool in fridge. Place plastic wrap down on a work surface, overlapping so that it’s twice the length and width of the tenderloin. Shingle the prosciutto on the plastic wrap into a rectangle that’s big enough to cover the whole tenderloin. Spread the duxelles evenly and thinly over the prosciutto. Season tenderloin, then place it at the bottom of the prosciutto. Roll meat into prosciutto-mushroom mixture, using plastic wrap to roll tightly. Tuck ends of prosciutto as you roll, then twist ends of plastic wrap tightly into a log and transfer to fridge to chill (this helps it maintain its shape). Heat oven to 425°. Lightly flour your work surface, then spread out puff pastry and roll it into a rectangle that will cover the tenderloin (just a little bigger than the prosciutto rectangle you just made!). Remove tenderloin from plastic wrap and place on bottom of puff pastry. Brush the other three edges of the pastry with egg wash, then tightly roll beef into pastry. Once the log is fully covered in puff pastry, trim any extra pastry, then crimp edges with a fork to seal well. Wrap roll in plastic wrap to get a really tight cylinder, then chill for 20 minutes. Remove plastic wrap, then transfer roll to a foil-lined baking sheet. Brush with egg wash and sprinkle with flaky salt. Bake until pastry is golden and the center registers 120°F for medium-rare, about 40 to 45 minutes. Let rest 10 minutes before carving and serving.",
+                'image' => "beef-wellington.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["United Kingdom"],
+                'ingredients' => [[2, "ilb", "center-cut beef tenderloin, trimmed"], [2, "teaspoons", "olive pil"], [0.5, "teaspoon", "salt"], [2, "tablespoons", "Dijon Mustard"], [1.5, "lb", "mixed mushrooms, roughly chopped"], [2, "tablespoons", "unsalted butter"], [12, "thin", "slices prosciutto"], [14, "oz", "frozen puff pastry, thawed"], [1, "large", "egg, beaten"], [1, "thyme", "sprig"]]
+            ], [
+                'name' => "Eton Mess",
+                'instructions' => "Heat oven to 120C/100C fan/gas 1 and line a large baking tray with parchment paper. Whisk the egg whites in a clean bowl using an electric whisk or tabletop mixer until they reach stiff peaks, then add the sugar in 3 lots, re-whisking to stiff peaks every time. Spoon dollops of the mixture onto the baking parchment, cook on the bottom shelf of the oven for 1hr – 1hr15 mins until the meringues are completely hard and come off the paper easily. Leave to cool. Blitz 1/3 of the strawberries to make a strawberry sauce. In a large bowl whisk the cream with the icing sugar until it just holds its shape. Roughly crush ¾ of the meringues and tip them in with the chopped strawberries and stir, then swirl through the strawberry sauce. Dollop into bowls then crush the remaining meringues, sprinkling the pieces over the top.",
+                'image' => "eton-mess.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["United Kingdom"],
+                'ingredients' => [[1, "tablespoon", "icing sugar"], [450, "ml", "double cream"], [500, "g", "strawberries, hulled and roughly chopped"], [2, "large", "white eggs"], [120, "g", "caster sugar"]]
+            ], [
+                'name' => "Köttbullar (Swedish Meatballs)",
+                'instructions' => "In a large bowl, mix the breadcrumbs together with the milk, cream (If using), egg, garlic, salt, peppers and spice. Allow the milk to soak into the breadcrumbs for at least 10 minutes. Once the milk has absorbed some, add in the onion, meat(s) and parsley. Mix well with your hands to combine. Roll meat into about 24 small balls, or 16 larger balls. Heat 1 tablespoons of butter and 2 teaspoons of oil in a pan on medium-high heat. Fry meatballs in batches of two so they don’t stew or simmer. Transfer to a warm plate and cover with foil. Add the 1/3 cup butter to the juices in the pan to melt. Whisk in the flour until it dissolves and turns brown in colour. Pour in the broth (or stock), cream, soy sauce and dijon. Bring to a to simmer and season with salt and pepper to taste. Mix the sauce through well to combine all of the flavours together. Continue to simmer until thickened.",
+                'image' => "swedish-meatballs.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Sweden"],
+                'ingredients' => [[0.5, "cup", "breadcrumbs"], [0.5, "cup", "milk"], [35, "ml", "cream"], [1, "clove", "minced garlic"], [1, "large", "egg"], [0.33, "teaspoon", "salt"], [0.33, "teaspoon", "salt"], [0.25, "teaspoon", "EACH of black pepper and ground white pepper"], [0.25, "teaspoon", "Grillkrydda OR all spice OR all purpose seasoning"], [0.33, "of", "an onion"], [500, "g", "ground beef (mince)"], [500, "g", "ground pork"], [2, "tablespoons", "fresh, finely chopped parsley"], [1, "tablespoon", "butter"], [2, "tablespoons", "olive oil"]]
+            ], [
+                'name' => "Räkmacka (Shrimp Sandwich)",
+                'instructions' => "Slice the eggs and cucumber into thin slices. Spread 1 tbsp of mayonnaise over each slice of bread. Season the prawns with salt, pepper and lemon juice. Arrange lettuce on top, followed by cucumber,eggs and seasoned prawns. Top with extra mayonnaise, garnish with dill and lemon slices, and serve.",
+                'image' => "shrimp-sandwich.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Sweden"],
+                'ingredients' => [[2, "boiled", "free-range eggs"], [2, "slices", "brown or normal rye bread"], [4, "tbsp", "mayonnaise"], [5, "leaves", "of lettuce"], [300, "g", "cooked prawns/shrimps"], [1, "squeeze", "of lemon"], [4, "smalls", "sprigs of dill"], [8, "slices", "of cucumber"]]
+            ], [
+                'name' => "Smulpaj (Crumble pie with summer berries)",
+                'instructions' => "Pre heat the oven to 425ºF. Use a a 8” diameter pie dish which is about 1” deep. Place the berries/fruit in the pie dish. Add the sugar and the corn starch over the berries and mix it carefully without mashing the berries. Mix sugar, rolled oats and flour in a bowl. Add the the soft butter in smaller pieces into the bowl. Rub in the butter using your finger tips until it forms crumbs and starts to stick together. Crumble the mixture loosely over the berries in the pie dish with your fingers, so that it leaves slight gaps and you can still see the berries underneath. Bake it in the middle part of the oven for approximately 20 minutes until the crumbles get a crispy golden color. Serve your crumble pie with vanilla ice cream (or vanilla sauce) and some fresh berries on top.",
+                'image' => "crumble-pie.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => false,
+                'countries' => ["Sweden"],
+                'ingredients' => [[1, "lb", "berries or apples or rhubarbs"], [3, "tbls", "granulated sugar"], [1, "tbls", "corn starch"], [5, "tbls", "granulated sugar"], [0.66, "cup", "rolled oats"], [6, "tbs", "all purpose flour"], [8.5, "tbs", "butter (room temperature)"]]
             ]
         ];
     }
