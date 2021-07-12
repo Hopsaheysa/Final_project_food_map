@@ -13,7 +13,7 @@ cook until wilted, about 30 minutes longer. If desired, serve with rice.",
 'ingredients' => [[4, "pounds", "loukaniko"], [3, "pieces", "peppers"], [1, "piece", "sweet onion"],
 [2, "cups", "beef stock"], [1, "whole", "garlic bulb"], [1, "tablespoon", "minced fresh oregano"], [1, "teaspoon", "coarse sea salt"],
 [1, "teaspoon", "coarsely ground pepper"], [3, "cups", "cherry tomatoes"]]
-]
+],
 
 [
 'name' => "Greek Shrimp Canapes",
@@ -36,7 +36,7 @@ top with shrimp and parsley.",
 'ingredients' => [[1.5, "cups", "olive oil"], [0.75, "cup", "lemon juice"], [0.66, "cup", "dry white wine"],
 [0.25, "cup", "Greek seasoning"], [4, "pcs", "garlic cloves"], [1, "pound", "uncooked shrimp"], [2, "pcs", "large cucumbers"],
 [1, "package", "cream cheese, softened"], [null, null, "Minced fresh parsley"]]
-]
+],
 
 [
 'name' => "Greek-Style Lentil Soup",
@@ -56,7 +56,7 @@ Cook, covered, on low about 1 hour longer, until spinach is wilted. If desired, 
 [2, "pieces", "carrots"], [1, "pcs", "onion"], [1, "pcs", "celery rib"], [1, "teaspoon", "dried oregano"],
 [1, "cup", "chopped fresh spinach"], [0.5, "cup", "tomato sauce"], [1, "can", "sliced ripe olives"], [3, "tablespoons", "red wine vinegar"],
 [2, "pcs", "garlic cloves"], [0.5, "teaspoon", "salt"], [0.25, "teaspoon", "pepper"]]
-]
+],
 
 [
 'name' => "Melomakarona",
@@ -75,7 +75,7 @@ Float and turn warm cookies in syrup about 10 seconds; allow excess to drip off.
 [1, "cup", "confectioners' sugar"], [2, "cups", "olive oil"], [0.5, "cup", "Cognac"], [0.5, "cup", "orange juice"],
 [1, "tablespoon", "honey"], [7.5, "cups", "all-purpose flour"], [4, "teaspoons", "grated orange zest"], [3, "teaspoons", "baking powder"],
 [1, "teaspoon", "ground cinnamon"], [0.5, "cup", "ground toasted walnuts"]]
-]
+],
 
 [
 'name' => "Greek Chicken & Rice",
@@ -92,7 +92,7 @@ Meanwhile, prepare rice according to package directions. Serve with chicken. Spr
 [2, "teaspoons", "olive oil"], [1, "jar", "marinated quartered artichoke hearts"], [1, "jar", "Croasted sweet red peppers"],
 [0.33, "cup", "oil-packed sun-dried tomatoes"],
 [0.33, "cup", "Greek olives"], [1, "package", "ready-to-serve brown rice"], [1, "tablespoon", "minced fresh parsley"]]
-]
+],
 
 [
 'name' => "Georgia Caviar",
@@ -115,7 +115,7 @@ and ground black pepper. Toss in black-eyed pea mixture. Chill in the refrigerat
 [1.5, "cups", "finely chopped onion"], [2, "ounces", "diced pimento peppers"], [1, "tablespoon", "minced garlic"],
 [2, "cups", "diced green bell pepper"],
 [1, "pinch", "ground black pepper"]]
-]
+],
 
 [
 'name' => "Crawfish Etouffee Georgia Style",
@@ -142,7 +142,7 @@ cook 2 minutes more.
 [3, null, "bay leaves"],
 [1.5, "tablespoon", "all-purpose flour"], [0.5, "cup", "low-sodium chicken broth"],
 [0.5, "cup", "water"]]
-]
+],
 
 [
 'name' => "Gozinaki",
@@ -163,7 +163,7 @@ and lightly sprayed with cooking spray. Using a spatula, spread the mixture into
 'countries' => ["Georgia"],
 'ingredients' => [[3.5, "cups", "shelled walnuts"], [12, "pcs", "dried apricots"], [1, "tablespoon", "dark rum"],
 [1, "teaspoon", "pure almond extract"], [0.66, "cup", "honey"], [0.33, "cup", "pomegranate molasses"]]
-]
+],
 
 [
 'name' => "Khachapuri",
@@ -189,7 +189,7 @@ Let the khachapuri cool for 5 to 10 minutes before serving warm.
 'countries' => ["Georgia"],
 'ingredients' => [[522, "g", "bread flour"], [1, "tablespoon", "instant active dry yeast"], [2, "tablespoons", "granulated sugar"],
 [1, "teaspoon", "fine sea salt"], [142, "g", "unsalted butter"], [1, "cup", "whole milk, warmed"], [0.33, "cup", "water"]]
-]
+],
 
 
 [

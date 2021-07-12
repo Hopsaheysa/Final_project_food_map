@@ -192,6 +192,488 @@ class DataProvider
                 'isNutFree' => true,
                 'countries' => ["France"],
                 'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
+            ], [
+                'name' => "Chicken mole enchiladas",
+                'instructions' => "You will need two frying pans. Place the mole sauce in one of the frying pans and set over medium low heat. Have a plate covered with paper towels ready. (Please check the ingredients list below)
+                Meanwhile, add the vegetable oil in the other frying pan and turn the heat to high. Once the oil is hot, turn down the heat to medium and start frying the tortillas in a fast pace, turning once. The tortilla should turn soft but without any excess oil. Place the tortillas over the paper towel-covered plate to absorb the oil. Keep them warm.
+                After frying all the tortillas, dip them one by one with the help of kitchen tongs (or your hand and a large spatula) into the warm mole sauce, making sure it is completely submerged. This is also a step that’s done quickly, to avoid breaking the tortillas.
+                Place the tortilla on a plate and add the chicken filling right at the center.
+                Chicken Mole Enchiladas | quick and easy
+                Fold the tortilla and, with the help of your spatula, place the enmolada on your serving plates. If needed, spoon some more mole sauce over the enmoladas.        
+                Chicken Mole Enchiladas | Authentic Mexican Food Recipes
+                Just before serving, garnish with the crumbled cheese and finely sliced onions.",
+                'image' => "chicken-mole.enchiladas.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Mexico"],
+                'ingredients' => [[300, "grams", "chicken"], [3, "cups", "mole sauce"], [12, null, "torillas"], [3, "tablespoons", "vegetable oil"], [150, "gram", "fresh cheese"], [1, null, "onion"]]
+            ], [
+                'name' => "Pozole Rojo",
+                'instructions' => "Cut the pork off the bone in large chunks. Sprinkle salt and pepper liberally over all the chunks, including the bone. Pop the stems off the dried chiles and shake out the loose seeds.
+                Set a heavy 6-8 quart dutch oven over medium heat. Add the oil to the pot. Once hot add the pork chunks, including the bone. Brown the pork on all sides.
+                Move the pork to the sides of the pot. Add in the onion wedges and garlic. Sear for 1-2 minutes, then add in the chile peppers, bay leaves, oregano, 6 cups chicken broth, and 1 teaspoon salt. Push the chiles down under the liquid.
+                Cover the pot with a heavy lid and bring to a boil. Then lower the heat and simmer for 50-60 minutes, until the pork is soft enough to shred. (Keep the pot covered.)
+                Remove the pork chunks, bone, and bay leaves. Discard the bone and bay leaves. Use tongs or forks to shred the pork into small chunks.
+                Use an immersion blender to puree the vegetables, chiles, and broth into a thick sauce. You can also do this is a standard blender, but cover the lid with a towel, to protect against hot liquid splashing out.
+                Add the shredded pork back to the pot, along with the rinsed hominy. Stir to combine. If the sauce seems too thick add 1+ cup chicken broth or water to the pot.
+                Stir in the lime juice. Taste, then season with salt and pepper as needed. Keep warm until ready to serve.
+                To serve: Ladle the posole into bowls. Garnish the top with tortilla chips, sliced avocado, radishes, lime wedges, and cilantro.",
+                'image' => "pozole-rojo.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Mexico"],
+                'ingredients' => [[2, "tablespoons", "olive oil"], [4, "pounds", "pork leg"], [1, null, "onion"], [7, "cloves", "garlic"], [6, "dried", "ancho chile peppers"], [5, "dried", "dried guajillo chile peppers"], [4, "dried", "dried arbol chile peppers"], [2, null, "bay leaves"], [1, "tablespoon", "dried Mexican Oregano"], [6, "cups", "chicken broth"], [3, "cans", "white hominy"], [1, null, "lime"], [null, null, "salt"], [null, null, "pepper"]]
+            ], [
+                'name' => "Mexican Torta",
+                'instructions' => "    Place the chicken breast halves in between plastic wrap and use a meat mallet or rolling pin to gently pound them until thin.
+                Place a skillet over medium-high heat and coat with oil. Add breadcrumbs to a shallow bowl. Add eggs to another shallow bowl and beat well.
+                Dip the chicken in the egg mixture on both sides, and then coat with breadcrumbs on both sides. 
+                Place in the pan with the hot oil. Cook for a a few minutes on one side, until browned, then flip and cook on the other side until cooked through.
+                Slice the ciabatta rolls in half and toast them.
+                On the inside top half of the roll, spread a thin layer of mayonnaise, followed by a thin layer of refried beans and then a thin layer of mashed avocado. 
+                Top the bottom half of the roll with cooked chicken, a few strings of mozzarella cheese, and a few pickled jalapeños. 
+                Sandwich the roll together. Serve immediately.",
+                'image' => "mexican-torta.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Mexico"],
+                'ingredients' => [[4, null, "chicken breasts"], [4, null, "rolls - torta/ciabatta"], [0.25, "cup", "mayonnaise"], [0.3, "cup", "refried beans"], [1, "half", "avocado"], [2, null, "mozzarelas"], [1, "cup", "breadcrumbs"], [2, "large", "eggs"], [4, "tablespoons", "oil"], [1, "can", "Jalapenos"]]
+            ], [
+                'name' => "Chiltomate",
+                'instructions' => "    Preheat a griddle or a large heavy skillet over medium-high heat. Roast the vegetables and the garlic on the griddle for 6 to 8 minutes, turning them with tongs to brown all sides.
+                Peel the chile and discard the skin and seeds. Peel and dice the onion, tomatoes and garlic.
+                Place the roasted ingredients and dried oregano in a mortar, blender or food processor, and grind or chop to the desired consistency.
+                Warm the oil in a large skillet over medium-high heat. Add the salsa and sauté for 2 to 3 minutes.
+                Stir in the fresh oregano and cilantro, and season to taste with salt. Serve warm or at room temperature.",
+                'image' => "chiltomate.jpg",
+                'isVegan' => true,
+                'isVegeterian' => true,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Mexico"],
+                'ingredients' => [[2, null, "habaneros peppers"], [1, "large", "onion"], [6, "medium", "tomatoes"], [3, "cloves", "garlic"], [3, "tablespoons", "vegetable oil"], [2, "teaspoons", "oregano"], [1, "tablespoon", "cilantro"], [null, null, "salt"]]
+            ], [
+                'name' => "Tacos de papa",
+                'instructions' => "    Boil potatoes and peel. Heat oil for frying.
+                Mash potatoes with a masher and mix with onions and the 4 ounces of queso fresco. (if mixture is too thick, add a little milk. mixture should be a little lumpy, but should not be as creamy as mashed potatoes.) Season with salt and pepper.
+                Warm tortillas in microwave for about 15 seconds.
+                Spoon potato mixture into tortillas and fry until golden on both sides.
+                Serve and garnish with lettuce, queso fresco, and salsa.",
+                'image' => "tacos-de-papa.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Mexico"],
+                'ingredients' => [[6, "large", "potatoes"], [120, "gram", "mexican crumbly cheese"], [1, "medium", "onion"], [null, null, "salt"], [null, null, "pepper"], [null, "if needed", "milk"], [null, null, "oil"], [1, "large", "onion"], [24, null, "corn tortillas"], [null, null, "lettuce"], [null, null, "fresh cheese"], [null, null, "salsa"]]
+            ], [
+                'name' => "Pão de Queijo",
+                'instructions' => "Preheat oven to 400°F. Spread a small amount olive oil around the insides of each well of a mini-muffin tin. 
+                Put all of the ingredients into a blender and pulse until smooth. You may need to use a spatula to scrape down the sides of the blender so that everything gets blended well. At this point you can store the batter in the refrigerator for up to a week. 
+                Pour batter into prepared mini-muffin tin, not quite to the top; leave about 1/8 inch from the top. 
+                Bake at 400°F in the oven for 15-20 minutes, until all puffy and nicely browned. Remove from oven and let cool on a rack for a few minutes. 
+                Eat while warm or save to reheat later.
+                Note that Brazilian cheese bread is very chewy, a lot like Japanese mochi. ",
+                'image' => "pao-de-queijo.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Brazil"],
+                'ingredients' => [[1, "large", "egg"], [0.33, "cup", "extra virgin olive oil"], [0.66, "cup", "milk"], [1.5, "cups", "tapioca flour"], [0.5, "cup", "cheese"], [1, "teaspoon", "salt"]]
+            ], [
+                'name' => "Feijoada",
+                'instructions' => "Pour boiling water over the black beans and let them sit while you prepare the rest of the stew. 
+                Heat the olive oil in a large pot over medium-high heat and brown the pork shoulder. When the meat has browned, remove the meat from the pot, set aside. 
+                Add the onions to the pot. Brown them, stirring occasionally, scraping up any browned bits from the bottom of the pot.
+                Sprinkle a little salt over the onions and add the garlic. Stir well and sauté 2 more minutes. 
+                Add back the pork shoulder, and the other meats and add enough water to cover. Add the bay leaves, cover and bring to a simmer. Cook gently for 1 hour. 
+                Drain the black beans from their soaking liquid and add them to the stew. Simmer gently, covered, until the beans are tender, about an hour and a half. 
+                Add the tomatoes, stir well and taste for salt, adding if it's needed. Simmer this, uncovered, until the meat begins to fall off the ham hock, which will probably take 2-3 hours. ",
+                'image' => "feijoada.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Brazil"],
+                'ingredients' => [[450, "gram", "black beans"], [4, "tablespoons", "extra virgin olive oil"], [450, "gram", "pork shoulder"], [2, "large", "onions"], [1, "head", "garlic"], [450, "gram", "corned boof"], [225, "gram", "fresh sausage - chorizo or Italian sausage"], [450, "gram", "smoked sausage - linguica or kielbasa"], [1, null, "smoked ham hock"], [4, null, "bay leaves"], [1, "can", "crushed tomatoes"], [null, null, "salt"]]
+            ], [
+                'name' => "Feijão Tropeiro",
+                'instructions' => "Start by cooking your beans. My preferred method is using a pressure cooker: combine the beans, bay leaves and water in your pot. Secure the lid and bring it to the stove, over high heat. When it reaches high pressure, reduce the heat to medium and cook for 20 minutes. Turn off the heat and allow the pot to cool down and release all the pressure naturally. When ready to open, unlock and remove the lid. Check if the beans are al dente. If not, cook them longer, in 5 minute increments. (Note: this method is for stove top pressure cookers. If you are using an electric pressure cooker, follow your cooker's instructions to cook beans.)
+                You can also cook your beans the conventional way, on the stove, but it will take longer. Just bring the beans, bay leaves and water to a boil, over medium-high heat. When boiling, reduce to a simmer and cook uncovered, until al dente, adding more water as needed to keep the beans submerged. The cooking process can take anywhere from 1 to 3 hours. Be patient!
+                When the beans are done, drain all the water and reserve.
+                Remove the stems of the collard greens leaves. Then, stack a few leaves on top of each other and roll that stack into a cylinder. Using a chef knife, slice the collard greens into thin strips. Repeat with all the leaves.
+                Place the oil in a medium-sized skillet and place it over medium heat. Whisk the eggs in a bowl and add them to the pan. Cook, stirring gently, until they are scrambled. Reserve.
+                Heat 2 tablespoons of olive oil in a large saute pan over medium heat. Add 3 cloves of garlic and cook, stirring often, until golden and fragrant, about 2 minutes. Add the collard greens and cook until withered, about 5 minutes. Season with salt and pepper and reserve.
+                Using that same pan, over medium heat, heat 1 tablespoon of olive oil and brown the sausage until it starts to get crispy, about 5 minutes. Remove from the pan and reserve. Discard the fat.
+                In the same pan, add the bacon and fry until golden brown, about 3 minutes. Then, stir in the onions and remaining garlic, cooking until translucent (about 3 more minutes). Add the drained beans and the sausage and cook for a minute, letting the beans soak up all those amazing flavors. Then, add the eggs and the collard greens, stirring until everything is well combined. Season generoulsy with salt and pepper. Then, add the manioc flour (to taste), a handful at a time, stirring until it is moist and incorporated into the dish.
+                Remove the pan from the heat and sprinkle the parsley and green onions.
+                Serve immediately!",
+                'image' => "feijao.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Brazil"],
+                'ingredients' => [[1, "pound", "carioca beans"], [2, null, "bay leaves"], [6, "cups", "water"], [1, "bunch", "collard greens"], [4, "tablespoons", "olive oil"], [14, "ounces", "calabresa sausage"], [0.5, "pound", "bacon"], [1, "large", "onion"], [6, "cloves", "garlic"], [5, null, "eggs"], [1, "cup", "manioc flour"], [null, null, "salt"],  [null, null, "pepper"],  [null, null, "parsley"],  [null, null, "green onion"]]
+            ], [
+                'name' => "Moqueca Baiana",
+                'instructions' => "Place fish and shrimp in a large bowl. Season with the lime juice, salt and pepper. Reserve in the fridge.
+                In a large clay pot (or dutch oven), heat 2 tablespoons olive oil over medium heat. Add the garlic and chopped chili pepper and cook until fragrant, about 1 minute.
+                Arrange half of the tomato slices on the bottom of the pot. Then add a layer of half the bell peppers, half the sliced onions, half of the fish, half of the shrimp and 1/3 of the cilantro. Season gently with salt and pepper, and drizzle with olive oil. Repeat the layering with all the ingredients, making sure to season again at the end. Reserve 1/3 of the cilantro for garnishing before serving.
+                Pour the coconut milk, add the dendê oil and the crumbled bouillon, and bring to a boil over medium-high heat. Then cover, lower the heat to a simmer and cook for 15 minutes, or until the onions are tender and the fish and shrimp are cooked through. Be careful not to overcook it, as you don't want the fish to fall apart. Taste and adjust seasonings. Add more dendê oil, if desired.
+                Garnish with the reserved cilantro and serve with white rice.",
+                'image' => "moqueca-baiana.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Brazil"],
+                'ingredients' => [[2, "pounds", "sea bass"], [1, "pound", "shrimps"], [1, null, "lime"], [0.33, "cup", "olive oil"], [2, "cloves", "garlic"], [1, null, "red chilli pepper"], [2, "large", "tomatoes"], [1, null, "green bell pepper"], [1, null, "red bell pepper"], [1, "large", "onion"], [1, "bunch", "cilantro"], [1, "can", "coconut milk"], [2, "tablespoons", "red palm oil"], [1, null, "buillon"], [null, null, "salt"],  [null, null, "pepper"]]
+            ], [
+                'name' => "Empadão de Frango",
+                'instructions' => "Make the filling:
+                In a large sauté pan, over medium heat, add the olive oil and, once hot, sauté the onions and garlic until translucent, about 2 minutes.
+                Add the tomatoes and cook them with the onions and garlic for a couple of minutes, until softened.
+                Add the shredded chicken,olives, corn (if using), peas (if using), hearts of palm (if using), tomato sauce, hot sauce and stir to combine. Then, add the chicken broth and the flour dissolved in milk. Lower the heat to medium low and cook, stirring often, until most of the liquid is gone and the filling is creamy and lightly thickened, about 10 minutes.
+                Add the chopped parsley and stir to incorporate.
+                Taste for seasoning and season with salt and pepper to taste.
+                Cool completely before assembling the pie.
+                Making the crust:
+                Combine the flour and the salt in a large bowl.
+                Add the egg yolks and stir using a wooden spoon.
+                Then add the butter and use your fingers to work the butter into the flour, until the mixture resembles coarse sand. Add the water, a few tablespoons of a time, and continue working with your fingers until the dough comes together. You might not need all the water!
+                Wrap the dough and chill for 20 minutes.
+                Preheat oven to 350F degrees.
+                When the dough is chill, cut 1/3 of the dough and reserve. Roll out the remaining dough to about 12\" round. Place the pastry in a 9-inch spring form pan, making sure the dough also covers the sides (since we have lots of filling!), and prick it all over with a fork.
+                Add the cold filling, smoothing it out so its evenly distributed.
+                Then, roll out the remaining dough and place it on top of the filling, sealing the pie and tucking the edges.
+                Using a knife, make two cuts in the center of the top crust, so that steam can escape while baking.
+                Brush the pie with the lightly beaten egg yolk.
+                Bake in the preheated oven for 25 to 35 minutes or until golden brown and the filling piping hot.
+                Remove from oven and allow to cool slightly before serving.",
+                'image' => "empadao-de-frango.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Brazil"],
+                'ingredients' => [[2, "tablespoons", "olive oil"], [2, "medium", "onions"], [2, "cloves", "garlic"], [2, null, "tomatoes"], [2, "pounds", "chicken breasts"], [0.5, "cup", "green olives"], [1, "cup", "corn (optional)"], [1, "cup", "green peas (optional)"], [1, "cup", "hearts of palm (optional)"], [1, "cup", "tomato sauce"], [null, null, "hot sauce"], [2, "cups", "chicken broth"], [1, "tablespoon", "flour dissolved in 1/3 cup milk"], [0.5, "cup", "parsley"], [null, null, "salt"],  [null, null, "pepper"], [5, "cups", "flour"], [1, "teaspoon", "salt"], [3, null, "egg yolks"], [0.5, "cup", "water"], [12, "ounces", "butter"], [1, null, "egg yolk"]]
+            ], [
+                'name' => "Black risotto",
+                'instructions' => "Remove innards from squid by pulling tentacles from the body and carefully remove the ink sac. Place the sacs in a glass with some extra virgin olive oil.
+                Remove the skin, wings, backbone, and eyes. Wash and cut the squid into smaller pieces (1cm).
+                Heat the olive oil in a large skillet with high sides and add the finely chopped onion and garlic. Cook shortly until golden brown, then add the squid bits.
+                Cook for ca 2 minutes, tossing occasionally, then add the wine.
+                When wine evaporates, add the rice and cook, stirring constantly until it turns opaque.
+                Gradually add the stock and cook over medium heat, stirring occasionally.
+                After 5 minutes, add squid ink, stir well and proceed by adding the rest of fish stock.
+                When the rice is cooked, remove from the fire, add parsley and season with salt and pepper.
+                Serve with parmesan cheese.",
+                'image' => "black-risotto.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Croatia"],
+                'ingredients' => [[300, "gram", "rice"], [500, "gram", "squid"], [250, "gram", "gamberetti (optional)"], [2, "sacs", "squid ink"], [2, "cloves", "garlic"], [2, "medium", "onions"], [2, "dl", "red wine"], [700, "ml", "fish stock"], [1, "tablespoon", "fresh parsley"], [null, null, "extra virgin olive oil"], [null, null, "salt"], [null, null, "pepper"],  [null, null, "parmesan"]]
+            ], [
+                'name' => "Fritule",
+                'instructions' => "Grate the apple. 
+                Proof the yeast by dissolving it and 1 teaspoon sugar in 1 cup of warm water (not over 110 F). When it foams, pour into a large bowl and add flour, salt, raisins, walnuts, grated apple, and zest, and mix well. Add 3 to 4 cups water, or as much as necessary to achieve a cake batter consistency. Cover the bowl with plastic wrap and let the batter rise until doubled, about 1 hour. 
+                In a heavy-bottomed pan or Dutch oven, heat oil to 370 F. Carefully drop tablespoons of batter into the oil, being careful not to overcrowd. Fry until golden on the bottom. Turn over once to brown both sides. 
+                Remove the fritules with a slotted spoon onto layers of paper towels to drain. Repeat until batter is finished. Sprinkle fritule with powdered sugar while still hot, if desired. 
+                Serve immediately and enjoy! ",
+                'image' => "fritule.jpg",
+                'isVegan' => true,
+                'isVegeterian' => true,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => false,
+                'countries' => ["Croatia"],
+                'ingredients' => [[1, "package", "active dry yeast"], [1, "teaspoon", "sugar"], [8, "cups", "flour"], [1, "teaspoon", "salt"], [1, "cup", "raisins"], [0.5, "cup", "walnuts"], [1, null, "apple"], [2, "teasponns", "lemon zest"], [4, "cups", "water"], [3, "cups", "oil"]]
+            ], [
+                'name' => "Pašticada",
+                'instructions' => "Wash and wipe the meat and then insert the pieces of bacon in it using a knife. Salt, as desired, spread mustard over the meat and place it in the “pajc” (a container with a mixture of the apple cider vinegar and oil enough to cover the meat). Let it marinate like this for at least 5 hours (overnight, preferably).
+                Brown the meat in hot oil (all sides). Remove it from the pan and quickly sauté the chopped onion, garlic, and vegetables.
+                Return the meat to the pan along with the red wine & simmer covered for about 2 hours. If required, add small amounts of red wine mixed with water and touch of sugar (dalmatian prošek works great as a replacement for this) as the meat cooks – it needs to be tender.
+                When the meat is tender, add tomato concentrate, diced prunes, and figs along with the apple quarters.
+                At the end of the cooking, stir in the bay leaf, rosemary, thyme &  minced cloves.
+                Add pepper and a little salt, try it and, if necessary, add a little bit of cooking chocolate. Balance the flavor with a bit of red wine and plums in order to get a sweet & sour taste to your liking.
+                Remove the meat, cut it into slices, and place on a heated plate.
+                Purée the vegetables with roast the drippings and pour it over the meat.
+                Serve with gnocchi and a slice of lemon.",
+                'image' => "pasticada.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => false,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Croatia"],
+                'ingredients' => [[2, "kilogram", "beef"], [20, "gram", "bacon"], [200, "gram", "onions"], [150, "grams", "parsley root"], [150, "grams", "carrot"], [50, "grams", "celery root"], [2, "cloves", "garlic"], [20, "grams", "tomato paste"], [200, "ml", "oil"], [null, null, "apple cider"], [10, "gram", "cloves"], [10, "dried", "plums"], [6, "dried", "figs"], [2, null, "apples"], [300, "ml", "red wine"], [2, "tablespoons", "mustard"], [3, null, "bay leaves"], [null, null, "thyme"], [null, null, "rosemary"], [null, null, "coocking chocolate"], [null, null, "salt"], [null, null, "pepper"]]
+            ], [
+                'name' => "Bučnica",
+                'instructions' => "Grate the apple. 
+                Proof the yeast by dissolving it and 1 teaspoon sugar in 1 cup of warm water (not over 110 F). When it foams, pour into a large bowl and add flour, salt, raisins, walnuts, grated apple, and zest, and mix well. Add 3 to 4 cups water, or as much as necessary to achieve a cake batter consistency. Cover the bowl with plastic wrap and let the batter rise until doubled, about 1 hour. 
+                In a heavy-bottomed pan or Dutch oven, heat oil to 370 F. Carefully drop tablespoons of batter into the oil, being careful not to overcrowd. Fry until golden on the bottom. Turn over once to brown both sides. 
+                Remove the fritules with a slotted spoon onto layers of paper towels to drain. Repeat until batter is finished. Sprinkle fritule with powdered sugar while still hot, if desired. 
+                Serve immediately and enjoy! ",
+                'image' => "bucnica.jpg",
+                'isVegan' => false,
+                'isVegeterian' => true,
+                'isLactoseFree' => false,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Croatia"],
+                'ingredients' => [[500, "gram", "phylo dough"], [5, null, "zucchinis"], [500, "gram", "ricotta"], [2, "teaspoons", "salt"], [100, "gram", "sour cream"], [2, null, "eggs"], [null, null, "oil"]]
+            ], [
+                'name' => "Lamb Peka",
+                'instructions' => "Grate the apple. 
+                Proof the yeast by dissolving it and 1 teaspoon sugar in 1 cup of warm water (not over 110 F). When it foams, pour into a large bowl and add flour, salt, raisins, walnuts, grated apple, and zest, and mix well. Add 3 to 4 cups water, or as much as necessary to achieve a cake batter consistency. Cover the bowl with plastic wrap and let the batter rise until doubled, about 1 hour. 
+                In a heavy-bottomed pan or Dutch oven, heat oil to 370 F. Carefully drop tablespoons of batter into the oil, being careful not to overcrowd. Fry until golden on the bottom. Turn over once to brown both sides. 
+                Remove the fritules with a slotted spoon onto layers of paper towels to drain. Repeat until batter is finished. Sprinkle fritule with powdered sugar while still hot, if desired. 
+                Serve immediately and enjoy! ",
+                'image' => "lamb-peka.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => true,
+                'isNutFree' => true,
+                'countries' => ["Croatia"],
+                'ingredients' => [[600, "gram", "potatoes"], [1, null, "zucchini"], [1, null, "carrot"], [1, null, "pepper"], [1, "small", "aubergine"], [1, "large", "onion"], [850, "gram", "diced lamb"], [4, "cloves", "garlic"], [1, "tablespoon", "tomato puree"], [80, "ml", "olive oil"], [null, null, "fresh herbs"], [250, "ml", "white wine"], [null, null, "salt"], [null, null, "pepper"]]
+            ], [
+                'name' => "Greek Sausage and Peppers",
+                'instructions' => "In a 7- or 8-qt. slow cooker, combine sausage, sweet peppers, onion, stock, garlic,
+                oregano, salt and pepper. Cook, covered, on low until vegetables are tender, 5-6 hours. Add tomatoes;
+                cook until wilted, about 30 minutes longer. If desired, serve with rice.",
+                'image' => "Greek-Sausage-and-Peppers.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Greece"],
+                'ingredients' => [
+                    [4, "pounds", "loukaniko"], [3, "pieces", "peppers"], [1, "piece", "sweet onion"],
+                    [2, "cups", "beef stock"], [1, "whole", "garlic bulb"], [1, "tablespoon", "minced fresh oregano"], [1, "teaspoon", "coarse sea salt"],
+                    [1, "teaspoon", "coarsely ground pepper"], [3, "cups", "cherry tomatoes"]
+                ]
+            ],
+
+            [
+                'name' => "Greek Shrimp Canapes",
+                'instructions' => " In a large bowl, whisk the first 5 ingredients until blended. Pour 1-1/2 cups
+                marinade into a large bowl. Add shrimp and stir to coat. Cover and refrigerate 45 minutes.
+                Meanwhile, pour remaining marinade in a 4- or 5-qt. slow cooker. Cook, covered, on high, 45 minutes.
+                Drain shrimp, discarding marinade in bowl. Add shrimp to slow cooker. Cook, covered, on high until
+                shrimp turn pink, about 20 minutes, stirring once; drain.
+                Cut each cucumber into 1/4-in.-thick slices. Scoop out centers, leaving bottoms intact. Pipe cream cheese onto each cucumber slice;
+                top with shrimp and parsley.",
+                'image' => "Greek-Shrimp-Canapes.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Greece"],
+                'ingredients' => [
+                    [1.5, "cups", "olive oil"], [0.75, "cup", "lemon juice"], [0.66, "cup", "dry white wine"],
+                    [0.25, "cup", "Greek seasoning"], [4, "pcs", "garlic cloves"], [1, "pound", "uncooked shrimp"], [2, "pcs", "large cucumbers"],
+                    [1, "package", "cream cheese, softened"], [null, null, "Minced fresh parsley"]
+                ]
+            ],
+
+            [
+                'name' => "Greek-Style Lentil Soup",
+                'instructions' => " Place the water, broth, lentils, carrots, onion, celery and 1/2 teaspoon oregano
+                in a 5- or 6-qt. slow cooker. Cook, covered, on low 4-5 hours or until lentils are tender.
+                Stir in the spinach, tomato sauce, olives, vinegar, garlic, salt, pepper and remaining 1/2 teaspoon oregano.
+                Cook, covered, on low about 1 hour longer, until spinach is wilted. If desired, serve with red onion, parsley and lemon wedges.",
+                'image' => "Greek-Style-Lentil-Soup.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Greece"],
+                'ingredients' => [
+                    [4, "cups", "water"], [4, "cups", "vegetable broth"], [2, "cups", "dried lentils, rinsed"],
+                    [2, "pieces", "carrots"], [1, "pcs", "onion"], [1, "pcs", "celery rib"], [1, "teaspoon", "dried oregano"],
+                    [1, "cup", "chopped fresh spinach"], [0.5, "cup", "tomato sauce"], [1, "can", "sliced ripe olives"], [3, "tablespoons", "red wine vinegar"],
+                    [2, "pcs", "garlic cloves"], [0.5, "teaspoon", "salt"], [0.25, "teaspoon", "pepper"]
+                ]
+            ],
+
+            [
+                'name' => "Melomakarona",
+                'instructions' => " Preheat oven to 350°. In a saucepan, combine sugar, water and honey; bring to a boil. Reduce heat; simmer, uncovered, 10 minutes. Cool completely.
+                Meanwhile, for cookies, in a large bowl, beat confectioners' sugar and oil until blended. Beat in Cognac, orange juice and honey. In another bowl, whisk flour, orange zest, baking powder and cinnamon; gradually beat into sugar mixture.
+                Shape tablespoons of dough into 1-in.-thick ovals. Place 1 in. apart on parchment-lined baking sheets. Bake until lightly browned, 20-25 minutes. Cool on pans 5 minutes. Remove to wire racks.
+                Float and turn warm cookies in syrup about 10 seconds; allow excess to drip off. Place on waxed paper; sprinkle with walnuts. Let stand until set. Store between pieces of waxed paper in airtight containers.",
+                'image' => "Melomakarona.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Greece"],
+                'ingredients' => [
+                    [1, "cup", "sugar"], [1, "cup", "water"], [0.75, "cup", "honey"],
+                    [1, "cup", "confectioners' sugar"], [2, "cups", "olive oil"], [0.5, "cup", "Cognac"], [0.5, "cup", "orange juice"],
+                    [1, "tablespoon", "honey"], [7.5, "cups", "all-purpose flour"], [4, "teaspoons", "grated orange zest"], [3, "teaspoons", "baking powder"],
+                    [1, "teaspoon", "ground cinnamon"], [0.5, "cup", "ground toasted walnuts"]
+                ]
+            ],
+
+            [
+                'name' => "Greek Chicken & Rice",
+                'instructions' => " Sprinkle chicken with garlic powder and pepper. In a large skillet, heat oil over medium heat. Add chicken; cook and stir until no longer pink, 8-10 minutes. Stir in artichokes, roasted peppers, tomatoes and olives. Cook and stir until heated through, 3-5 minutes.
+                Meanwhile, prepare rice according to package directions. Serve with chicken. Sprinkle with parsley.",
+                'image' => "Greek-Chicken-Bowls.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Greece"],
+                'ingredients' => [
+                    [1, "pound", "boneless skinless chicken breasts"], [0.25, "teaspoon", "garlic powder"], [0.25, "teaspoon", "pepper"],
+                    [2, "teaspoons", "olive oil"], [1, "jar", "marinated quartered artichoke hearts"], [1, "jar", "Croasted sweet red peppers"],
+                    [0.33, "cup", "oil-packed sun-dried tomatoes"],
+                    [0.33, "cup", "Greek olives"], [1, "package", "ready-to-serve brown rice"], [1, "tablespoon", "minced fresh parsley"]
+                ]
+            ],
+
+            [
+                'name' => "Georgia Caviar",
+                'instructions' => "Place black-eyed peas in a large saucepan with enough water to cover. Bring to a boil.
+                Reduce heat and simmer 90 minutes, or until black-eyed peas are tender.
+                Drain black-eyed peas. Cover with Italian-style salad dressing.
+                In a large bowl, mix together jalapeno, onion, pimento peppers, garlic, green bell pepper,
+                and ground black pepper. Toss in black-eyed pea mixture. Chill in the refrigerator 8 hours or overnight before serving.",
+                'image' => "Georgia-Caviar.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Georgia"],
+                'ingredients' => [
+                    [1, "pound", "dry black-eyed peas"], [2, "cups", "Italian-style salad dressing "], [0.5, "cup", "diced jalapeno chile pepper"],
+                    [1.5, "cups", "finely chopped onion"], [2, "ounces", "diced pimento peppers"], [1, "tablespoon", "minced garlic"],
+                    [2, "cups", "diced green bell pepper"],
+                    [1, "pinch", "ground black pepper"]
+                ]
+            ],
+
+            [
+                'name' => "Crawfish Etouffee Georgia Style",
+                'instructions' => "Melt butter in a large cast iron skillet over medium heat. Stir in onion, celery root,
+                and bell peppers; cook and stir until the onion has softened and turned translucent, 8 to 10 minutes.
+                Stir in crawfish, garlic, and bay leaves. Cook, stirring occasionally, for 10 to 12 minutes.
+                Whisk flour into chicken broth and water in a bowl until smooth; pour into crawfish mixture. Season with smoked salt and cayenne pepper.
+                Bring mixture to a boil. Reduce heat to medium; cook and stir until mixture thickens, about 4 minutes. Stir in parsley and green onions;
+                cook 2 minutes more.",
+                'image' => "Etouffee.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Georgia"],
+                'ingredients' => [
+                    [0.5, "cup", "unsalted butter"], [2, "cups", "chopped sweet onions"], [1, "cup", "celery root"],
+                    [2.5, "teaspoon", "chopped green bell pepper "], [1, "pound", "peeled crawfish tails"], [2, "teaspoons", "minced garlic"],
+                    [3, null, "bay leaves"],
+                    [1.5, "tablespoon", "all-purpose flour"], [0.5, "cup", "low-sodium chicken broth"],
+                    [0.5, "cup", "water"]
+                ]
+            ],
+
+            [
+                'name' => "Gozinaki",
+                'instructions' => "Place apricot pieces in a small bowl. Add rum and almond extract, and mix well to coat each piece. Set aside.
+                Toast walnuts lightly at 350° F for 10 minutes; then chop them coarsely. In a deep saucepan,
+                bring the honey and pomegranate molasses to a boil. Stir in the nuts and apricot pieces.
+                Cook while stirring over medium-low heat for 10 to 12 minutes, until the mixture is thick.
+                Be careful not to burn it.
+                Pour the mixture out onto a moistened wooden board or a baking sheet lined with parchment paper
+                and lightly sprayed with cooking spray. Using a spatula, spread the mixture into a 1/2-inch thick rectangle. Let stand until hardened.",
+                'image' => "Gozinaki.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Georgia"],
+                'ingredients' => [
+                    [3.5, "cups", "shelled walnuts"], [12, "pcs", "dried apricots"], [1, "tablespoon", "dark rum"],
+                    [1, "teaspoon", "pure almond extract"], [0.66, "cup", "honey"], [0.33, "cup", "pomegranate molasses"]
+                ]
+            ],
+
+            [
+                'name' => "Khachapuri",
+                'instructions' => " Make the dough: In the bowl of an electric mixer fitted with the dough hook attachment, mix the flour, yeast, sugar, and salt to combine. Add the butter and mix on low speed until the mixture looks crumbly, about 1 minute.
+                Add the milk and water and mix the dough on low speed for 4 minutes. Raise the speed to medium and mix until the dough is very smooth, 2-3 minutes more.
+                Transfer the dough to a large, oiled bowl and cover with plastic wrap. Let the dough rise for 1 1/2 to 2 hours, until the dough is puffed (it may not fully double in size).
+                Divide the dough as desired: Cut into two even pieces for larger, more share-able khachapuri, or into four even pieces for smaller, individual khachapuri.
+                Pat the dough into an oval shape with your hands. On a lightly floured surface, roll out the dough, maintaining the oval shape, into an oblong oval about 1/3-inch thick.
+                Pick the dough up from the ends and transfer it to a parchment lined baking sheet. Gently stretch the dough when you transfer it to help elongate the oval a bit.
+                Crumble the goat cheese evenly over the dough, leaving about 1 inch around the edge on all sides. Sprinkle the mozzarella evenly over the goat cheese.
+                Working your way around the bread, fold the excess dough up and over the filling to create a little wall and encase it. Gently pinch the ends of the oval to help seal. Cover the breads with a piece of plastic wrap sprayed with nonstick spray, and let the bread rise for 30 minutes to 1 hour.
+                Preheat the oven to 375° F. Brush the edges of the dough with egg wash.
+                For small khachapuri, crack an egg on each piece, in the center of the bread. Transfer to the oven and bake until the crust is golden brown, the cheese is melted and lightly golden, and the egg white is set, but the yolk is still runny, 30 to 35 minutes.
+                For large khachapuri, transfer the breads to the oven and bake for 15 to 20 minutes. Remove the breads from the oven and crack three eggs evenly over the center of each bread. Return to the oven and continue to bake for 25 to 30 minutes more, until the bread is golden, the cheese is melted, and the egg white is set but the yolks are still runny.
+                Let the khachapuri cool for 5 to 10 minutes before serving warm.",
+                'image' => "Khachapuri.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Georgia"],
+                'ingredients' => [
+                    [522, "g", "bread flour"], [1, "tablespoon", "instant active dry yeast"], [2, "tablespoons", "granulated sugar"],
+                    [1, "teaspoon", "fine sea salt"], [142, "g", "unsalted butter"], [1, "cup", "whole milk, warmed"], [0.33, "cup", "water"]
+                ]
+            ],
+
+
+            [
+                'name' => "Chakapuli",
+                'instructions' => "Place the meat in a medium, wide pot in one layer. Add a third of the herbs, tomatillos, and
+                red pepper flakes. Add another layer of meat and then herbs. Season with salt and black pepper, drizzle the
+                wine and lime juice, cover and let it cook over medium-low heat for 45 to 50 minutes until the meat is tender.
+                Add the rest of the herbs, taste and adjust the seasonings. Turn the heat off in two minutes.",
+                'image' => "Chakapuli.jpg",
+                'isVegan' => false,
+                'isVegeterian' => false,
+                'isLactoseFree' => true,
+                'isGlutenFree' => false,
+                'isNutFree' => true,
+                'countries' => ["Georgia"],
+                'ingredients' => [
+                    [2, "pounds", " lamb (with bones)"], [5, "pcs", "tomatillos"], [2, null, "lime juice"],
+                    [2, "bunches", "tarragon"], [2, "bunches", "scallions"], [2, "cups", "dry white wine"], [null, null, "salt"]
+                ]
             ]
         ];
     }
