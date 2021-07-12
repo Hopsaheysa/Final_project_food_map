@@ -17,7 +17,7 @@ const [recipe, setRecipe] = useState('')
 
 
   return (
-    <div className="results__container">
+    // <div className="results__container">
       <div className="country">
          <div className="country__container">
               <h1 className="country__heading">Meals from {props.countries.name}</h1>
@@ -28,10 +28,12 @@ const [recipe, setRecipe] = useState('')
                 props.recipes.map((recipe, i) => (
                     <div key={i} className= "country__option" onClick={(event) => handleClick(event, recipe)}>
                     
-                     <div className="country__card">
+                     {/* <div className="country__card"> */}
+                    
                          <img src={`/images-food/${recipe.image}`} alt={recipe.name}/>
-                      <h3>{recipe.name}</h3>
-                    </div>
+                          <div className="country__name">{recipe.name}</div>
+                      
+                    {/* </div> */}
                   </div>
                 ))
               }
@@ -40,7 +42,7 @@ const [recipe, setRecipe] = useState('')
             </div>
          
 
-    </div>
+    {/* </div> */}
      {
        recipe ? 
        <RecipeResults recipe={recipe}  />

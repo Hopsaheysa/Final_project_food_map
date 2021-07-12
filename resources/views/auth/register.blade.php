@@ -1,15 +1,17 @@
-@foreach ($errors->all() as $error)
 
-    <div class="error">{{ $error }}</div>
-
-@endforeach
 
  
 @extends('layout.main')
 
 @section('content')
+
 <div class="register">
     <div class="register__container">
+        @foreach ($errors->all() as $error)
+
+    <div class="error">{{ $error }}</div>
+
+@endforeach
         <form class="register__form" action="{{ route('register') }}" method="post">
             @csrf
             <p class="register__title">Register</p>

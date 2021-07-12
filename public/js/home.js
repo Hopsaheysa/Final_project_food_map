@@ -292,9 +292,10 @@ function CountryResults(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     window.scrollTo(0, 2900);
   }, [recipe]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "results__container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return (
+    /*#__PURE__*/
+    // <div className="results__container">
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "country",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "country__container",
@@ -308,27 +309,25 @@ function CountryResults(props) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "country__options",
         children: props.recipes.map(function (recipe, i) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             className: "country__option",
             onClick: function onClick(event) {
               return handleClick(event, recipe);
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "country__card",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-                src: "/images-food/".concat(recipe.image),
-                alt: recipe.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-                children: recipe.name
-              })]
-            })
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+              src: "/images-food/".concat(recipe.image),
+              alt: recipe.name
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "country__name",
+              children: recipe.name
+            })]
           }, i);
         })
-      })]
-    }), recipe ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_RecipeResults__WEBPACK_IMPORTED_MODULE_0__.default, {
-      recipe: recipe
-    }) : null]
-  });
+      }), recipe ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_RecipeResults__WEBPACK_IMPORTED_MODULE_0__.default, {
+        recipe: recipe
+      }) : null]
+    })
+  );
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CountryResults);
@@ -938,6 +937,9 @@ function RecipeResults(props) {
               className: "recipe__container__bon",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
                 src: "../img/chef.png"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: "",
+                children: "Leave a review"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
                 children: "...Enjoy your meal! ...Bon app\xE9tit!  ...Dobar tek! ...Smakelijk eten! ...\u039A\u03B1\u03BB\u03AE \u03CC\u03C1\u03B5\u03BE\u03B7! ...Hyv\xE4\xE4 ruokahalua! ...Dobrou chu\u0165! ...\u98DF\u98EF! ...Buon appetito! ...J\xF3 \xE9tv\xE1gyat!"
               })]
