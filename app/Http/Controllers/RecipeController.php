@@ -56,4 +56,14 @@ class RecipeController extends Controller
             'status' => 'success'
         ];
     }
+
+    public function editReview($id)
+    {
+        $user = auth()->user();
+        $review = Comment::where("id", $id)->get();
+        // $review->text = 
+        return [
+            'status' => 'success'
+        ];
+    }
 }

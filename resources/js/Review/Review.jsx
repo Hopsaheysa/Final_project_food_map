@@ -6,8 +6,11 @@ const Review = () => {
     let { recipeId } = useParams();
     const [fetchHelper, setFetchHelper] = useState(null);
     const [text, setText] = useState('');
+
     const [reviewArray, setReviewArray] = useState([]);
     const [loggedInUser, setLoggedInUser] = useState({});
+
+
 
 
     const fetchReview = async () => {
@@ -29,6 +32,8 @@ const Review = () => {
     const handleTextChange = (event) => {
         setText(event.target.value);
     }
+
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -65,12 +70,19 @@ const Review = () => {
 
     };
 
+
+    const editItem = (e, review) => {
+        e.preventDefault();
+        setText(review.text);
+
+    };
+
+
     return (
 
 
         <div className="review__container">
             <form className="review__form" action="" onSubmit={handleSubmit}>
-
 
                 <h1 className="review__heading">Review this recipe</h1>
                 {/* "{ recipe.name }" */}
@@ -108,10 +120,17 @@ const Review = () => {
                                 <p>"{review.text}"</p>
                                 <p>By: {review.user.name}</p>
 
-                                {review.user.id === loggedInUser.id || loggedInUser.admin ?
 
-                                    <button className="btn" onClick={(e) => removeItem(e, review.id)} >X</button>
-                                    : ""}
+                                {review.user.id === loggedInUser.id || loggedInUser.admin ?
+                                    <>
+                                        <button className="btn" onClick={(e) => removeItem(e, review.id)} >Delete</button>
+                                        <button className="btn" onClick={(e) => editItem(e, review)} >Edit</button>
+                                    </>
+                                    : ""
+                                }
+
+
+
 
                             </div>
                         )
@@ -121,7 +140,7 @@ const Review = () => {
                 }
             </div>
 
-        </div>
+        </div >
 
 
 
