@@ -973,13 +973,20 @@ header {
 // REVIEWS
 
 .review {
-    background-color: #e6d3a3;
+    background-color: #f2f4f3;
+    // display: flex;
+    // justify-content: center;
+    // margin-top: 6em;
+    height: 100vh;
 
-    &__image {
+    img {
+        width: 500px;
+        height: auto;
     }
+
     &__container {
-        margin-top: 6em;
         display: flex;
+        // flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }

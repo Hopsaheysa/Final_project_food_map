@@ -68,8 +68,8 @@ const Review = () => {
 
     return (
 
-
-        <div className="review__container">
+        <>
+      
             <form className="review__form" action="" onSubmit={handleSubmit}>
 
 
@@ -79,7 +79,7 @@ const Review = () => {
 
                 <div className="review__group">
 
-                    <label htmlFor="text">Text</label>
+                    <label htmlFor="text"></label>
                     <textarea
                         name="text"
                         id="text"
@@ -122,9 +122,9 @@ const Review = () => {
                 }
             </div>
 
-        </div>
+    
 
-
+            </>
 
 
     )
