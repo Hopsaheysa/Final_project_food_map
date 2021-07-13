@@ -1009,6 +1009,7 @@ function RecipeResults(props) {
                 children: "Leave a review"
               })]
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "recipe__login",
               children: "Login to review this recipe"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
               className: "recipe__container__bon",

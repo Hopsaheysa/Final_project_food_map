@@ -552,6 +552,12 @@ header:hover {
 .recipe__review span:hover {
   color: #919720;
 }
+.recipe__login {
+  font-style: italic;
+  color: #919720;
+  display: flex;
+  justify-content: center;
+}
 .recipe__container__bon {
   display: flex;
   justify-content: center;

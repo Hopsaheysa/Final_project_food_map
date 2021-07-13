@@ -562,6 +562,13 @@ header {
         }
     }
 
+    &__login {
+        font-style: italic;
+        color: #919720;
+        display: flex;
+        justify-content: center;
+    }
+
     &__container__bon {
         display: flex;
         justify-content: center;
