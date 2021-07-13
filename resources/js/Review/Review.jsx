@@ -17,7 +17,6 @@ const Review = () => {
             }
         });
         const data = await response.json();
-        console.log(data);
         setReviewArray(data.review);
         setLoggedInUser(data.user);
     }
