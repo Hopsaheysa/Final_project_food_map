@@ -119,7 +119,7 @@ function RecipeResults(props) {
 
               <div className="recipe__container__bon">
                 <img src="../img/chef.png" />
-                <a href="">Leave a review</a>
+                <a href={`/recipe/${props.recipe.id}`}>Leave a review</a>
                 <h3>...Enjoy your meal! ...Bon appétit!  ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
               </div>
             </div>

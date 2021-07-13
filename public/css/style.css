@@ -11,6 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.flag {
+  width: 30px;
+  margin-left: 0.5em;
+}
+
 .home__container {
   background-color: #e6d3a3;
   display: flex;

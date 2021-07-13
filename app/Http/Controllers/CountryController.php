@@ -59,6 +59,7 @@ class CountryController extends Controller
         $user = auth()->user();
         if ($user) {
             $dislikedIngredient = $user->dislikesIngredients;
+
             // all recipes from country => this will be changed 
             // according to preference if user is logged in 
             $recipeQuery = $country->recipes()->with("ingredients")
