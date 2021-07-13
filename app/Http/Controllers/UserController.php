@@ -90,6 +90,6 @@ class UserController extends Controller
 
         return [
             'status' => 'success'
-        ];;
+        ];
     }
 }

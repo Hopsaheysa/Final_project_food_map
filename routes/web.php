@@ -28,9 +28,12 @@ Route::get('/recipe/{id}', "RecipeController@show");
 
 Route::get('/profile', "UserController@indexProfile")->middleware("auth");
 Route::post('/userSave', "UserController@store")->middleware("auth");
-Route::post('api/removeIngredient/{id}', "UserController@removeIngredient")->middleware("auth");
+Route::post('/api/removeIngredient/{id}', "UserController@removeIngredient")->middleware("auth");
 
 Route::get('/api/recipe/{id}', "RecipeController@fetchRecipe")->middleware("auth");
+Route::get('/api/review/{id}', "RecipeController@fetchReview")->middleware("auth");
+Route::post('/api/recipe/{id}/review', 'RecipeController@storeReview')->middleware('auth');
+// Route::post('/recipe/reviews/delete', 'BookController@deleteReview')->middleware('can:admin');
 
 
 
