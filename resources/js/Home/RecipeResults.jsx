@@ -66,8 +66,8 @@ function RecipeResults(props) {
 
                 {
                   props.recipe.ingredients.map((n, i) => (
-                    <ul>
-                      <li key={i}>
+                    <ul key={i}>
+                      <li >
                         {n.pivot.quantity ?
 
                           <span>{n.pivot.quantity} </span>

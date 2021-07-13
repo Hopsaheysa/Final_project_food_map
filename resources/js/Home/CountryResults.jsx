@@ -27,10 +27,7 @@ const [recipe, setRecipe] = useState('')
               {
                 props.recipes.map((recipe, i) => (
                     <div key={i} className= "country__option" onClick={(event) => handleClick(event, recipe)}>
-                    
-                    
-                    
-                         <img src={`/images-food/${recipe.image}`} alt={recipe.name}/>
+                         <img  src={`/images-food/${recipe.image}`} alt={recipe.name}/>
                           <p className="country__name">{recipe.name}</p>
             
                   </div>

@@ -907,8 +907,8 @@ function RecipeResults(props) {
                     }) : "", n.pivot.measurement ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
                       children: [n.pivot.measurement, " "]
                     }) : "", n.name]
-                  }, i)
-                });
+                  })
+                }, i);
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "recipe__ingredient",
