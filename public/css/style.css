@@ -902,18 +902,75 @@ header:hover {
   padding: 2px 16px;
 }
 
-.review {
-  background-color: #f2f4f3;
-  height: 100vh;
-}
-.review img {
-  width: 500px;
+#reviews {
+  width: 100%;
   height: auto;
+}
+
+.review {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/ingredients.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f2f4f3;
+  min-height: 100vh;
 }
 .review__container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+}
+.review__form {
+  margin: 3em;
+}
+.review__image {
+  color: #919720;
+}
+.review__heading {
+  text-align: center;
+  color: #919720;
+}
+.review__group {
+  outline: none;
+  border-style: none;
+}
+.review__btn {
+  margin-top: 1em;
+  background-color: rgba(60, 59, 13, 0.7);
+  color: #f2f4f3;
+}
+.review__btn, .review__remove {
+  padding: 0.6em;
+}
+.review__btn:hover, .review__remove:hover {
+  cursor: pointer;
+  background-color: #919720;
+  color: #f2f4f3;
+}
+.review__remove {
+  background-color: #919720;
+  color: #f2f4f3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 60%;
+}
+.review__comment {
+  position: relative;
+  background: rgba(60, 59, 13, 0.7);
+  color: #f2f4f3;
+  padding: 10px 30px;
+  margin: 10px 0;
+  word-wrap: break-word;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.review__comment cite {
+  font-size: 70%;
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=style.css.map*/
