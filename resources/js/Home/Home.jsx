@@ -84,7 +84,16 @@ function Home() {
           }
         }).map((val, key) => {
           return <div key={key} className="list">
-            <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}</div>
+            <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}
+            {
+                 
+              val.flag ?
+          
+              <img className="flag" src={`/images-flags/${val.flag}`} />
+              : <p></p>
+            }
+            
+            </div>
           </div>
         })}
 

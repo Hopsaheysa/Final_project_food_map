@@ -685,12 +685,15 @@ function Home() {
       }).map(function (val, key) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           className: "list",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "country-select",
             onClick: function onClick(event) {
               return handleClick(val);
             },
-            children: val.name
+            children: [val.name, val.flag ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+              className: "flag",
+              src: "/images-flags/".concat(val.flag)
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {})]
           })
         }, key);
       })]
@@ -906,8 +909,8 @@ function RecipeResults(props) {
                     }) : "", n.pivot.measurement ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
                       children: [n.pivot.measurement, " "]
                     }) : "", n.name]
-                  }, i)
-                });
+                  })
+                }, i);
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "recipe__ingredient",

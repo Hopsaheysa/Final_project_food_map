@@ -67,15 +67,17 @@ const Review = () => {
     };
 
     return (
-        <>
-            <form className="recipe-review" action="" onSubmit={handleSubmit}>
 
 
-                <h1>Review recipe </h1>
+        <div className="review__container">
+            <form className="review__form" action="" onSubmit={handleSubmit}>
 
 
+                <h1 className="review__heading">Review this recipe</h1>
+                {/* "{ recipe.name }" */}
 
-                <div className="form-group">
+
+                <div className="review__group">
 
                     <label htmlFor="text">Text</label>
                     <textarea
@@ -90,9 +92,9 @@ const Review = () => {
 
                 </div>
 
-                <div className="form-group">
+                <div className="review__group">
 
-                    <button>Submit the review</button>
+                    <button className="review__btn">Submit the review</button>
 
                 </div>
 
@@ -103,9 +105,9 @@ const Review = () => {
                 {reviewArray ?
                     reviewArray.map((review, i) => {
                         return (
-                            <div key={i}>
-                                <p>Review: {review.text}</p>
-                                <p>Written by: {review.user.name}</p>
+                            <div className="review__comment" key={i}>
+                                <p>"{review.text}"</p>
+                                <p>By: {review.user.name}</p>
 
                                 {review.user.id === loggedInUser.id || loggedInUser.admin ?
 
@@ -119,7 +121,11 @@ const Review = () => {
                     ""
                 }
             </div>
-        </>
+
+        </div>
+
+
+
 
     )
 

@@ -11,6 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.flag {
+  width: 30px;
+  margin-left: 0.5em;
+}
+
 .home__container {
   background-color: #e6d3a3;
   display: flex;
@@ -895,6 +900,16 @@ header:hover {
 }
 .about__person {
   padding: 2px 16px;
+}
+
+.review {
+  background-color: #e6d3a3;
+}
+.review__container {
+  margin-top: 6em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map*/
