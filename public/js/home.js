@@ -606,7 +606,7 @@ function Home() {
           switch (_context2.prev = _context2.next) {
             case 0:
               if (!countryResult) {
-                _context2.next = 9;
+                _context2.next = 8;
                 break;
               }
 
@@ -624,10 +624,9 @@ function Home() {
 
             case 6:
               data = _context2.sent;
-              console.log(data);
               setRecipesResult(data);
 
-            case 9:
+            case 8:
             case "end":
               return _context2.stop();
           }
@@ -939,7 +938,7 @@ function RecipeResults(props) {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
                 src: "../img/chef.png"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                href: "",
+                href: "/recipe/".concat(props.recipe.id),
                 children: "Leave a review"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
                 children: "...Enjoy your meal! ...Bon app\xE9tit!  ...Dobar tek! ...Smakelijk eten! ...\u039A\u03B1\u03BB\u03AE \u03CC\u03C1\u03B5\u03BE\u03B7! ...Hyv\xE4\xE4 ruokahalua! ...Dobrou chu\u0165! ...\u98DF\u98EF! ...Buon appetito! ...J\xF3 \xE9tv\xE1gyat!"

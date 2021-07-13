@@ -24,8 +24,14 @@ Route::get('/api/search', 'CountryController@allCountries');
 Route::get('/api/search/{term}', 'CountryController@search');
 Route::get('/country', "CountryController@index");
 
+Route::get('/recipe/{id}', "RecipeController@show");
+
 Route::get('/profile', "UserController@indexProfile")->middleware("auth");
 Route::post('/userSave', "UserController@store")->middleware("auth");
 Route::post('api/removeIngredient/{id}', "UserController@removeIngredient")->middleware("auth");
+
+Route::get('/api/recipe/{id}', "RecipeController@fetchRecipe")->middleware("auth");
+
+
 
 Route::get('/disliked', "UserController@dislikedIngredients")->middleware("auth");
