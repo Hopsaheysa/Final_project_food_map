@@ -82,20 +82,22 @@ const Review = () => {
 
 
         <div className="review__container">
+
             <form className="review__form" action="" onSubmit={handleSubmit}>
 
-                <h1 className="review__heading">Review this recipe</h1>
+
+                <h3 className="review__heading">Let us know!</h3>
                 {/* "{ recipe.name }" */}
 
 
                 <div className="review__group">
 
-                    <label htmlFor="text">Text</label>
+                    {/* <label htmlFor="text"></label> */}
                     <textarea
                         name="text"
                         id="text"
                         cols="30"
-                        rows="10"
+                        rows="8"
                         value={text}
                         placeholder="Leave your review here..."
                         onChange={handleTextChange}
@@ -105,7 +107,7 @@ const Review = () => {
 
                 <div className="review__group">
 
-                    <button className="review__btn">Submit the review</button>
+                    <button className="review__btn">Submit review</button>
 
                 </div>
 
@@ -117,20 +119,17 @@ const Review = () => {
                     reviewArray.map((review, i) => {
                         return (
                             <div className="review__comment" key={i}>
-                                <p>"{review.text}"</p>
-                                <p>By: {review.user.name}</p>
+                                <blockquote>"{review.text}"</blockquote>
+                                <cite>UserName: {review.user.name}</cite>
 
 
                                 {review.user.id === loggedInUser.id || loggedInUser.admin ?
                                     <>
-                                        <button className="btn" onClick={(e) => removeItem(e, review.id)} >Delete</button>
+                                        <button className="review__remove" onClick={(e) => removeItem(e, review.id)} >Remove</button>
                                         <button className="btn" onClick={(e) => editItem(e, review)} >Edit</button>
                                     </>
                                     : ""
                                 }
-
-
-
 
                             </div>
                         )
@@ -140,8 +139,8 @@ const Review = () => {
                 }
             </div>
 
-        </div >
 
+        </div>
 
 
 

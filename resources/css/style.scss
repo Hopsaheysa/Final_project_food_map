@@ -378,9 +378,6 @@ header {
     }
 
     &__container {
-        // background-color: #91972a;
-        // background-color: #e6d3a3;
-
         background-color: rgba(190, 190, 190, 0.322);
 
         display: flex;
@@ -972,15 +969,87 @@ header {
 
 // REVIEWS
 
+#reviews {
+    width: 100%;
+    height: auto;
+}
+
 .review {
-    background-color: #e6d3a3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../img/ingredients.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f2f4f3;
+    min-height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form {
+        margin: 3em;
+    }
 
     &__image {
+        color: #919720;
     }
-    &__container {
-        margin-top: 6em;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+
+    &__heading {
+        text-align: center;
+        color: #919720;
+    }
+
+    &__group {
+        outline: none;
+        border-style: none;
+    }
+
+    &__btn {
+        margin-top: 1em;
+        background-color: rgba(59.9, 59.2, 12.5, 0.7);
+        color: #f2f4f3;
+    }
+
+    &__btn,
+    &__remove {
+        padding: 0.6em;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #919720;
+            color: #f2f4f3;
+        }
+    }
+
+    &__remove {
+        background-color: #919720;
+        color: #f2f4f3;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 60%;
+    }
+
+    &__comment {
+        position: relative;
+        background: rgba(59.9, 59.2, 12.5, 0.7);
+        color: #f2f4f3;
+        padding: 10px 30px;
+        margin: 10px 0;
+        word-wrap: break-word;
+
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+
+        cite {
+            font-size: 70%;
+            margin-right: 1em;
+        }
     }
 }

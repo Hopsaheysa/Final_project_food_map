@@ -5,13 +5,16 @@
 
 <div class="review">
 
-{{$recipe["name"]}}
-
-<div class="recipe__image"><img src="/images-food/{{$recipe["image"]}}" alt={{$recipe["name"]}} /></div>
-
-<div id="review">   
-
+     
+<div class="review__image">
+    <h1>Did you find the {{$recipe["name"]}} recipe helpful?</h1>
+    
+    {{-- <img src="/images-food/{{$recipe["image"]}}" alt={{$recipe["name"]}} /> --}}
 </div>
+
+<div id="reviews">   
+    </div>
+
     <script src="{{mix('js/review.js')}}"></script>
 
 @endsection

@@ -17,4 +17,4 @@ ReactDOM.render((
         </Switch>
     </Router>
 
-), document.getElementById('review'))
+), document.getElementById('reviews'))
