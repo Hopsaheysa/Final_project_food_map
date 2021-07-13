@@ -6,9 +6,11 @@ const Review = () => {
     let { recipeId } = useParams();
     const [fetchHelper, setFetchHelper] = useState(null);
     const [text, setText] = useState('');
+    const [textEdit, setTextEdit] = useState('');
 
     const [reviewArray, setReviewArray] = useState([]);
     const [loggedInUser, setLoggedInUser] = useState({});
+    const [edit, setEdit] = useState(0);
 
 
 
@@ -33,6 +35,10 @@ const Review = () => {
         setText(event.target.value);
     }
 
+    const handleTextEditChange = (event) => {
+        setTextEdit(event.target.value);
+    }
+
 
 
     const handleSubmit = async (event) => {
@@ -51,9 +57,30 @@ const Review = () => {
         setFetchHelper(data);
     }
 
+    const handleSubmitEdit = async (event) => {
+        event.preventDefault();
+        let review_id = event.target[0].id
+        let change = event.target[0].innerHTML;
+        console.log(event.target[0].innerHTML);
+        const response = await fetch(`/api/recipe/${recipeId}/review/${review_id}`, {
+            method: 'POST',
+            body: JSON.stringify({ change }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+        })
+        const data = await response.json();
+        console.log(data);
+        setFetchHelper(data);
+        setEdit(0);
+    }
+
     const removeItem = async (e, id) => {
         e.preventDefault();
         console.log(id);
+
         const response = await fetch(`/api/removeReview/${id}`, {
             method: 'POST',
             body: JSON.stringify(id),
@@ -73,8 +100,9 @@ const Review = () => {
 
     const editItem = (e, review) => {
         e.preventDefault();
-        setText(review.text);
-
+        setEdit(review.id);
+        setTextEdit(review.text);
+        console.log(review.id);
     };
 
 
@@ -119,14 +147,34 @@ const Review = () => {
                     reviewArray.map((review, i) => {
                         return (
                             <div className="review__comment" key={i}>
-                                {}
-                                <blockquote>"{review.text}"</blockquote>
-                                <cite>UserName: {review.user.name}</cite>
+                                {review.id == edit ?
+                                    (<form className="review__form" action="" onSubmit={handleSubmitEdit}>
 
+                                        <textarea
+                                            name="text"
+                                            id={edit}
+                                            cols="30"
+                                            rows="8"
+                                            value={textEdit}
+                                            onChange={handleTextEditChange}
+                                        ></textarea>
+
+
+                                        <button className="review__btn">Save</button>
+
+                                    </form>)
+                                    :
+                                    (<>
+                                      <cite>User: {review.user.name}</cite>
+                                        <blockquote>"{review.text}"</blockquote>
+                                      
+                                    </>)
+                                }
 
                                 {review.user.id === loggedInUser.id || loggedInUser.admin ?
                                     <>
                                         <button className="review__remove" onClick={(e) => removeItem(e, review.id)} >Remove</button>
+                                   
                                         <button className="review__edit" onClick={(e) => editItem(e, review)} >Edit</button>
                                     </>
                                     : ""

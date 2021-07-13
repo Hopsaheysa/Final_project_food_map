@@ -47,6 +47,19 @@ class RecipeController extends Controller
             'status' => 'success'
         ];
     }
+
+    public function updateReview($recipe_id, $review_id, Request $request)
+    {
+        $review_text = $request->all();
+        $text = $review_text["change"];
+
+        Comment::where("id", $review_id)->update(["text" => $text]);
+
+        return [
+            'status' => 'success'
+        ];
+    }
+
     public function removeReview($id)
     {
         $user = auth()->user();
