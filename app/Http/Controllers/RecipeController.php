@@ -26,9 +26,9 @@ class RecipeController extends Controller
     {
         $user = auth()->user();
         $review = Comment::where("recipe_id", $id)
-            ->leftJoin("users", "user_id", '=', "comments.user_id")
+            ->with("user")
             ->get();
-        return $review;
+        return compact("review", "user");
     }
 
     public function storeReview($id, Request $request)
@@ -42,6 +42,15 @@ class RecipeController extends Controller
 
         $newReview->save();
 
+
+        return [
+            'status' => 'success'
+        ];
+    }
+    public function removeReview($id)
+    {
+        $user = auth()->user();
+        Comment::where("id", $id)->delete();
 
         return [
             'status' => 'success'

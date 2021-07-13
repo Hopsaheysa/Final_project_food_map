@@ -7,22 +7,8 @@ const Review = () => {
     const [fetchHelper, setFetchHelper] = useState(null);
     const [text, setText] = useState('');
     const [reviewArray, setReviewArray] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useState({});
 
-
-    // const fetchRecipe = async () => {
-    //     const response = await fetch(`/api/recipe/${recipeId}`, {
-    //         headers: {
-    //             'Accept': 'application/json'
-    //         }
-    //     });
-    //     const data = await response.json();
-    //     console.log(data.id);
-    //     setRecipe(data);
-    // }
-
-    // useEffect(() => {
-    //     fetchRecipe();
-    // }, []);
 
     const fetchReview = async () => {
         const response = await fetch(`/api/review/${recipeId}`, {
@@ -32,11 +18,13 @@ const Review = () => {
         });
         const data = await response.json();
         console.log(data);
-        setReviewArray(data)
+        setReviewArray(data.review);
+        setLoggedInUser(data.user);
     }
 
+
     useEffect(() => {
-        fetchReview();
+        fetchReview() && setFetchHelper(null);
     }, [fetchHelper]);
 
     const handleTextChange = (event) => {
@@ -59,6 +47,24 @@ const Review = () => {
         setFetchHelper(data);
     }
 
+    const removeItem = async (e, id) => {
+        e.preventDefault();
+        console.log(id);
+        const response = await fetch(`/api/removeReview/${id}`, {
+            method: 'POST',
+            body: JSON.stringify(id),
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+
+        // this deletes it from list on page -> we need to run it through backend -> done above
+        // setData(data.filter((ing) => ing.id !== ingredient.id));
+        setFetchHelper("changed");
+
+    };
 
     return (
         <>
@@ -66,7 +72,7 @@ const Review = () => {
 
 
                 <h1>Review recipe </h1>
-                {/* "{ recipe.name }" */}
+
 
 
                 <div className="form-group">
@@ -99,7 +105,13 @@ const Review = () => {
                         return (
                             <div key={i}>
                                 <p>Review: {review.text}</p>
-                                <p>Written by: {review.name}</p>
+                                <p>Written by: {review.user.name}</p>
+
+                                {review.user.id === loggedInUser.id || loggedInUser.admin ?
+
+                                    <button className="btn" onClick={(e) => removeItem(e, review.id)} >X</button>
+                                    : ""}
+
                             </div>
                         )
                     })

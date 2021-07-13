@@ -33,7 +33,7 @@ Route::post('/api/removeIngredient/{id}', "UserController@removeIngredient")->mi
 Route::get('/api/recipe/{id}', "RecipeController@fetchRecipe")->middleware("auth");
 Route::get('/api/review/{id}', "RecipeController@fetchReview")->middleware("auth");
 Route::post('/api/recipe/{id}/review', 'RecipeController@storeReview')->middleware('auth');
-// Route::post('/recipe/reviews/delete', 'BookController@deleteReview')->middleware('can:admin');
+Route::post('/api/removeReview/{id}', 'RecipeController@removeReview')->middleware("auth");
 
 
 
