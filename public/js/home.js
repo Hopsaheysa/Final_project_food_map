@@ -290,7 +290,7 @@ function CountryResults(props) {
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    window.scrollTo(0, 2900);
+    window.scrollTo(0, 2000);
   }, [recipe]);
   return (
     /*#__PURE__*/

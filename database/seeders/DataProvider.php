@@ -176,22 +176,18 @@ class DataProvider
                 'countries' => ["France"],
                 'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
             ], [
-                'name' => "Lobster Bisque",
-                'instructions' => "Gather the ingredients.
-            Melt the butter in a large pan, once melted add the flour, a pinch of salt and pepper and the paprika. Stir well. 
-            Slowly whisk in the milk, followed by the chicken stock, the white wine, and continue stirring until a smooth and slightly thickened to a cream-like consistency. (This stirring can take several minutes but spending the time at this stage of the bisque is critical to the success of the dish. Be careful not to let the mixture boil as this may cause the bisque to curdle.) 
-            Add the onion, the carrots and simmer (again, do not boil) for 10 minutes. Add the cooked lobster meat and stir. Taste the bisque and adjust the seasoning to your liking. 
-            Stir in the Cognac and finally, the cream. Heat through until piping hot. 
-            Serve in hot bowls with a crusty baguette on the side. 
-            Enjoy! ",
-                'image' => "Lobster-Bisque.jpg",
+                'name' => "French toast",
+                'instructions' => "Whisk together the eggs, milk, cream, vanilla and cinnamon. Lay the brioche slices in a single layer in a shallow dish and pour the egg mixture over them. Allow to soak for 2-3 mins, then carefully turn over and soak for 2 mins more.
+                Heat 1 tbsp of the vegetable oil and butter in a non-stick frying pan over a medium heat until foaming. Carefully lift 2 slices of the soaked brioche out of the dish and add to the frying pan. Fry for 3 mins on each side, until golden and crisp, then place on a wire rack over a baking tray in a warm oven while you repeat with the remaining slices.
+                Serve dusted in icing sugar and scattered with fresh berries, if you like. ",
+                'image' => "french-toast.jpg",
                 'isVegan' => false,
-                'isVegetarian' => false,
+                'isVegetarian' => true,
                 'isLactoseFree' => false,
                 'isGlutenFree' => false,
                 'isNutFree' => true,
                 'countries' => ["France"],
-                'ingredients' => [[6, "tablespoons", "butter"], [6, "tablespoons", "flour"], [1, "teaspoon", "salt"], [null, null, "black pepper"], [1, "teaspoon", "paprika"], [4, "cups", "milk"], [1, "cups", "chicken stock"], [1, "dl", "white wine"], [3, "tablespoons", "onion"], [3, "tablespoons", "carrot"], [3, "cups", "cooked lobster meat"], [1, "tablespoon", "Cognac"], [0.5, "cup", "heavy cream"]]
+                'ingredients' => [[6, "large", "eggs"], [80, "ml", "milk"], [40, "ml", "double cream"], [1, "tsp", "vanilla extract"], [0.5, "tbs", "cinnamon"], [1, "cups", "chicken stock"], [4, "thick", "slices brioche"], [2, "tbls", "vegetable oil"], [2, "tbls", "butter"], [null, null, "icing sugar and fresh berries, to serve"]]
             ], [
                 'name' => "Chicken mole enchiladas",
                 'instructions' => "You will need two frying pans. Place the mole sauce in one of the frying pans and set over medium low heat. Have a plate covered with paper towels ready. (Please check the ingredients list below)
