@@ -675,7 +675,22 @@ class DataProvider
                 'name' => "Beef Wellington",
                 'instructions' => "Using kitchen twine, tie tenderloin in 4 places. Season generously with salt and pepper. 
                 Over high heat, coat bottom of a heavy skillet with olive oil. Once pan is nearly smoking, sear tenderloin until well-browned on all sides, including the ends, about 2 minutes per side (12 minutes total). 
-                Transfer to a plate. When cool enough to handle, snip off twine and coat all sides with mustard. Let cool in fridge. Meanwhile, make duxelles: In a food processor, pulse mushrooms, shallots, and thyme until finely chopped. To skillet, add butter and melt over medium heat. Add mushroom mixture and cook until liquid has evaporated, about 25 minutes. Season with salt and pepper, then let cool in fridge. Place plastic wrap down on a work surface, overlapping so that it’s twice the length and width of the tenderloin. Shingle the prosciutto on the plastic wrap into a rectangle that’s big enough to cover the whole tenderloin. Spread the duxelles evenly and thinly over the prosciutto. Season tenderloin, then place it at the bottom of the prosciutto. Roll meat into prosciutto-mushroom mixture, using plastic wrap to roll tightly. Tuck ends of prosciutto as you roll, then twist ends of plastic wrap tightly into a log and transfer to fridge to chill (this helps it maintain its shape). Heat oven to 425°. Lightly flour your work surface, then spread out puff pastry and roll it into a rectangle that will cover the tenderloin (just a little bigger than the prosciutto rectangle you just made!). Remove tenderloin from plastic wrap and place on bottom of puff pastry. Brush the other three edges of the pastry with egg wash, then tightly roll beef into pastry. Once the log is fully covered in puff pastry, trim any extra pastry, then crimp edges with a fork to seal well. Wrap roll in plastic wrap to get a really tight cylinder, then chill for 20 minutes. Remove plastic wrap, then transfer roll to a foil-lined baking sheet. Brush with egg wash and sprinkle with flaky salt. Bake until pastry is golden and the center registers 120°F for medium-rare, about 40 to 45 minutes. Let rest 10 minutes before carving and serving.",
+                Transfer to a plate. When cool enough to handle, snip off twine and coat all sides with mustard. Let cool in fridge. 
+                Meanwhile, make duxelles: In a food processor, pulse mushrooms, shallots, and thyme until finely chopped. 
+                To skillet, add butter and melt over medium heat. Add mushroom mixture and cook until liquid has evaporated, about 25 minutes. 
+                Season with salt and pepper, then let cool in fridge. 
+                Place plastic wrap down on a work surface, overlapping so that it’s twice the length and width of the tenderloin. 
+                Shingle the prosciutto on the plastic wrap into a rectangle that’s big enough to cover the whole tenderloin. 
+                Spread the duxelles evenly and thinly over the prosciutto. Season tenderloin, then place it at the bottom of the prosciutto. 
+                Roll meat into prosciutto-mushroom mixture, using plastic wrap to roll tightly. 
+                Tuck ends of prosciutto as you roll, then twist ends of plastic wrap tightly into a log and transfer to fridge to chill (this helps it maintain its shape). 
+                Heat oven to 425°. Lightly flour your work surface, then spread out puff pastry and roll it into a rectangle that will cover the tenderloin (just a little bigger than the prosciutto rectangle you just made!). 
+                Remove tenderloin from plastic wrap and place on bottom of puff pastry. Brush the other three edges of the pastry with egg wash, then tightly roll beef into pastry. 
+                Once the log is fully covered in puff pastry, trim any extra pastry, then crimp edges with a fork to seal well. 
+                Wrap roll in plastic wrap to get a really tight cylinder, then chill for 20 minutes. Remove plastic wrap, then transfer roll to a foil-lined baking sheet. 
+                Brush with egg wash and sprinkle with flaky salt. 
+                Bake until pastry is golden and the center registers 120°F for medium-rare, about 40 to 45 minutes. 
+                Let rest 10 minutes before carving and serving.",
                 'image' => "beef-wellington.jpg",
                 'isVegan' => false,
                 'isVegetarian' => false,
@@ -686,7 +701,13 @@ class DataProvider
                 'ingredients' => [[2, "ilb", "center-cut beef tenderloin, trimmed"], [2, "teaspoons", "olive pil"], [0.5, "teaspoon", "salt"], [2, "tablespoons", "Dijon Mustard"], [1.5, "lb", "mixed mushrooms, roughly chopped"], [2, "tablespoons", "unsalted butter"], [12, "thin", "slices prosciutto"], [14, "oz", "frozen puff pastry, thawed"], [1, "large", "egg, beaten"], [1, "thyme", "sprig"]]
             ], [
                 'name' => "Eton Mess",
-                'instructions' => "Heat oven to 120C/100C fan/gas 1 and line a large baking tray with parchment paper. Whisk the egg whites in a clean bowl using an electric whisk or tabletop mixer until they reach stiff peaks, then add the sugar in 3 lots, re-whisking to stiff peaks every time. Spoon dollops of the mixture onto the baking parchment, cook on the bottom shelf of the oven for 1hr – 1hr15 mins until the meringues are completely hard and come off the paper easily. Leave to cool. Blitz 1/3 of the strawberries to make a strawberry sauce. In a large bowl whisk the cream with the icing sugar until it just holds its shape. Roughly crush ¾ of the meringues and tip them in with the chopped strawberries and stir, then swirl through the strawberry sauce. Dollop into bowls then crush the remaining meringues, sprinkling the pieces over the top.",
+                'instructions' => "Heat oven to 120C/100C fan/gas 1 and line a large baking tray with parchment paper. 
+                Whisk the egg whites in a clean bowl using an electric whisk or tabletop mixer until they reach stiff peaks, then add the sugar in 3 lots, re-whisking to stiff peaks every time. 
+                Spoon dollops of the mixture onto the baking parchment, cook on the bottom shelf of the oven for 1hr – 1hr15 mins until the meringues are completely hard and come off the paper easily. Leave to cool. 
+                Blitz 1/3 of the strawberries to make a strawberry sauce. 
+                In a large bowl whisk the cream with the icing sugar until it just holds its shape. 
+                Roughly crush ¾ of the meringues and tip them in with the chopped strawberries and stir, then swirl through the strawberry sauce. 
+                Dollop into bowls then crush the remaining meringues, sprinkling the pieces over the top.",
                 'image' => "eton-mess.jpg",
                 'isVegan' => false,
                 'isVegetarian' => true,
@@ -697,7 +718,16 @@ class DataProvider
                 'ingredients' => [[1, "tablespoon", "icing sugar"], [450, "ml", "double cream"], [500, "g", "strawberries, hulled and roughly chopped"], [2, "large", "white eggs"], [120, "g", "caster sugar"]]
             ], [
                 'name' => "Köttbullar (Swedish Meatballs)",
-                'instructions' => "In a large bowl, mix the breadcrumbs together with the milk, cream (If using), egg, garlic, salt, peppers and spice. Allow the milk to soak into the breadcrumbs for at least 10 minutes. Once the milk has absorbed some, add in the onion, meat(s) and parsley. Mix well with your hands to combine. Roll meat into about 24 small balls, or 16 larger balls. Heat 1 tablespoons of butter and 2 teaspoons of oil in a pan on medium-high heat. Fry meatballs in batches of two so they don’t stew or simmer. Transfer to a warm plate and cover with foil. Add the 1/3 cup butter to the juices in the pan to melt. Whisk in the flour until it dissolves and turns brown in colour. Pour in the broth (or stock), cream, soy sauce and dijon. Bring to a to simmer and season with salt and pepper to taste. Mix the sauce through well to combine all of the flavours together. Continue to simmer until thickened.",
+                'instructions' => "In a large bowl, mix the breadcrumbs together with the milk, cream (If using), egg, garlic, salt, peppers and spice. 
+                Allow the milk to soak into the breadcrumbs for at least 10 minutes. 
+                Once the milk has absorbed some, add in the onion, meat(s) and parsley. 
+                Mix well with your hands to combine. Roll meat into about 24 small balls, or 16 larger balls. 
+                Heat 1 tablespoons of butter and 2 teaspoons of oil in a pan on medium-high heat. 
+                Fry meatballs in batches of two so they don’t stew or simmer. Transfer to a warm plate and cover with foil. 
+                Add the 1/3 cup butter to the juices in the pan to melt. 
+                Whisk in the flour until it dissolves and turns brown in colour. Pour in the broth (or stock), cream, soy sauce and dijon. 
+                Bring to a to simmer and season with salt and pepper to taste. Mix the sauce through well to combine all of the flavours together. 
+                Continue to simmer until thickened.",
                 'image' => "swedish-meatballs.jpg",
                 'isVegan' => false,
                 'isVegetarian' => true,
@@ -708,7 +738,11 @@ class DataProvider
                 'ingredients' => [[0.5, "cup", "breadcrumbs"], [0.5, "cup", "milk"], [35, "ml", "cream"], [1, "clove", "minced garlic"], [1, "large", "egg"], [0.33, "teaspoon", "salt"], [0.33, "teaspoon", "salt"], [0.25, "teaspoon", "EACH of black pepper and ground white pepper"], [0.25, "teaspoon", "Grillkrydda OR all spice OR all purpose seasoning"], [0.33, "of", "an onion"], [500, "g", "ground beef (mince)"], [500, "g", "ground pork"], [2, "tablespoons", "fresh, finely chopped parsley"], [1, "tablespoon", "butter"], [2, "tablespoons", "olive oil"]]
             ], [
                 'name' => "Räkmacka (Shrimp Sandwich)",
-                'instructions' => "Slice the eggs and cucumber into thin slices. Spread 1 tbsp of mayonnaise over each slice of bread. Season the prawns with salt, pepper and lemon juice. Arrange lettuce on top, followed by cucumber,eggs and seasoned prawns. Top with extra mayonnaise, garnish with dill and lemon slices, and serve.",
+                'instructions' => "Slice the eggs and cucumber into thin slices. 
+                Spread 1 tbsp of mayonnaise over each slice of bread. 
+                Season the prawns with salt, pepper and lemon juice. 
+                Arrange lettuce on top, followed by cucumber,eggs and seasoned prawns. 
+                Top with extra mayonnaise, garnish with dill and lemon slices, and serve.",
                 'image' => "shrimp-sandwich.jpg",
                 'isVegan' => false,
                 'isVegetarian' => false,
@@ -719,7 +753,14 @@ class DataProvider
                 'ingredients' => [[2, "boiled", "free-range eggs"], [2, "slices", "brown or normal rye bread"], [4, "tbsp", "mayonnaise"], [5, "leaves", "of lettuce"], [300, "g", "cooked prawns/shrimps"], [1, "squeeze", "of lemon"], [4, "smalls", "sprigs of dill"], [8, "slices", "of cucumber"]]
             ], [
                 'name' => "Smulpaj (Crumble pie with summer berries)",
-                'instructions' => "Pre heat the oven to 425ºF. Use a a 8” diameter pie dish which is about 1” deep. Place the berries/fruit in the pie dish. Add the sugar and the corn starch over the berries and mix it carefully without mashing the berries. Mix sugar, rolled oats and flour in a bowl. Add the the soft butter in smaller pieces into the bowl. Rub in the butter using your finger tips until it forms crumbs and starts to stick together. Crumble the mixture loosely over the berries in the pie dish with your fingers, so that it leaves slight gaps and you can still see the berries underneath. Bake it in the middle part of the oven for approximately 20 minutes until the crumbles get a crispy golden color. Serve your crumble pie with vanilla ice cream (or vanilla sauce) and some fresh berries on top.",
+                'instructions' => "Pre heat the oven to 425ºF. Use a a 8” diameter pie dish which is about 1” deep. 
+                Place the berries/fruit in the pie dish. 
+                Add the sugar and the corn starch over the berries and mix it carefully without mashing the berries. 
+                Mix sugar, rolled oats and flour in a bowl. Add the the soft butter in smaller pieces into the bowl. 
+                Rub in the butter using your finger tips until it forms crumbs and starts to stick together. 
+                Crumble the mixture loosely over the berries in the pie dish with your fingers, so that it leaves slight gaps and you can still see the berries underneath. 
+                Bake it in the middle part of the oven for approximately 20 minutes until the crumbles get a crispy golden color. 
+                Serve your crumble pie with vanilla ice cream (or vanilla sauce) and some fresh berries on top.",
                 'image' => "crumble-pie.jpg",
                 'isVegan' => false,
                 'isVegetarian' => true,

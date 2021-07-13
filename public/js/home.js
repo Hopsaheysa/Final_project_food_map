@@ -184,11 +184,11 @@ function About() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
               children: "Favourite food: "
-            }), " I like every food where are red hot chilli peppers."]
+            }), " I like every food where are red hot chilli peppers"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
               children: "Interests: "
-            }), " I collect elephant figurines."]
+            }), " I collect elephant figurines"]
           })]
         })]
       })]
@@ -317,7 +317,7 @@ function CountryResults(props) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
               src: "/images-food/".concat(recipe.image),
               alt: recipe.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
               className: "country__name",
               children: recipe.name
             })]

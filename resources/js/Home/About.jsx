@@ -31,8 +31,8 @@ function About() {
                 <img src="../img/marek.jpg" alt="Marek" />
                 <div className="about__person">
                     <h4>Marek Stránský</h4>
-                    <p><b>Favourite food: </b> I like every food where are red hot chilli peppers.</p>
-                    <p><b>Interests: </b> I collect elephant figurines.</p>
+                    <p><b>Favourite food: </b> I like every food where are red hot chilli peppers</p>
+                    <p><b>Interests: </b> I collect elephant figurines</p>
                 </div>
             </div>
            </div>
