@@ -107,7 +107,7 @@ const Review = () => {
 
                 <div className="review__group">
 
-                    <button className="review__btn">Submit review</button>
+                    <button className="review__btn">Submit</button>
 
                 </div>
 
@@ -127,7 +127,7 @@ const Review = () => {
                                 {review.user.id === loggedInUser.id || loggedInUser.admin ?
                                     <>
                                         <button className="review__remove" onClick={(e) => removeItem(e, review.id)} >Remove</button>
-                                        <button className="btn" onClick={(e) => editItem(e, review)} >Edit</button>
+                                        <button className="review__edit" onClick={(e) => editItem(e, review)} >Edit</button>
                                     </>
                                     : ""
                                 }

@@ -11,9 +11,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.flag {
-  width: 30px;
-  margin-left: 0.5em;
+button {
+  font-family: "Raleway", sans-serif;
 }
 
 .home__container {
@@ -65,6 +64,10 @@ html {
     font-size: 130%;
     width: 85%;
   }
+}
+.home__container__flag {
+  width: 30px;
+  margin-left: 0.5em;
 }
 
 .main_nav {
@@ -944,26 +947,32 @@ header:hover {
   outline: none;
   border-style: none;
 }
-.review__btn {
-  margin-top: 1em;
+.review__remove, .review__edit, .review__btn {
+  padding: 0.6em;
+  background-color: #919720;
   background-color: rgba(60, 59, 13, 0.7);
   color: #f2f4f3;
 }
-.review__btn, .review__remove {
-  padding: 0.6em;
-}
-.review__btn:hover, .review__remove:hover {
+.review__remove:hover, .review__edit:hover, .review__btn:hover {
   cursor: pointer;
   background-color: #919720;
   color: #f2f4f3;
 }
+.review__btn {
+  margin-top: 1em;
+  font-size: 100%;
+}
 .review__remove {
-  background-color: #919720;
-  color: #f2f4f3;
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 60%;
+  font-size: 70%;
+}
+.review__edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 70%;
 }
 .review__comment {
   position: relative;

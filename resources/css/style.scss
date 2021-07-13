@@ -13,12 +13,17 @@ html {
     scroll-behavior: smooth;
 }
 
-.flag {
-    width: 30px;
-    margin-left: 0.5em;
+button {
+    font-family: "Raleway", sans-serif;
 }
 
+
+
 // HOME
+
+.home {
+
+}
 
 .home__container {
     background-color: #e6d3a3;
@@ -27,6 +32,8 @@ html {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+
 
     &__header {
         font-size: 600%;
@@ -67,6 +74,13 @@ html {
             width: 85%;
         }
     }
+    
+    &__flag {    
+        width: 30px;
+        margin-left: 0.5em;
+    }
+
+
 }
 
 // NAV
@@ -1018,15 +1032,14 @@ header {
         border-style: none;
     }
 
+    &__remove,
+    &__edit,
     &__btn {
-        margin-top: 1em;
+        
+        padding: 0.6em;
+        background-color: #919720;
         background-color: rgba(59.9, 59.2, 12.5, 0.7);
         color: #f2f4f3;
-    }
-
-    &__btn,
-    &__remove {
-        padding: 0.6em;
 
         &:hover {
             cursor: pointer;
@@ -1035,13 +1048,23 @@ header {
         }
     }
 
+    &__btn {
+        margin-top: 1em;
+        font-size: 100%;
+    }
+
     &__remove {
-        background-color: #919720;
-        color: #f2f4f3;
         position: absolute;
         bottom: 0;
         right: 0;
-        font-size: 60%;
+        font-size: 70%;
+    }
+
+    &__edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 70%;
     }
 
     &__comment {

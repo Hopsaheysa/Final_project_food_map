@@ -691,7 +691,7 @@ function Home() {
               return handleClick(val);
             },
             children: [val.name, val.flag ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-              className: "flag",
+              className: "home__container__flag",
               src: "/images-flags/".concat(val.flag)
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {})]
           })

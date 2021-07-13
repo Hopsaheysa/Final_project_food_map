@@ -91,7 +91,7 @@ function Home() {
 
                 val.flag ?
 
-                  <img className="flag" src={`/images-flags/${val.flag}`} />
+                  <img className="home__container__flag" src={`/images-flags/${val.flag}`} />
                   : <p></p>
               }
 
