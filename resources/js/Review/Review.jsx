@@ -119,6 +119,7 @@ const Review = () => {
                     reviewArray.map((review, i) => {
                         return (
                             <div className="review__comment" key={i}>
+                                {}
                                 <blockquote>"{review.text}"</blockquote>
                                 <cite>UserName: {review.user.name}</cite>
 
