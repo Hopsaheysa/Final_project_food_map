@@ -11,6 +11,7 @@ function Home() {
   const [countryResult, setCountryResult] = useState('');
   const [recipesResult, setRecipesResult] = useState(null);
 
+
   const loadCountries = async () => {
     const response = await fetch(`/api/search`, {
       headers: {
@@ -20,6 +21,8 @@ function Home() {
     const data = await response.json();
     setCountriesAll(data);
   }
+
+
 
   useEffect(() => {
     loadCountries();
@@ -37,7 +40,6 @@ function Home() {
       });
       const data = await response.json();
       setRecipesResult(data);
-
     }
   }
 
@@ -62,7 +64,7 @@ function Home() {
 
   return (
     <>
-    
+
       <div className="home__container">
         <h1 className="home__container__header">World <span>Kitchen</span></h1>
         <h2 className="home__container__slogan"><span>Finding you recipes </span>from around the world</h2>
@@ -85,14 +87,14 @@ function Home() {
         }).map((val, key) => {
           return <div key={key} className="list">
             <div className="country-select" onClick={(event) => handleClick(val)}>{val.name}
-            {
-                 
-              val.flag ?
-          
-              <img className="flag" src={`/images-flags/${val.flag}`} />
-              : <p></p>
-            }
-            
+              {
+
+                val.flag ?
+
+                  <img className="flag" src={`/images-flags/${val.flag}`} />
+                  : <p></p>
+              }
+
             </div>
           </div>
         })}

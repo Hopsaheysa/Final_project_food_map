@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/api/country/{country_id}', "CountryController@show");
 
 Route::get('/api/search', 'CountryController@allCountries');
+Route::get('/api/user', 'UserController@showUser');
 
 Route::get('/api/search/{term}', 'CountryController@search');
 Route::get('/country', "CountryController@index");

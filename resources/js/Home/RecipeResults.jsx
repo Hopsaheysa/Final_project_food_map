@@ -1,6 +1,26 @@
 import Footer from './Footer'
+import { useState, useEffect } from 'react'
 
 function RecipeResults(props) {
+
+  const [user, setUser] = useState(null);
+
+
+  const loadUser = async () => {
+    const response = await fetch(`/api/user`, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    const data = await response.json();
+
+    setUser(data);
+  }
+
+  useEffect(() => {
+    loadUser();
+  }, [])
+
 
   const instructionsSteps = props.recipe.instructions.split('\n')
   console.log(props.recipe);
@@ -114,13 +134,13 @@ function RecipeResults(props) {
 
 
               </ol>
-
-                   <a className="recipe__review" href={`/recipe/${props.recipe.id}`}>Like this meal? <span>Leave a review</span></a>
-
+              {user ?
+                <a className="recipe__review" href={`/recipe/${props.recipe.id}`}>Like this meal? <span>Leave a review</span></a>
+                : <p>Login to review this recipe</p>}
               <div className="recipe__container__bon">
-               
+
                 <img src="../img/chef.png" />
-              
+
                 <h3>...Enjoy your meal! ...Bon appétit!  ...Dobar tek! ...Smakelijk eten! ...Καλή όρεξη! ...Hyvää ruokahalua! ...Dobrou chuť! ...食飯! ...Buon appetito! ...Jó étvágyat!</h3>
               </div>
             </div>

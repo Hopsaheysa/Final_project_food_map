@@ -92,4 +92,10 @@ class UserController extends Controller
             'status' => 'success'
         ];
     }
+    
+    public function showUser()
+    {
+        $user = auth()->user();
+        return $user;
+    }
 }
