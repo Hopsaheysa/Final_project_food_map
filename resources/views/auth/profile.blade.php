@@ -7,9 +7,7 @@
 <div class="profile">
 
     <div class="profile__container">
-                {{-- <h5>
-            Your email is {{ $user->email }}
-        </h5> --}}
+
         <h1>
             Hello, <span>{{ $user->name }}</span>
         </h1>
@@ -21,19 +19,19 @@
             <h2>Want to update your preferences?</h2>
             
             <label for="isVegan">Vegan?</label>
-            <input type="checkbox" name="isVegan" value={{ old( $user->isVegan )}}><br />
+            <input type="checkbox" name="isVegan" value="1" {{ $user->isVegan ? "checked" : ""}}><br />
 
             <label for="isVegetarian">Vegetarian?</label>
-            <input type="checkbox" name="isVegetarian" value={{ old( $user->isVegetarian )}}><br />
+            <input type="checkbox" name="isVegetarian" value="1" {{ $user->isVegetarian ? "checked" : ""}}><br />
 
             <label for="isLactoseFree">Lactose intolerant?</label>
-            <input type="checkbox" name="isLactoseFree" value={{ old( $user->isLactoseFree )}}><br />
+            <input type="checkbox" name="isLactoseFree" value="1" {{ $user->isLactoseFree ? "checked" : ""}}><br />
             
             <label for="isGlutenFree">Gluten intolerant?</label>
-            <input type="checkbox" name="isGlutenFree" value={{ old( $user->isGlutenFree )}}><br />
+            <input type="checkbox" name="isGlutenFree" value="1" {{ $user->isGlutenFree ? "checked" : ""}}><br />
 
             <label for="isNutFree">Nut intolerant?</label>
-            <input type="checkbox" name="isNutFree" value={{ old( $user->isVegan )}}><br />
+            <input type="checkbox" name="isNutFree" value="1" {{ $user->isNutFree ? "checked" : ""}}><br />
             
         
             {{-- this id is used as a link to index.js if you want to change it change also index.js --}}

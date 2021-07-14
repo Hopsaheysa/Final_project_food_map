@@ -12,8 +12,8 @@ class UserController extends Controller
     public function indexProfile()
     {
 
-
         $user = auth()->user();
+        // dd($user->isVegetarian);
         return view('auth.profile', compact("user"));
     }
 
@@ -92,7 +92,7 @@ class UserController extends Controller
             'status' => 'success'
         ];
     }
-    
+
     public function showUser()
     {
         $user = auth()->user();
