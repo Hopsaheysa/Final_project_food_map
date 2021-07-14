@@ -63,31 +63,33 @@ function Disliked() {
     return (
         <>
             <div className="profile__inputs">
-                <p>
-                    <span className="profile__emoji">✕</span> I don't care for
+                <h2>
+                    {/* <span className="profile__emoji">✕</span>  */}
+                    I don't care for
                     these ingredients...
-                </p>
+                </h2>
                 <form action="" method="post" onSubmit={(e) => handleDeleteSubmit(e)}>
                     <ul>
                         {
                             data.map((ingredient) => (
                                 <li key={ingredient.id}>
-                                    <p> {ingredient.name}</p>
-                                    <button className="btn" onClick={(e) => removeItem(e, ingredient)} >X</button>
+                                    <div class="profile__ingredient"> {ingredient.name}<button className="profile__remove" onClick={(e) => removeItem(e, ingredient)} >x</button></div>
+
                                 </li >
                             ))
                         }
+                       <p class="profile__give">Give me another input <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button> </p>
                     </ul>
                 </form>
 
                 <ul>
                     {inputArray}
+                        
                 </ul>
+             
             </div>
 
-            <button className="profile__add" onClick={(e) => addIngredient(e)}>
-                +
-            </button>
+           
 
 
 

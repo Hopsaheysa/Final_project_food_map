@@ -13,6 +13,7 @@ html {
 
 button {
   font-family: "Raleway", sans-serif;
+  cursor: pointer;
 }
 
 .home__container {
@@ -831,54 +832,89 @@ header:hover {
 }
 
 .profile {
-  background-color: #f2f4f3;
+  background-color: #e6d3a3;
 }
 .profile__container {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 20px;
+  padding: 5em;
+}
+.profile__admin {
+  color: red;
+  opacity: 0.6;
+}
+.profile__user {
+  margin: 2em 4em;
+  padding: 3.5em 4.5em;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f2f4f3;
+}
+.profile__inputs {
+  margin-left: 5em;
+}
+.profile__inputs li {
+  list-style: none;
+  padding: 0;
+}
+.profile__inputs p {
+  color: #919720;
 }
 .profile h1 {
-  margin-top: 2em;
   font-size: 300%;
 }
+.profile h2 {
+  margin-left: 1em;
+}
 .profile h2,
+.profile h3,
 .profile span {
   color: #919720;
 }
-.profile__form {
-  line-height: 2.5;
-}
 .profile__preferences {
-  margin-top: 4em;
+  margin: 1.5em;
+  line-height: 3;
+}
+.profile__detail {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
 }
 .profile__input {
   display: block;
   padding: 15px 10px;
-  margin-bottom: 10px;
   width: 100%;
   border: 1px solid #ddd;
   transition: border-width 0.2s ease;
   border-radius: 2px;
   color: #404040;
 }
-.profile__emoji {
+.profile__give {
   color: #919720;
+  font-size: 66%;
 }
-.profile__add {
-  width: 30px;
-  height: 30px;
+.profile__add, .profile__remove {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  margin-bottom: 2em;
-  background: #919720;
   text-align: center;
   border: none;
-  font-size: 20px;
+  font-size: 14px;
   color: #f2f4f3;
+}
+.profile__add {
+  background: #919720;
+}
+.profile__add:hover {
+  background-color: #565a01;
+}
+.profile__remove {
+  margin-left: 1em;
+  background-color: #ffb1b1;
+}
+.profile__remove:hover {
+  background-color: #ff3d3d;
 }
 .profile__btn {
   background: #919720;
@@ -888,10 +924,22 @@ header:hover {
   border: none;
   border-radius: 0.75rem;
   font-size: 100%;
-  margin-left: 20em;
 }
-.profile button {
-  cursor: pointer;
+.profile__btn:hover {
+  background-color: #565a01;
+}
+
+.add-admin {
+  background: #919720;
+  color: #f2f4f3;
+  margin-top: 2em;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 100%;
+}
+.add-admin:hover {
+  background-color: #565a01;
 }
 
 .about {

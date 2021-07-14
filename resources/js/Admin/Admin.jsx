@@ -59,8 +59,8 @@ const Admin = () => {
 
             <form action="" method="post" onSubmit={(e) => addAdmin(e)}>
                 <div className="searchAdmin__container">
-                    <h1 className="searchAdmin__container__header">Search an user</h1>
-                    <h2 className="searchAdmin__container__slogan"><span>Which you want to </span>make an admin</h2>
+                    <h1 className="searchAdmin__container__header">Admin creator</h1>
+                    <h3 className="searchAdmin__container__slogan">search user</h3>
                     <div className="filter">
                         <input
                             type="search"
