@@ -25,7 +25,12 @@ const Admin = () => {
     // THIS WILL SAVE USER AS AN ADMIN!
     const addAdmin = async (e) => {
         e.preventDefault();
-       
+
+        fetchedUsers.map((usr) => {
+            if (usr.name === searchTerm) {
+                console.log("Hi");
+            }
+        })
         const response = await fetch(`/api/addAdmin/${searchTerm}`, {
             method: 'POST',
             body: JSON.stringify(searchTerm),

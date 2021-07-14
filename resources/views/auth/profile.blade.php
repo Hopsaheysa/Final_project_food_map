@@ -12,6 +12,7 @@
             Hello, <span>{{ $user->name }}</span>
         </h1>
 
+        <p> {{$user->admin ? "You are logged in as an admin" : ""}} </p>
 
         <form class="profile__form" action="{{ action('UserController@store') }}" method="post">
             @csrf
