@@ -72,7 +72,7 @@ function Home() {
           <input
             type="search"
             className="filter__input"
-            placeholder="e.g Czech Republic"
+            placeholder="e.g. Czech Republic"
             onChange={(event) => { setSearchTerm(event.target.value) }}
 
           />

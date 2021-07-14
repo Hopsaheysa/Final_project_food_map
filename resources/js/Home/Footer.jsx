@@ -10,15 +10,17 @@ function Footer() {
 
                     <ul className="footer__nav">
                         <Link to='/about'><li>About us</li></Link>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href={`/register`}>Register</a></li>
+                        <li><a href={`/login`}>Login</a></li>
+                        <li><a href="">Contact</a></li>
                     </ul>
                
 
                 <div className="footer__copyright">
                     <p>Copyright &copy; 2021 by WorldKitchen.</p>
                     <p>All rights reserved</p>
+                    <br/>
+                       <p>info@world-kitchen.com</p>
                 </div>
             
                 
