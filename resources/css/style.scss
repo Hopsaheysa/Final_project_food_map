@@ -15,6 +15,7 @@ html {
 
 button {
     font-family: "Raleway", sans-serif;
+    cursor: pointer;
 }
 
 // HOME
@@ -870,40 +871,72 @@ header {
 // PROFILE
 
 .profile {
-    background-color: #f2f4f3;
+    background-color: #e6d3a3;
 
     &__container {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        width: 100%;
-        min-height: 100vh;
-        padding: 20px;
+        padding: 5em;
+    }
+
+    &__admin {
+        color: red;
+        opacity: 0.6;
+    }
+
+    &__user {
+        // display: flex;
+        // flex-direction: row;
+
+        margin: 2em 4em;
+        padding: 3.5em 4.5em;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+        background-color: #f2f4f3;
+    }
+
+    &__inputs {
+        margin-left: 5em;
+
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+        p {
+            color: #919720;
+        }
     }
 
     h1 {
-        margin-top: 2em;
         font-size: 300%;
     }
 
+    h2 {
+        margin-left: 1em;
+    }
+
     h2,
+    h3,
     span {
         color: #919720;
     }
 
-    &__form {
-        line-height: 2.5;
+    &__preferences {
+        margin: 1.5em;
+        line-height: 3;
     }
 
-    &__preferences {
-        margin-top: 4em;
+    &__detail {
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
     }
 
     &__input {
         display: block;
         padding: 15px 10px;
-        margin-bottom: 10px;
         width: 100%;
         border: 1px solid #ddd;
         transition: border-width 0.2s ease;
@@ -911,20 +944,42 @@ header {
         color: #404040;
     }
 
-    &__emoji {
+    &__give {
         color: #919720;
+        font-size: 66%;
+    }
+
+    // &__emoji {
+    //     color: #919720;
+    // }
+
+    &__add,
+    &__remove {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        // margin-bottom: 2em;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+        color: #f2f4f3;
     }
 
     &__add {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-bottom: 2em;
         background: #919720;
-        text-align: center;
-        border: none;
-        font-size: 20px;
-        color: #f2f4f3;
+
+        &:hover {
+            background-color: #565a01;
+        }
+    }
+
+    &__remove {
+        margin-left: 1em;
+        background-color: rgb(255, 177, 177);
+
+        &:hover {
+            background-color: rgb(255, 61, 61);
+        }
     }
 
     &__btn {
@@ -935,11 +990,26 @@ header {
         border: none;
         border-radius: 0.75rem;
         font-size: 100%;
-        margin-left: 20em;
-    }
 
-    button {
-        cursor: pointer;
+        &:hover {
+            background-color: #565a01;
+        }
+    }
+}
+
+// ADMIN
+
+.add-admin {
+    background: #919720;
+    color: #f2f4f3;
+    margin-top: 2em;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 100%;
+
+    &:hover {
+        background-color: #565a01;
     }
 }
 
