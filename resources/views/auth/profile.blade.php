@@ -16,11 +16,11 @@
 
         <form class="profile__form" action="{{ action('UserController@store') }}" method="post">
             @csrf
-            
             <h2>Want to update your preferences?</h2>
             
             <label for="isVegan">Vegan?</label>
-            <input type="checkbox" name="isVegan" value="1" {{ $user->isVegan ? "checked" : ""}}><br />
+            
+            <input type="checkbox" name="isVegan" value="1" {{ $user->isVegan ? "checked" : ""}} ><br />
 
             <label for="isVegetarian">Vegetarian?</label>
             <input type="checkbox" name="isVegetarian" value="1" {{ $user->isVegetarian ? "checked" : ""}}><br />

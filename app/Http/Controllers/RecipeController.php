@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Recipe;
+use App\Models\Ingredient;
 use App\Models\User;
 use App\Models\Comment;
 
@@ -78,5 +79,18 @@ class RecipeController extends Controller
         return [
             'status' => 'success'
         ];
+    }
+
+    public function addRecipe(Request $request)
+    {
+        dd($request);
+        $recipe = new Recipe;
+        $recipe->name = $request->name;
+        $recipe->isVegan = $request->isVegan;
+        $recipe->isVegetarian = $request->isVegetarian;
+        $recipe->isLactoseFree = $request->isLactoseFree;
+        $recipe->isNutFree = $request->isNutFree;
+        $recipe->instructions = $request->instructions;
+        $recipe->image = $request->image;
     }
 }

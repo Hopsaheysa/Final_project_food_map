@@ -23,6 +23,7 @@ Route::get('/api/search', 'CountryController@allCountries');
 Route::get('/api/user', 'UserController@showUser');
 Route::get('/api/allUsers', 'UserController@allUsers');
 Route::post('/api/addAdmin/{searchTerm}', 'UserController@addAdmin');
+Route::post('/api/recipe/save', 'RecipeController@addRecipe');
 
 Route::get('/api/search/{term}', 'CountryController@search');
 Route::get('/country', "CountryController@index");
