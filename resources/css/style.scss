@@ -574,7 +574,7 @@ header {
         }
     }
 
-    &__login {
+    a {
         font-style: italic;
         color: #919720;
         display: flex;
@@ -616,6 +616,10 @@ header {
         list-style: none;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 760px) {
+            font-size: 70%;
+        }
     }
 
     &__nav li,
@@ -648,9 +652,9 @@ header {
     &__copyright {
         color: #d8d174;
         text-align: center;
-        margin-top: 2em;
+        margin-top: 1em;
 
-        @media (max-width: 700px) {
+        @media (max-width: 760px) {
             font-size: 70%;
         }
 
@@ -670,6 +674,10 @@ header {
     font-size: 18px;
     border: 0;
     color: #d8d174;
+
+    @media (max-width: 760px) {
+        font-size: 14px;
+    }
 }
 
 .facebook:hover {

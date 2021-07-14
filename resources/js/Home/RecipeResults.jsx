@@ -136,7 +136,7 @@ function RecipeResults(props) {
               </ol>
               {user ?
                 <a className="recipe__review" href={`/recipe/${props.recipe.id}`}>Like this meal? <span>Leave a review</span></a>
-                : <p className="recipe__login">Login to review this recipe</p>}
+                : <a href={`/login`}>Login to review this recipe</a>}
               <div className="recipe__container__bon">
 
                 <img src="../img/chef.png" />

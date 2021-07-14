@@ -18,7 +18,7 @@ function About() {
     
     
             <div className="about__card">
-                <img src="" alt="Richard" />
+                <img src="../img/richard.jpg" alt="Richard" />
                 <div className="about__person">
                     <h4>Richard Paprok</h4>
                     <p><b>Favourite food: </b> Svíčková, Sushi</p>
