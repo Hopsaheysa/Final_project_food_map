@@ -6,7 +6,6 @@ function Disliked() {
     const [inputsNumber, setInputsNumber] = useState(1);
     const [inputArray, setInputArray] = useState([]);
     const [data, setData] = useState([]);
-    const [dislikeList, setDislikeList] = useState([]);
 
     const fetchData = async () => {
         const response = await fetch("disliked");
@@ -14,13 +13,14 @@ function Disliked() {
         setData(data);
     };
 
+
+
     useEffect(() => {
         fetchData();
     }, []);
 
     const addIngredient = (e) => {
         e.preventDefault();
-        console.log(e);
         setInputsNumber(inputsNumber + 1);
     };
 
@@ -43,7 +43,6 @@ function Disliked() {
 
     const removeItem = async (e, ingredient) => {
         e.preventDefault();
-        console.log(ingredient.id)
 
         const response = await fetch(`/api/removeIngredient/${ingredient.id}`, {
             method: 'POST',
@@ -78,7 +77,6 @@ function Disliked() {
                                 </li >
                             ))
                         }
-                        {dislikeList}
                     </ul>
                 </form>
 
@@ -90,6 +88,9 @@ function Disliked() {
             <button className="profile__add" onClick={(e) => addIngredient(e)}>
                 +
             </button>
+
+
+
         </>
     );
 }

@@ -42,11 +42,14 @@
            </div>
             <button class="profile__btn">Update</button>
          </form>
+         <div id="admin-form">
 
+        </div>
 </div>
 
 
     <script src="{{mix('js/profile.js')}}"></script>
+    <script src="{{mix('js/admin.js')}}"></script>
     
 
 

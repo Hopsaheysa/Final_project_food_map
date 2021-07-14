@@ -7,7 +7,6 @@ function Input(props) {
     //     e.preventDefault()
     //     setInputsNumber(inputsNumber + 1);
     // }
-    console.log(props.position);
     return (
         <>
 

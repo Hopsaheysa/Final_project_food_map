@@ -13,7 +13,6 @@ class UserController extends Controller
     {
 
         $user = auth()->user();
-        // dd($user->isVegetarian);
         return view('auth.profile', compact("user"));
     }
 
@@ -97,5 +96,20 @@ class UserController extends Controller
     {
         $user = auth()->user();
         return $user;
+    }
+
+    public function allUsers()
+    {
+        $users = User::all();
+        return $users;
+    }
+
+    public function addAdmin($user)
+    {
+        User::where("name", $user)->update(["admin" => 1]);
+
+        return [
+            'status' => 'success'
+        ];
     }
 }
