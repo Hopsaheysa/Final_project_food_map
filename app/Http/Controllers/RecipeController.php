@@ -84,7 +84,7 @@ class RecipeController extends Controller
 
     public function addRecipe(Request $request)
     {
-
+    
         $recipe = new Recipe;
 
 
@@ -129,7 +129,7 @@ class RecipeController extends Controller
 
             $recipe->ingredients()->attach($ingredientNew->id, ["quantity" => $ingredient->ingredient_quantity, "measurement" => $ingredient->ingredient_measurement]);
         }
-
+         
         return [
             'status' => 'success'
         ];

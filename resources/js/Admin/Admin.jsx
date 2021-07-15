@@ -90,7 +90,7 @@ const Admin = () => {
                 if (response.data.status === "success") {
                     setSuccessMessage("Recipe saved!");
                 }
-            }).catch(error => setSuccessMessage("Storing of the recipe failed!!"));
+            }).catch(error => setSuccessMessage("Failed to create recipe"));
     }
 
 
@@ -162,6 +162,10 @@ const Admin = () => {
     }, [ingredientsQuantity]);
 
 
+
+
+
+    
 
 
 
@@ -256,6 +260,9 @@ const Admin = () => {
                     {successAdmin ? <div className="admin__success"> {successAdmin} </div> : ""}
                 </div>
             </form>
+
+               
+
         </div>
 
     )
