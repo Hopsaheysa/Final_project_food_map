@@ -865,13 +865,27 @@ header {
 .error {
     color: #919720;
     line-height: 2;
-    font-size: 90%;
+    font-size: 80%;
 }
 
 // PROFILE
 
+#profile-form {
+    @media (max-width: 630px) {
+        margin-left: 0;
+    }
+}
+
 .profile {
     background-color: #e6d3a3;
+
+    @media (max-width: 800px) {
+        font-size: 90%;
+    }
+
+    @media (max-width: 705px) {
+        font-size: 80%;
+    }
 
     &__container {
         display: flex;
@@ -879,6 +893,11 @@ header {
         align-items: center;
         justify-content: center;
         padding: 5em;
+
+        @media (max-width: 48px) {
+            padding: 0;
+            width: 100%;
+        }
     }
 
     &__admin {
@@ -894,10 +913,19 @@ header {
         padding: 3.5em 4.5em;
         box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
         background-color: #f2f4f3;
+
+        @media (max-width: 630px) {
+            margin: 0;
+            width: fit-content;
+        }
     }
 
     &__inputs {
         margin-left: 5em;
+
+        @media (max-width: 630px) {
+            margin-left: 0;
+        }
 
         li {
             list-style: none;
@@ -921,6 +949,10 @@ header {
     h3,
     span {
         color: #919720;
+
+        @media (max-width: 775px) {
+            font-size: 90%;
+        }
     }
 
     &__preferences {
@@ -1012,9 +1044,14 @@ header {
 
 .searchAdmin__container {
     margin: 2em 4em;
-    padding: 3.5em 4.5em;
+    padding: 4em;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     background-color: #f2f4f3;
+
+    @media (max-width: 630px) {
+        margin: 2em 0;
+        width: fit-content;
+    }
 
     &__header {
         color: #919720;
@@ -1028,11 +1065,20 @@ header {
 .admin {
     display: flex;
 
+    @media (max-width: 1340px) {
+        flex-direction: column;
+    }
+
     &__recipe__create {
         box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
         background-color: #f2f4f3;
         margin: 2em 4em;
-        padding: 5em;
+        padding: 4em;
+
+        @media (max-width: 630px) {
+            margin: 2em 0;
+            width: fit-content;
+        }
 
         h1,
         p {
@@ -1209,6 +1255,10 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }
     }
 
     &__form {
@@ -1217,11 +1267,27 @@ header {
 
     &__image {
         color: #919720;
-    }
 
-    &__heading {
-        text-align: center;
-        color: #919720;
+        h1 {
+            @media (max-width: 1300px) {
+                margin-top: 6em;
+                font-size: 120%;
+            }
+
+            @media (max-width: 580px) {
+                margin-top: 10em;
+                font-size: 80%;
+            }
+
+            @media (max-width: 400px) {
+                margin-left: 1em;
+            }
+        }
+
+        &__heading {
+            text-align: center;
+            color: #919720;
+        }
     }
 
     &__group {
