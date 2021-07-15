@@ -143,6 +143,10 @@ const Admin = () => {
             })
     }
 
+    
+
+
+
 
     return (
         <div className="admin">
@@ -233,6 +237,9 @@ const Admin = () => {
                     <button className="searchAdmin__btn" >Add admin</button>
                 </div>
             </form>
+
+               
+
         </div>
 
     )
