@@ -862,7 +862,7 @@ header:hover {
   color: #919720;
 }
 .profile h1 {
-  font-size: 300%;
+  font-size: 250%;
 }
 .profile h2 {
   margin-left: 1em;
@@ -882,13 +882,12 @@ header:hover {
   flex-direction: column;
 }
 .profile__input {
-  display: block;
-  padding: 15px 10px;
+  outline: none;
+  padding: 0.75em;
+  border-style: none;
+  opacity: 0.7;
+  margin: 0.75em 0em;
   width: 100%;
-  border: 1px solid #ddd;
-  transition: border-width 0.2s ease;
-  border-radius: 2px;
-  color: #404040;
 }
 .profile__give {
   color: #919720;
@@ -905,6 +904,7 @@ header:hover {
 }
 .profile__add {
   background: #919720;
+  margin-left: 0.5em;
 }
 .profile__add:hover {
   background-color: #565a01;
@@ -929,7 +929,7 @@ header:hover {
   background-color: #565a01;
 }
 
-.add-admin {
+.searchAdmin__btn {
   background: #919720;
   color: #f2f4f3;
   margin-top: 2em;
@@ -938,7 +938,92 @@ header:hover {
   border-radius: 0.75rem;
   font-size: 100%;
 }
-.add-admin:hover {
+.searchAdmin__btn:hover {
+  background-color: #565a01;
+}
+
+.searchAdmin__container {
+  margin: 2em 4em;
+  padding: 3.5em 4.5em;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f2f4f3;
+}
+.searchAdmin__container__header {
+  color: #919720;
+}
+.searchAdmin__container__search {
+  color: #404040;
+}
+
+.admin {
+  display: flex;
+}
+.admin__recipe__create {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f2f4f3;
+  margin: 2em 4em;
+  padding: 5em;
+}
+.admin__recipe__create h1,
+.admin__recipe__create p {
+  color: #919720;
+}
+.admin__recipe__create form {
+  line-height: 2;
+}
+.admin__recipe__create input,
+.admin__recipe__create textarea {
+  outline: none;
+  padding: 0.75em;
+  border-style: none;
+  opacity: 0.7;
+  margin: 0.75em 0em;
+}
+.admin__form-group {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.admin__form-group__pref {
+  margin-bottom: 2em;
+  margin-left: 1em;
+  line-height: 2.5;
+  font-size: 90%;
+}
+.admin__form-group__label {
+  color: #919720;
+}
+.admin__ingredient__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.admin__country {
+  margin-bottom: 1em;
+}
+.admin__add {
+  background: #919720;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  color: #f2f4f3;
+}
+.admin__add:hover {
+  background-color: #565a01;
+}
+.admin__submit {
+  background: #919720;
+  color: #f2f4f3;
+  margin-top: 2em;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 100%;
+}
+.admin__submit:hover {
   background-color: #565a01;
 }
 

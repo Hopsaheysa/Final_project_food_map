@@ -12,7 +12,7 @@
             Hello, <span>{{ $user->name }}</span>
         </h1>
 
-        <p class="profile__admin"> {{$user->admin ? "*You are logged in as an admin" : ""}} </p>
+        <p class="profile__admin"> {{$user->admin ? "*You are logged in as admin" : ""}} </p>
             
         <div class="profile__user">
             <h2>Update your preferences</h2>

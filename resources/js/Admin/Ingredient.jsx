@@ -36,11 +36,11 @@ const Ingredient = (props) => {
 
     return (
         <div>
-            <h5>Ingredient {props.position + 1}</h5>
-            <div key={props.position}>
+            <p>Please enter ingredient {props.position + 1}</p>
+            <div key={props.position} className="admin__ingredient__input">
                 <input type="number" name="ingredient_quantity" value={values.ingredient_quantity} onChange={handleChange} placeholder="Quantity" />
                 <input type="text" name="ingredient_measurement" value={values.ingredient_measurement} onChange={handleChange} placeholder="Unit" />
-                <input type="text" name="ingredient_name" value={values.ingredient_name} onChange={handleChange} placeholder="Ingredient name" />
+                <input type="text" name="ingredient_name" value={values.ingredient_name} onChange={handleChange} placeholder="Name" />
             </div>
         </div>
     )

@@ -28,8 +28,9 @@ const Country = (props) => {
     }, [values]);
 
     return (
-        <div>
-            <input type="text" name="country_name" value={values.country_name} onChange={handleChange} placeholder="Country name" />
+        <div className="admin__country">
+            <p>Which country or countries does this belong to?</p>
+            <input className="admin__country__input" type="text" name="country_name" value={values.country_name} onChange={handleChange} placeholder="Country name" />
         </div>
     )
 }
