@@ -13,6 +13,8 @@ const Admin = () => {
 
     const [countryQuantity, setCountryQuantity] = useState(1);
     const [countryList, setCountryList] = useState([]);
+    const [successMessage, setSuccessMessage] = useState("");
+    const [successAdmin, setSuccessAdmin] = useState("");
 
     const [values, setValues] = useState({
         name: "",
@@ -38,7 +40,6 @@ const Admin = () => {
         setFetchedUsers(data);
     }
 
-    // THIS WILL SAVE USER AS AN ADMIN!
     const addAdmin = async (e) => {
         e.preventDefault();
 
@@ -50,69 +51,14 @@ const Admin = () => {
                 'Content-type': 'application/json',
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
-        })
-    }
-
-    const addIngredient = (e) => {
-        e.preventDefault();
-        setIngredientsQuantity(ingredientsQuantity + 1);
-    };
-    const creatingIngredientsList = () => {
-        const list = [];
-        for (let i = 0; i < ingredientsQuantity; i++) {
-            list.push(
-                <div key={i}>
-                    <Ingredient position={i} ingredient={ingredient} setIngredient={setIngredient} />
-                </div>
-            );
-        }
-        setIngredientsList(list);
-    }
-
-    useEffect(() => {
-        creatingIngredientsList();
-    }, [ingredientsQuantity]);
-
-
-    const addCountry = (e) => {
-        e.preventDefault();
-        setCountryQuantity(countryQuantity + 1);
-    };
-    const creatingCountryList = () => {
-        const list = [];
-        for (let i = 0; i < countryQuantity; i++) {
-            list.push(
-                <div key={i}>
-                    <Country position={i} country={country} setCountry={setCountry} />
-                </div>
-            );
-        }
-        setCountryList(list);
-    }
-
-    useEffect(() => {
-        creatingCountryList();
-    }, [countryQuantity]);
-
-    useEffect(() => {
-        fetchUsers();
-    }, []);
-
-    const handleChange = (event) => {
-        console.log(event);
-        let value = null;
-        if (event.target.name === "img") {
-            value = event.target.files[0]
-
-        } else {
-            value = event.target.value
-        }
-        setValues(previous_values => {
-            return ({
-                ...previous_values,
-                [event.target.name]: value
-            });
         });
+        const data = await response.json();
+        if (data.status === "success") {
+            setSuccessAdmin("Admin created!");
+        } else {
+            setSuccessAdmin("User not found")
+        }
+
     }
 
     const addRecipe = async (event) => {
@@ -139,8 +85,85 @@ const Admin = () => {
                     "Content-Type": "multipart/form-data",
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                 }
-            })
+
+            }).then(response => {
+                if (response.data.status === "success") {
+                    setSuccessMessage("Recipe saved!");
+                }
+            }).catch(error => setSuccessMessage("Storing of the recipe failed!!"));
     }
+
+
+
+    const handleChange = (event) => {
+        console.log(event);
+        let value = null;
+        if (event.target.name === "img") {
+            value = event.target.files[0]
+
+        } else {
+            value = event.target.value
+        }
+        setValues(previous_values => {
+            return ({
+                ...previous_values,
+                [event.target.name]: value
+            });
+        });
+    }
+
+
+    const addCountry = (e) => {
+        e.preventDefault();
+        setCountryQuantity(countryQuantity + 1);
+    };
+
+    const addIngredient = (e) => {
+        e.preventDefault();
+        setIngredientsQuantity(ingredientsQuantity + 1);
+    };
+
+
+    const creatingIngredientsList = () => {
+        const list = [];
+        for (let i = 0; i < ingredientsQuantity; i++) {
+            list.push(
+                <div key={i}>
+                    <Ingredient position={i} ingredient={ingredient} setIngredient={setIngredient} />
+                </div>
+            );
+        }
+        setIngredientsList(list);
+    }
+
+    const creatingCountryList = () => {
+        const list = [];
+        for (let i = 0; i < countryQuantity; i++) {
+            list.push(
+                <div key={i}>
+                    <Country position={i} country={country} setCountry={setCountry} />
+                </div>
+            );
+        }
+        setCountryList(list);
+    }
+
+    useEffect(() => {
+        creatingCountryList();
+    }, [countryQuantity]);
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
+
+
+    useEffect(() => {
+        creatingIngredientsList();
+    }, [ingredientsQuantity]);
+
+
+
+
 
 
     return (
@@ -191,7 +214,7 @@ const Admin = () => {
                     </div>
 
                     <input className="admin__submit" type="submit" value="Submit" />
-
+                    {successMessage ? <div className="admin__success"> {successMessage} </div> : ""}
                 </form>
             </div>
 
@@ -217,7 +240,7 @@ const Admin = () => {
                             fetchedUsers.filter((val) => {
                                 if (searchTerm == "") {
                                     return null
-                                } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                } else if (val.name.includes(searchTerm)) {
                                     return val
                                 }
                             }).map((val, key) => {
@@ -230,6 +253,7 @@ const Admin = () => {
                             : ""}
                     </div>
                     <button className="searchAdmin__btn" >Add admin</button>
+                    {successAdmin ? <div className="admin__success"> {successAdmin} </div> : ""}
                 </div>
             </form>
         </div>
