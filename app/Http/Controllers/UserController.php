@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Ingredient;
 use Illuminate\Support\Facades\DB;
 
+use function Symfony\Component\String\b;
+
 class UserController extends Controller
 {
     public function indexProfile()
@@ -106,8 +108,10 @@ class UserController extends Controller
 
     public function addAdmin($user)
     {
-        User::where("name", $user)->update(["admin" => 1]);
-
+        $user = User::where("name", $user)->update(["admin" => 1]);
+        if ($user == null) {
+            return  ['status' => 'fail'];
+        }
         return [
             'status' => 'success'
         ];
