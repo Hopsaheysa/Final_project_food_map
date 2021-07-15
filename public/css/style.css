@@ -1089,6 +1089,10 @@ header:hover {
 .admin__submit:hover {
   background-color: #565a01;
 }
+.admin__success {
+  color: #919720;
+  margin-top: 1em;
+}
 
 .about {
   background-color: #f2f4f3;

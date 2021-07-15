@@ -90,7 +90,7 @@ const Admin = () => {
                 if (response.data.status === "success") {
                     setSuccessMessage("Recipe saved!");
                 }
-            }).catch(error => setSuccessMessage("Storing of the recipe failed!!"));
+            }).catch(error => setSuccessMessage("Failed to create recipe"));
     }
 
 
