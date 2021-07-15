@@ -23,7 +23,6 @@ function RecipeResults(props) {
 
 
   const instructionsSteps = props.recipe.instructions.split('\n')
-  console.log(props.recipe);
   return (
     <>
       <div className="recipe">
@@ -124,10 +123,10 @@ function RecipeResults(props) {
               <ol>
                 {
                   instructionsSteps.map((step, i) => (
-                    <>
-                      <li key={i}>{step.trim()}</li>
+                    <div key={i}>
+                      <li >{step.trim()}</li>
                       <br />
-                    </>
+                    </div>
 
                   ))
                 }
