@@ -42,11 +42,6 @@ const Admin = () => {
     const addAdmin = async (e) => {
         e.preventDefault();
 
-        fetchedUsers.map((usr) => {
-            if (usr.name === searchTerm) {
-                console.log("Hi");
-            }
-        })
         const response = await fetch(`/api/addAdmin/${searchTerm}`, {
             method: 'POST',
             body: JSON.stringify(searchTerm),
@@ -57,6 +52,7 @@ const Admin = () => {
             }
         })
     }
+
     const addIngredient = (e) => {
         e.preventDefault();
         setIngredientsQuantity(ingredientsQuantity + 1);
@@ -107,7 +103,7 @@ const Admin = () => {
         let value = null;
         if (event.target.name === "img") {
             value = event.target.files[0]
-            console.log(value)
+
         } else {
             value = event.target.value
         }
@@ -124,13 +120,9 @@ const Admin = () => {
 
         const dataArray = new FormData();
         for (let key in values) {
-            // if (key == "img") continue;
-            // console.log(`values[${key}]`);
-            // console.log(values[key]);
             dataArray.append(`values[${key}]`, values[key]);
         }
         for (let key in ingredient) {
-            console.log(ingredient[key])
             let ingrString = JSON.stringify(ingredient[key]);
             dataArray.append(`ingredient[${key}]`, ingrString);
 
@@ -140,10 +132,7 @@ const Admin = () => {
             dataArray.append(`country[${key}]`, countryString);
 
         }
-        // for (var [key, value] of dataArray.entries()) {
-        //     console.log(key, value);
-        // }
-        console.log(dataArray)
+        console.log("saving")
         axios
             .post("/api/recipe/save", dataArray, {
                 headers: {
@@ -152,86 +141,67 @@ const Admin = () => {
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                 }
             })
-            .then((response) => {
-                console.log("success")
-
-            })
     }
-
-    //     const response = await fetch(`/api/recipe/save`, {
-    //         method: 'POST',
-    //         body: dataArray,
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             "Content-Type": "multipart/form-data",
-
-
-    //             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-    //         },
-    //     })
-    //     console.log(dataArray)
-    // }
-
 
 
     return (
         <div className="admin">
             <div className="admin__recipe__create">
-            <h1>Create a recipe</h1>
-            <form action="" method="post" onSubmit={(e) => addRecipe(e)}>
-                <div className="admin__form-group">
-                    <label htmlFor="name" className="admin__form-group__label">What is the name of the recipe?</label>
-                    <input type="text" name="name" value={values.name} onChange={handleChange} placeholder="Recipe Name" /><br />
-                </div>
+                <h1>Create a recipe</h1>
+                <form action="" method="post" onSubmit={(e) => addRecipe(e)} encType="multipart/form-data">
+                    <div className="admin__form-group">
+                        <label htmlFor="name" className="admin__form-group__label">What is the name of the recipe?</label>
+                        <input type="text" name="name" value={values.name} onChange={handleChange} placeholder="Recipe Name" /><br />
+                    </div>
 
-                <div className="admin__form-group__pref">
-                    <label htmlFor="isVegan">Vegan</label>
-                    <input type="checkbox" name="isVegan" value="1" onChange={handleChange} /> <br />
-                    <label htmlFor="isVegetarian">Vegetarian</label>
-                    <input type="checkbox" name="isVegetarian" value="1" onChange={handleChange} /><br />
-                    <label htmlFor="isLactoseFree">Lactose free</label>
-                    <input type="checkbox" name="isLactoseFree" value="1" onChange={handleChange} /><br />
-                    <label htmlFor="isGlutenFree">Gluten free</label>
-                    <input type="checkbox" name="isGlutenFree" value="1" onChange={handleChange} /><br />
-                    <label htmlFor="isNutFree">Nut free</label>
-                    <input type="checkbox" name="isNutFree" value="1" onChange={handleChange} /><br />
-                </div>
+                    <div className="admin__form-group__pref">
+                        <label htmlFor="isVegan">Vegan</label>
+                        <input type="checkbox" name="isVegan" value="1" onChange={handleChange} /> <br />
+                        <label htmlFor="isVegetarian">Vegetarian</label>
+                        <input type="checkbox" name="isVegetarian" value="1" onChange={handleChange} /><br />
+                        <label htmlFor="isLactoseFree">Lactose free</label>
+                        <input type="checkbox" name="isLactoseFree" value="1" onChange={handleChange} /><br />
+                        <label htmlFor="isGlutenFree">Gluten free</label>
+                        <input type="checkbox" name="isGlutenFree" value="1" onChange={handleChange} /><br />
+                        <label htmlFor="isNutFree">Nut free</label>
+                        <input type="checkbox" name="isNutFree" value="1" onChange={handleChange} /><br />
+                    </div>
 
-                <div className="admin__form-group">
-                    <label htmlFor="img" className="admin__form-group__label">Upload meal image:</label>
-                    <input type="file" id="img" name="img" accept="image/*"></input>
-                </div>
+                    <div className="admin__form-group">
+                        <label htmlFor="img" className="admin__form-group__label">Upload meal image:</label>
+                        <input type="file" id="img" name="img" accept="image/*" onChange={handleChange}></input>
+                    </div>
 
-                <div className="admin__form-group">
-                    <label htmlFor="instructions" className="admin__form-group__label">Instructions:</label>
-                    <textarea name="instructions" id="" cols="20" rows="5" value={values.instructions} onChange={handleChange}></textarea>
-                </div>
+                    <div className="admin__form-group">
+                        <label htmlFor="instructions" className="admin__form-group__label">Instructions:</label>
+                        <textarea name="instructions" id="" cols="20" rows="5" value={values.instructions} onChange={handleChange}></textarea>
+                    </div>
 
-                <div className="admin__form-group">
-                {ingredientsList}
-                    <button className="admin__add" onClick={(e) => addIngredient(e)}>
-                        +
-                    </button>
-                </div>
+                    <div className="admin__form-group">
+                        {ingredientsList}
+                        <button className="admin__add" onClick={(e) => addIngredient(e)}>
+                            +
+                        </button>
+                    </div>
 
-                <div className="admin__form-group">
-                    {countryList}
-                    <button className="admin__add" onClick={(e) => addCountry(e)}>
-                        +
-                    </button>
-                </div>
+                    <div className="admin__form-group">
+                        {countryList}
+                        <button className="admin__add" onClick={(e) => addCountry(e)}>
+                            +
+                        </button>
+                    </div>
 
-                <input className="admin__submit" type="submit" value="Submit" />
+                    <input className="admin__submit" type="submit" value="Submit" />
 
-            </form>
-        </div>
+                </form>
+            </div>
 
 
 
             <form action="" method="post" onSubmit={(e) => addAdmin(e)}>
                 <div className="searchAdmin__container">
                     <h1 className="searchAdmin__container__header">Admin creator</h1>
-                    {/* <p className="searchAdmin__container__search">Search user</p> */}
+
                     <div className="filter">
                         <input
                             type="search"
@@ -241,7 +211,7 @@ const Admin = () => {
                         />
                     </div>
 
-                   
+
 
                     <div>
                         {fetchedUsers ?
@@ -260,7 +230,7 @@ const Admin = () => {
                             })
                             : ""}
                     </div>
-                             <button className="searchAdmin__btn" >Add admin</button>
+                    <button className="searchAdmin__btn" >Add admin</button>
                 </div>
             </form>
         </div>

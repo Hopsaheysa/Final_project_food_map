@@ -87,13 +87,13 @@ class RecipeController extends Controller
 
         $recipe = new Recipe;
 
+
         if ($request->file("values.img")) {
             $image_name = $request->file('values.img')->storeAs('', $request->file('values.img')->getClientOriginalName(), 'uploads');
+
             $recipe->image = $image_name;
         }
-        // $request->file('img')->store('imgs', 'uploads');
-        // dd($request);
-        // ->img["original_name"]
+
 
         $recipe->name = $request->values["name"];
         $recipe->isVegan = number_format($request->values["isVegan"]);
@@ -107,7 +107,7 @@ class RecipeController extends Controller
 
         foreach ($request->country as $country) {
             $country = json_decode($country);
-            // dd($country->country_name);
+
             $country_generated = Country::where("name", $country->country_name)->first();
             $recipe->countries()->attach($country_generated->id);
         }
@@ -115,14 +115,12 @@ class RecipeController extends Controller
 
         foreach ($request->ingredient as $ingr) {
             $ingredient = json_decode($ingr);
-            // dd($ingredient->ingredient_name);
-            //we need to know if the ingredient is already in the DB if not, it is stored
+
             $ingredient_generated = Ingredient::where("name", $ingredient->ingredient_name)->first();
 
             if (!$ingredient_generated) {
                 $ingredientNew = new Ingredient;
                 $ingredientNew->name = $ingredient->ingredient_name;
-                // dd($ingredient->name, $ingredient->ingredient_name);
                 $ingredientNew->save();
             } else {
                 $ingredientNew = $ingredient_generated;
@@ -131,5 +129,9 @@ class RecipeController extends Controller
 
             $recipe->ingredients()->attach($ingredientNew->id, ["quantity" => $ingredient->ingredient_quantity, "measurement" => $ingredient->ingredient_measurement]);
         }
+
+        return [
+            'status' => 'success'
+        ];
     }
 }
