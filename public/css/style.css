@@ -828,11 +828,27 @@ header:hover {
 .error {
   color: #919720;
   line-height: 2;
-  font-size: 90%;
+  font-size: 80%;
+}
+
+@media (max-width: 630px) {
+  #profile-form {
+    margin-left: 0;
+  }
 }
 
 .profile {
   background-color: #e6d3a3;
+}
+@media (max-width: 800px) {
+  .profile {
+    font-size: 90%;
+  }
+}
+@media (max-width: 705px) {
+  .profile {
+    font-size: 80%;
+  }
 }
 .profile__container {
   display: flex;
@@ -840,6 +856,12 @@ header:hover {
   align-items: center;
   justify-content: center;
   padding: 5em;
+}
+@media (max-width: 48px) {
+  .profile__container {
+    padding: 0;
+    width: 100%;
+  }
 }
 .profile__admin {
   color: red;
@@ -851,8 +873,21 @@ header:hover {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   background-color: #f2f4f3;
 }
+@media (max-width: 630px) {
+  .profile__user {
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .profile__inputs {
   margin-left: 5em;
+}
+@media (max-width: 630px) {
+  .profile__inputs {
+    margin-left: 0;
+  }
 }
 .profile__inputs li {
   list-style: none;
@@ -871,6 +906,13 @@ header:hover {
 .profile h3,
 .profile span {
   color: #919720;
+}
+@media (max-width: 775px) {
+  .profile h2,
+.profile h3,
+.profile span {
+    font-size: 90%;
+  }
 }
 .profile__preferences {
   margin: 1.5em;
@@ -944,9 +986,17 @@ header:hover {
 
 .searchAdmin__container {
   margin: 2em 4em;
-  padding: 3.5em 4.5em;
+  padding: 4em;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   background-color: #f2f4f3;
+}
+@media (max-width: 630px) {
+  .searchAdmin__container {
+    margin: 2em 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .searchAdmin__container__header {
   color: #919720;
@@ -958,11 +1008,24 @@ header:hover {
 .admin {
   display: flex;
 }
+@media (max-width: 1340px) {
+  .admin {
+    flex-direction: column;
+  }
+}
 .admin__recipe__create {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   background-color: #f2f4f3;
   margin: 2em 4em;
-  padding: 5em;
+  padding: 4em;
+}
+@media (max-width: 630px) {
+  .admin__recipe__create {
+    margin: 2em 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .admin__recipe__create h1,
 .admin__recipe__create p {
