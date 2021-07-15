@@ -132,7 +132,6 @@ const Admin = () => {
             dataArray.append(`country[${key}]`, countryString);
 
         }
-        console.log("saving")
         axios
             .post("/api/recipe/save", dataArray, {
                 headers: {
