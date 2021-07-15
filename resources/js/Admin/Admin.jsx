@@ -175,55 +175,63 @@ const Admin = () => {
 
 
     return (
-        <>
+        <div className="admin">
+            <div className="admin__recipe__create">
             <h1>Create a recipe</h1>
-            <form action="" method="post" onSubmit={(e) => addRecipe(e)} encType="multipart/form-data">
+            <form action="" method="post" onSubmit={(e) => addRecipe(e)}>
+                <div className="admin__form-group">
+                    <label htmlFor="name" className="admin__form-group__label">What is the name of the recipe?</label>
+                    <input type="text" name="name" value={values.name} onChange={handleChange} placeholder="Recipe Name" /><br />
+                </div>
 
-                <label htmlFor="name">Recipe name</label>
-                <input type="text" name="name" value={values.name} onChange={handleChange} placeholder="Enter name" /><br />
+                <div className="admin__form-group__pref">
+                    <label htmlFor="isVegan">Vegan</label>
+                    <input type="checkbox" name="isVegan" value="1" onChange={handleChange} /> <br />
+                    <label htmlFor="isVegetarian">Vegetarian</label>
+                    <input type="checkbox" name="isVegetarian" value="1" onChange={handleChange} /><br />
+                    <label htmlFor="isLactoseFree">Lactose free</label>
+                    <input type="checkbox" name="isLactoseFree" value="1" onChange={handleChange} /><br />
+                    <label htmlFor="isGlutenFree">Gluten free</label>
+                    <input type="checkbox" name="isGlutenFree" value="1" onChange={handleChange} /><br />
+                    <label htmlFor="isNutFree">Nut free</label>
+                    <input type="checkbox" name="isNutFree" value="1" onChange={handleChange} /><br />
+                </div>
 
-                <label htmlFor="isVegan">Vegan</label>
-                <input type="checkbox" name="isVegan" value="1" onChange={handleChange} /><br />
+                <div className="admin__form-group">
+                    <label htmlFor="img" className="admin__form-group__label">Upload meal image:</label>
+                    <input type="file" id="img" name="img" accept="image/*"></input>
+                </div>
 
-                <label htmlFor="isVegetarian">Vegetarian</label>
-                <input type="checkbox" name="isVegetarian" value="1" onChange={handleChange} /><br />
+                <div className="admin__form-group">
+                    <label htmlFor="instructions" className="admin__form-group__label">Instructions:</label>
+                    <textarea name="instructions" id="" cols="20" rows="5" value={values.instructions} onChange={handleChange}></textarea>
+                </div>
 
-                <label htmlFor="isLactoseFree">Lactose free</label>
-                <input type="checkbox" name="isLactoseFree" value="1" onChange={handleChange} /><br />
-
-                <label htmlFor="isGlutenFree">Gluten free</label>
-                <input type="checkbox" name="isGlutenFree" value="1" onChange={handleChange} /><br />
-
-                <label htmlFor="isNutFree">Nut free</label>
-                <input type="checkbox" name="isNutFree" value="1" onChange={handleChange} /><br />
-
-                <label htmlFor="img">Select image:</label>
-                <input type="file" id="img" name="img" accept="image/*" onChange={handleChange} ></input>
-
-                <label htmlFor="instructions">Instructions:</label>
-                <textarea name="instructions" id="" cols="30" rows="10" value={values.instructions} onChange={handleChange}></textarea>
-
+                <div className="admin__form-group">
                 {ingredientsList}
-                <button className="ingredient__add" onClick={(e) => addIngredient(e)}>
-                    +
-                </button>
+                    <button className="admin__add" onClick={(e) => addIngredient(e)}>
+                        +
+                    </button>
+                </div>
 
-                {countryList}
-                <button className="country__add" onClick={(e) => addCountry(e)}>
-                    +
-                </button>
+                <div className="admin__form-group">
+                    {countryList}
+                    <button className="admin__add" onClick={(e) => addCountry(e)}>
+                        +
+                    </button>
+                </div>
 
-                <input type="submit" value="Submit" />
+                <input className="admin__submit" type="submit" value="Submit" />
 
             </form>
-
+        </div>
 
 
 
             <form action="" method="post" onSubmit={(e) => addAdmin(e)}>
                 <div className="searchAdmin__container">
                     <h1 className="searchAdmin__container__header">Admin creator</h1>
-                    <h3 className="searchAdmin__container__slogan">search user</h3>
+                    {/* <p className="searchAdmin__container__search">Search user</p> */}
                     <div className="filter">
                         <input
                             type="search"
@@ -233,7 +241,7 @@ const Admin = () => {
                         />
                     </div>
 
-                    <button className="add-admin" >Add admin</button>
+                   
 
                     <div>
                         {fetchedUsers ?
@@ -252,10 +260,10 @@ const Admin = () => {
                             })
                             : ""}
                     </div>
-
+                             <button className="searchAdmin__btn" >Add admin</button>
                 </div>
             </form>
-        </>
+        </div>
 
     )
 }

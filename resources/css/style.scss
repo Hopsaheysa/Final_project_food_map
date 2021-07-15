@@ -910,7 +910,7 @@ header {
     }
 
     h1 {
-        font-size: 300%;
+        font-size: 250%;
     }
 
     h2 {
@@ -935,13 +935,12 @@ header {
     }
 
     &__input {
-        display: block;
-        padding: 15px 10px;
+        outline: none;
+        padding: 0.75em;
+        border-style: none;
+        opacity: 0.7;
+        margin: 0.75em 0em;
         width: 100%;
-        border: 1px solid #ddd;
-        transition: border-width 0.2s ease;
-        border-radius: 2px;
-        color: #404040;
     }
 
     &__give {
@@ -949,16 +948,11 @@ header {
         font-size: 66%;
     }
 
-    // &__emoji {
-    //     color: #919720;
-    // }
-
     &__add,
     &__remove {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        // margin-bottom: 2em;
         text-align: center;
         border: none;
         font-size: 14px;
@@ -967,6 +961,7 @@ header {
 
     &__add {
         background: #919720;
+        margin-left: 0.5em;
 
         &:hover {
             background-color: #565a01;
@@ -999,17 +994,118 @@ header {
 
 // ADMIN
 
-.add-admin {
-    background: #919720;
-    color: #f2f4f3;
-    margin-top: 2em;
-    padding: 8px 8px;
-    border: none;
-    border-radius: 0.75rem;
-    font-size: 100%;
+.searchAdmin {
+    &__btn {
+        background: #919720;
+        color: #f2f4f3;
+        margin-top: 2em;
+        padding: 8px 8px;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 100%;
 
-    &:hover {
-        background-color: #565a01;
+        &:hover {
+            background-color: #565a01;
+        }
+    }
+}
+
+.searchAdmin__container {
+    margin: 2em 4em;
+    padding: 3.5em 4.5em;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f2f4f3;
+
+    &__header {
+        color: #919720;
+    }
+
+    &__search {
+        color: #404040;
+    }
+}
+
+.admin {
+    display: flex;
+
+    &__recipe__create {
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+        background-color: #f2f4f3;
+        margin: 2em 4em;
+        padding: 5em;
+
+        h1,
+        p {
+            color: #919720;
+        }
+
+        form {
+            line-height: 2;
+        }
+
+        input,
+        textarea {
+            outline: none;
+            padding: 0.75em;
+            border-style: none;
+            opacity: 0.7;
+            margin: 0.75em 0em;
+        }
+    }
+
+    &__form-group {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+
+        &__pref {
+            margin-bottom: 2em;
+            margin-left: 1em;
+            line-height: 2.5;
+            font-size: 90%;
+        }
+
+        &__label {
+            color: #919720;
+        }
+    }
+
+    &__ingredient__input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    &__country {
+        margin-bottom: 1em;
+    }
+
+    &__add {
+        background: #919720;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+        color: #f2f4f3;
+        &:hover {
+            background-color: #565a01;
+        }
+    }
+
+    &__submit {
+        background: #919720;
+        color: #f2f4f3;
+        margin-top: 2em;
+        padding: 8px 8px;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 100%;
+
+        &:hover {
+            background-color: #565a01;
+        }
     }
 }
 
