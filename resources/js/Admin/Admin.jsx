@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Ingredient from './Ingredient';
 import Country from './Country';
+import axios from "axios";
 
 const Admin = () => {
     const [fetchedUsers, setFetchedUsers] = useState("");
@@ -20,6 +21,7 @@ const Admin = () => {
         isLactoseFree: 0,
         isGlutenFree: 0,
         isNutFree: 0,
+        img: "",
         instructions: ""
     });
 
@@ -102,10 +104,17 @@ const Admin = () => {
 
     const handleChange = (event) => {
         console.log(event);
+        let value = null;
+        if (event.target.name === "img") {
+            value = event.target.files[0]
+            console.log(value)
+        } else {
+            value = event.target.value
+        }
         setValues(previous_values => {
             return ({
                 ...previous_values,
-                [event.target.name]: event.target.value
+                [event.target.name]: value
             });
         });
     }
@@ -113,18 +122,57 @@ const Admin = () => {
     const addRecipe = async (event) => {
         event.preventDefault();
 
-        const response = await fetch(`/api/recipe/save`, {
-            method: 'POST',
-            body: JSON.stringify([values, ingredient, country]),
-            headers: {
-                'Accept': 'application/json',
-                'Content-type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            },
-        })
+        const dataArray = new FormData();
+        for (let key in values) {
+            // if (key == "img") continue;
+            // console.log(`values[${key}]`);
+            // console.log(values[key]);
+            dataArray.append(`values[${key}]`, values[key]);
+        }
+        for (let key in ingredient) {
+            console.log(ingredient[key])
+            let ingrString = JSON.stringify(ingredient[key]);
+            dataArray.append(`ingredient[${key}]`, ingrString);
+
+        }
+        for (let key in country) {
+            let countryString = JSON.stringify(country[key]);
+            dataArray.append(`country[${key}]`, countryString);
+
+        }
+        // for (var [key, value] of dataArray.entries()) {
+        //     console.log(key, value);
+        // }
+        console.log(dataArray)
+        axios
+            .post("/api/recipe/save", dataArray, {
+                headers: {
+                    'Accept': 'application/json',
+                    "Content-Type": "multipart/form-data",
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                }
+            })
+            .then((response) => {
+                console.log("success")
+
+            })
     }
 
-    console.log("country", country);
+    //     const response = await fetch(`/api/recipe/save`, {
+    //         method: 'POST',
+    //         body: dataArray,
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             "Content-Type": "multipart/form-data",
+
+
+    //             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    //         },
+    //     })
+    //     console.log(dataArray)
+    // }
+
+
 
     return (
         <div className="admin">

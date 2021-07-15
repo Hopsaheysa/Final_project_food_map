@@ -1255,6 +1255,10 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }
     }
 
     &__form {
@@ -1263,11 +1267,27 @@ header {
 
     &__image {
         color: #919720;
-    }
 
-    &__heading {
-        text-align: center;
-        color: #919720;
+        h1 {
+            @media (max-width: 1300px) {
+                margin-top: 6em;
+                font-size: 120%;
+            }
+
+            @media (max-width: 580px) {
+                margin-top: 10em;
+                font-size: 80%;
+            }
+
+            @media (max-width: 400px) {
+                margin-left: 1em;
+            }
+        }
+
+        &__heading {
+            text-align: center;
+            color: #919720;
+        }
     }
 
     &__group {

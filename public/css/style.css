@@ -1184,13 +1184,35 @@ header:hover {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 850px) {
+  .review__container {
+    flex-direction: column;
+  }
+}
 .review__form {
   margin: 3em;
 }
 .review__image {
   color: #919720;
 }
-.review__heading {
+@media (max-width: 1300px) {
+  .review__image h1 {
+    margin-top: 6em;
+    font-size: 120%;
+  }
+}
+@media (max-width: 580px) {
+  .review__image h1 {
+    margin-top: 10em;
+    font-size: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .review__image h1 {
+    margin-left: 1em;
+  }
+}
+.review__image__heading {
   text-align: center;
   color: #919720;
 }
