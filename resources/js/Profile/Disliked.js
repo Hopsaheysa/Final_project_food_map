@@ -73,23 +73,23 @@ function Disliked() {
                         {
                             data.map((ingredient) => (
                                 <li key={ingredient.id}>
-                                    <div class="profile__ingredient"> {ingredient.name}<button className="profile__remove" onClick={(e) => removeItem(e, ingredient)} >x</button></div>
+                                    <div className="profile__ingredient"> {ingredient.name}<button className="profile__remove" onClick={(e) => removeItem(e, ingredient)} >x</button></div>
 
                                 </li >
                             ))
                         }
-                       <p class="profile__give">Give me another input <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button> </p>
+                        <p className="profile__give">Give me another input <button className="profile__add" onClick={(e) => addIngredient(e)}>+</button> </p>
                     </ul>
                 </form>
 
                 <ul>
                     {inputArray}
-                        
+
                 </ul>
-             
+
             </div>
 
-           
+
 
 
 
