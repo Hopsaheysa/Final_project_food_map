@@ -831,14 +831,12 @@ header:hover {
   font-size: 80%;
 }
 
-@media (max-width: 630px) {
-  #profile-form {
-    margin-left: 0;
-  }
-}
-
 .profile {
-  background-color: #e6d3a3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(119, 101, 101, 0.7)), url("../img/kitchen2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 800px) {
   .profile {
@@ -850,6 +848,12 @@ header:hover {
     font-size: 80%;
   }
 }
+@media (max-width: 570px) {
+  .profile {
+    background-color: #e6d3a3;
+    background-image: none;
+  }
+}
 .profile__container {
   display: flex;
   flex-direction: column;
@@ -857,15 +861,14 @@ header:hover {
   justify-content: center;
   padding: 5em;
 }
-@media (max-width: 48px) {
+@media (max-width: 360px) {
   .profile__container {
     padding: 0;
-    width: 100%;
   }
 }
 .profile__admin {
-  color: red;
-  opacity: 0.6;
+  color: #f2f4f3;
+  opacity: 0.9;
 }
 .profile__user {
   margin: 2em 4em;
@@ -875,10 +878,14 @@ header:hover {
 }
 @media (max-width: 630px) {
   .profile__user {
-    margin: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin: 2em 0;
+    padding: 3.5em 4.5em;
+  }
+}
+@media (max-width: 400px) {
+  .profile__user {
+    margin: 1em 0.1em;
+    padding: 0;
   }
 }
 .profile__inputs {
@@ -893,11 +900,18 @@ header:hover {
   list-style: none;
   padding: 0;
 }
+@media (max-width: 860px) {
+  .profile__inputs li {
+    font-size: 90%;
+  }
+}
 .profile__inputs p {
   color: #919720;
 }
-.profile h1 {
-  font-size: 250%;
+.profile__header {
+  color: #f2f4f3;
+  opacity: 0.8;
+  font-size: 300%;
 }
 .profile h2 {
   margin-left: 1em;
@@ -905,9 +919,9 @@ header:hover {
 .profile h2,
 .profile h3,
 .profile span {
-  color: #919720;
+  color: #abb13a;
 }
-@media (max-width: 775px) {
+@media (max-width: 860px) {
   .profile h2,
 .profile h3,
 .profile span {
@@ -917,6 +931,11 @@ header:hover {
 .profile__preferences {
   margin: 1.5em;
   line-height: 3;
+}
+@media (max-width: 860px) {
+  .profile__preferences {
+    font-size: 80%;
+  }
 }
 .profile__detail {
   margin: 1em;
@@ -993,12 +1012,15 @@ header:hover {
 @media (max-width: 630px) {
   .searchAdmin__container {
     margin: 2em 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
 }
-.searchAdmin__container__header {
+@media (max-width: 400px) {
+  .searchAdmin__container {
+    margin: 0;
+    width: 95%;
+  }
+}
+.searchAdmin__container__heading {
   color: #919720;
 }
 .searchAdmin__container__search {
@@ -1011,6 +1033,12 @@ header:hover {
 @media (max-width: 1340px) {
   .admin {
     flex-direction: column;
+  }
+}
+@media (max-width: 360px) {
+  .admin {
+    width: 80%;
+    margin-left: 4.2em;
   }
 }
 .admin__recipe__create {
@@ -1027,6 +1055,18 @@ header:hover {
     width: fit-content;
   }
 }
+@media (max-width: 400px) {
+  .admin__recipe__create {
+    margin: 1em 1em;
+    width: 90%;
+  }
+}
+@media (max-width: 360px) {
+  .admin__recipe__create {
+    margin: 0, 0.5em;
+    width: 90%;
+  }
+}
 .admin__recipe__create h1,
 .admin__recipe__create p {
   color: #919720;
@@ -1039,6 +1079,7 @@ header:hover {
   outline: none;
   padding: 0.75em;
   border-style: none;
+  width: 100%;
   opacity: 0.7;
   margin: 0.75em 0em;
 }

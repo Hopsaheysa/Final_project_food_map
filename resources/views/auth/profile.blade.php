@@ -8,8 +8,8 @@
 
     <div class="profile__container">
 
-        <h1>
-            Hello, <span>{{ $user->name }}</span>
+        <h1 class="profile__header">
+          Hello,  <span> {{ $user->name }}</span> 
         </h1>
 
         <p class="profile__admin"> {{$user->admin ? "*You are logged in as admin" : ""}} </p>

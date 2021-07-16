@@ -93,6 +93,10 @@ button {
             padding: 0.75rem;
             border-radius: 1.2rem;
         }
+
+        // &__containter {
+        //     margin-right: 2em;
+        // }
     }
 
     a:hover {
@@ -870,14 +874,17 @@ header {
 
 // PROFILE
 
-#profile-form {
-    @media (max-width: 630px) {
-        margin-left: 0;
-    }
-}
-
 .profile {
-    background-color: #e6d3a3;
+    // background-color: #e6d3a3;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(119, 101, 101, 0.7)
+        ),
+        url("../img/kitchen2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
     @media (max-width: 800px) {
         font-size: 90%;
@@ -887,6 +894,11 @@ header {
         font-size: 80%;
     }
 
+    @media (max-width: 570px) {
+        background-color: #e6d3a3;
+        background-image: none;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -894,15 +906,14 @@ header {
         justify-content: center;
         padding: 5em;
 
-        @media (max-width: 48px) {
+        @media (max-width: 360px) {
             padding: 0;
-            width: 100%;
         }
     }
 
     &__admin {
-        color: red;
-        opacity: 0.6;
+        color: #f2f4f3;
+        opacity: 0.9;
     }
 
     &__user {
@@ -914,9 +925,22 @@ header {
         box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
         background-color: #f2f4f3;
 
+        // @media (max-width: 630px) {
+        //     margin: 0;
+        //     width: fit-content;
+        // }
+
         @media (max-width: 630px) {
-            margin: 0;
-            width: fit-content;
+            margin: 2em 0;
+            padding: 3.5em 4.5em;
+            // width: 100%;
+            // width: fit-content;
+        }
+
+        @media (max-width: 400px) {
+            margin: 1em 0.1em;
+            // width: 100%;
+            padding: 0;
         }
     }
 
@@ -930,6 +954,10 @@ header {
         li {
             list-style: none;
             padding: 0;
+
+            @media (max-width: 860px) {
+                font-size: 90%;
+            }
         }
 
         p {
@@ -937,9 +965,14 @@ header {
         }
     }
 
-    h1 {
-        font-size: 250%;
+    &__header {
+        color: #f2f4f3;
+        opacity: 0.8;
+        font-size: 300%;
     }
+
+    // h1 {
+    // }
 
     h2 {
         margin-left: 1em;
@@ -948,9 +981,9 @@ header {
     h2,
     h3,
     span {
-        color: #919720;
+        color: #abb13a;
 
-        @media (max-width: 775px) {
+        @media (max-width: 860px) {
             font-size: 90%;
         }
     }
@@ -958,6 +991,10 @@ header {
     &__preferences {
         margin: 1.5em;
         line-height: 3;
+
+        @media (max-width: 860px) {
+            font-size: 80%;
+        }
     }
 
     &__detail {
@@ -1050,10 +1087,13 @@ header {
 
     @media (max-width: 630px) {
         margin: 2em 0;
-        width: fit-content;
+    }
+    @media (max-width: 400px) {
+        margin: 0;
+        width: 95%;
     }
 
-    &__header {
+    &__heading {
         color: #919720;
     }
 
@@ -1069,6 +1109,11 @@ header {
         flex-direction: column;
     }
 
+    @media (max-width: 360px) {
+        width: 80%;
+        margin-left: 4.2em;
+    }
+
     &__recipe__create {
         box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
         background-color: #f2f4f3;
@@ -1078,6 +1123,16 @@ header {
         @media (max-width: 630px) {
             margin: 2em 0;
             width: fit-content;
+        }
+
+        @media (max-width: 400px) {
+            margin: 1em 1em;
+            width: 90%;
+        }
+
+        @media (max-width: 360px) {
+            margin: 0, 0.5em;
+            width: 90%;
         }
 
         h1,
@@ -1094,6 +1149,7 @@ header {
             outline: none;
             padding: 0.75em;
             border-style: none;
+            width: 100%;
             opacity: 0.7;
             margin: 0.75em 0em;
         }

@@ -226,7 +226,7 @@ const Admin = () => {
 
             <form action="" method="post" onSubmit={(e) => addAdmin(e)}>
                 <div className="searchAdmin__container">
-                    <h1 className="searchAdmin__container__header">Admin creator</h1>
+                    <h1 className="searchAdmin__container__heading">Admin creator</h1>
 
                     <div className="filter">
                         <input
@@ -260,8 +260,7 @@ const Admin = () => {
                     {successAdmin ? <div className="admin__success"> {successAdmin} </div> : ""}
                 </div>
             </form>
-
-               
+        
 
         </div>
 

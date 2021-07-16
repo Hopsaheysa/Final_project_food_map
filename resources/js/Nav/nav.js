@@ -9,6 +9,7 @@
     window.startObserver = () => {
         const header = document.querySelector("header");
         const sectionResults = document.querySelector(".hero__container");
+        const sectionProfile = document.querySelector(".profile__container");
 
 
     const sectionResultsObserver = new IntersectionObserver(function(
